@@ -16,14 +16,14 @@ class Interface extends Component {
 
   
   componentDidMount(){
-    var margin = {top: 40, right: 0, bottom: 0, left: 320},
-    width = 1120 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+    var margin = {top: 40, right: 0, bottom: 0, left: 500},
+    width = 1280 - margin.left - margin.right,
+    height = 740 - margin.top - margin.bottom;
 
     var x = d3.scaleLinear()
         .range([0, width]);
 
-    var barHeight = 32;
+    var barHeight = 28;
 
     var color = d3.scaleOrdinal()
         .range(["black", "#ccc"]);
@@ -58,7 +58,7 @@ class Interface extends Component {
         .attr("y1", "100%");
 
 
-    d3.json("readme.json").then(function(root) {
+    d3.json("file.json").then(function(root) {
       root = d3.hierarchy(root)
                     .sum(d => d.size)
                     .sort((a,b) => b.value - a.value);
