@@ -18,7 +18,7 @@ class Interface extends Component {
   componentDidMount(){
     var margin = {top: 40, right: 0, bottom: 0, left: 500},
     width = 1280 - margin.left - margin.right,
-    height = 740 - margin.top - margin.bottom;
+    height = 600 - margin.top - margin.bottom;
 
     var x = d3.scaleLinear()
         .range([0, width]);
@@ -29,7 +29,7 @@ class Interface extends Component {
         .range(["black", "#ccc"]);
 
     var duration = 750,
-        delay = 25;
+        delay = 32;
 
     var partition = d3.partition();
 
@@ -104,7 +104,7 @@ class Interface extends Component {
       var enterTransition = enter.transition()
           .duration(duration)
           .delay(function(d, i) { return i * delay; })
-          .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.2 + ")"; });
+          .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.4 + ")"; });
 
       // Transition entering text.
       enterTransition.select("text")
@@ -144,7 +144,7 @@ class Interface extends Component {
 
       // Enter the new bars for the clicked-on data's parent.
       var enter = bar(d.parent)
-          .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.2 + ")"; })
+          .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.4 + ")"; })
           .style("opacity", 1e-6);
 
       // Color the bars as appropriate.
@@ -214,8 +214,9 @@ class Interface extends Component {
       bar.append("text")
           .attr("x", -6)
           .attr("y", barHeight / 2)
-          .attr("dy", ".35em")
+          .attr("dy", ".2em")
           .style("text-anchor", "end")
+          .style("font-size", "1rem")
           .text(function(d) { return d.data.name; });
 
       bar.append("rect")
