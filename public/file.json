@@ -2,6 +2,23 @@
     "name": "flare",
     "children": [
         {
+            "name": "Invitaci\u00f3n cuando menos a tres personas",
+            "children": [
+                {
+                    "name": "DECREMENTO POR CIERRE DE MES",
+                    "size": 3276628
+                },
+                {
+                    "name": "INCREMENTO PARA PAGO DE FACTURAS",
+                    "size": 3276628
+                },
+                {
+                    "name": "SERVICIOS PROFESIONALES PARA EL DESARROLLO Y ALINEACI\u00d3N DE LAS ESTRUCTURAS ORG\u00c1NICAS, B\u00c1SICAS Y NO B\u00c1SICAS DEL SESNSP",
+                    "size": 77800
+                }
+            ]
+        },
+        {
             "name": "Adjudicaci\u00f3n Directa",
             "children": [
                 {
@@ -29,22 +46,6 @@
                     "size": 5458902
                 },
                 {
-                    "name": "\"SERVICIO DE ALIMENTACI\u00d3N PARA EMPLEADOS DE LA SEGOB Y DEL \u00d3RGANO ADMINISTRATIVO DESCONCENTRADO SESNSP\"",
-                    "size": 5458902
-                },
-                {
-                    "name": "SERVICIO DE ALIMENTACI\u00d3N PARA EMPLEADOS DE LA SECRETAR\u00cdA DE gOBERNACI\u00d3N Y DEL \u00d3RGANO ADMINISTRATIVO DESCONCENTRADO SECRETARIADO EJECUTIVO DEL SISTEMA NACIONAL DE SEGURIDAD P\u00daBLICA.",
-                    "size": 5458902
-                },
-                {
-                    "name": "SERVICIO DE ALIMENTACI\u00d3N PARA EMPLEADOS DE LA SEGOB Y DEL \u00d3RGANO ADMINISTRATIVO DESCONCENTRADO SESNSP",
-                    "size": 5458902
-                },
-                {
-                    "name": "SERVICIO DE ALIMENTACI\u00d3N PARA EMPLEADOS DE LA SECRETAR\u00cdA DE gOBERNACI\u00d3N Y DEL \u00d3RGANO ADMINISTRATIVO DESCONCENTRADO SECRETARIADO EJECUTIVO DEL SISTEMA NACIONAL DE SEGURIDAD P\u00daBLICA.",
-                    "size": 5458902
-                },
-                {
                     "name": "SERVICIO DE ALIMENTACI\u00d3N PARA EMPLEADOS DE LA SEGOB Y DEL \u00d3RGANO ADMINISTRATIVO DESCONCENTRADO SESNSP",
                     "size": 5458902
                 },
@@ -57,23 +58,11 @@
                     "size": 3456000
                 },
                 {
-                    "name": "SERVICIO INTEGRAL DE TRANSPORTE VEHICULAR PARA LA SECRETAR\u00cdA DE GOBERNACI\u00d3N  (SEGOB) Y SUS \u00d3RGANOS ADMINISTRATIVOS DESCONCENTRADOS SECRETARIADO EJECUTIVO DEL SISTEMA NACIONAL DE SEGURIDAD P\u00daBLICA (SESNSP) Y PREVENCI\u00d3N Y READAPTACI\u00d3N SOCIAL (PYRS), PARA EL PERIODO CONTADO A PARTIR DEL 01 DE MARZO DEL 2017 Y HASTA EL 31 DE DICIEMBRE DE 2017.",
-                    "size": 10368000
-                },
-                {
                     "name": "SERVICIO INTEGRAL DE FOTOCOPIADO, IMPRESI\u00d3N, ESCANEO Y RECEPCION Y ENVIO DE FAX EN BLANCO Y NEGRO EN EL OADPRS",
-                    "size": 46000000
-                },
-                {
-                    "name": "SERVICIO INTEGRAL DE FOTOCOPIADO, IMPRESI\u00d3N, ESCANEO Y RECEPCION Y ENVIO DE FAX EN BLANCO Y NEGRO EN EL OADPRS.",
                     "size": 46000000
                 },
                 {
                     "name": "SERVICIO INTEGRAL DE FOTOCOPIADO, IMPRESI\u00d3N, ESCANEO Y RECEPCION Y ENVIO DE FAX EN BLANCO Y NEGRO EN EL OADPRS. ESTE COMPROMISO SE PAGA BAJO EL AMPARO DEL ART. 41 FRACC. IV LAASSP",
-                    "size": 46000000
-                },
-                {
-                    "name": "SERVICIO INTEGRAL DE FOTOCOPIADO, IMPRESI\u00d3N, ESCANEO Y RECEPCION Y ENVIO DE FAX EN BLANCO Y NEGRO EN EL OADPRS",
                     "size": 46000000
                 },
                 {
@@ -112,27 +101,6 @@
                 {
                     "name": "ADQUISICI\u00d3N DE BLANCOS PARA LOS CENTROS FEDERALES DE READAPTACI\u00d3N SOCIAL, CEFEREPSI Y CPIM.",
                     "size": 71872347
-                }
-            ]
-        },
-        {
-            "name": "Invitaci\u00f3n cuando menos a tres personas",
-            "children": [
-                {
-                    "name": "DECREMENTO POR CIERRE DE MES",
-                    "size": 3276628
-                },
-                {
-                    "name": "INCREMENTO PARA PAGO DE FACTURAS",
-                    "size": 3276628
-                },
-                {
-                    "name": "SERVICIOS PROFESIONALES PARA EL DESARROLLO Y ALINEACI\u00d3N DE LAS ESTRUCTURAS ORG\u00c1NICAS, B\u00c1SICAS Y NO B\u00c1SICAS DEL SESNSP",
-                    "size": 77800
-                },
-                {
-                    "name": "SERVICIOS PROFESIONALES PARA EL DESARROLLO Y ALINEACI\u00d3N DE LAS ESTRUCTURAS ORG\u00c1NICAS, B\u00c1SICAS Y NO B\u00c1SICAS DEL SESNSP",
-                    "size": 77800
                 }
             ]
         }
