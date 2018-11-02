@@ -1,0 +1,92 @@
+{
+    "name": "flare",
+    "children": [
+        {
+            "name": "Licitación Local Pequeña",
+            "children": [
+                {
+                    "name": "Decremento por cierre de mes",
+                    "size": 3276628
+                },
+                {
+                    "name": "Incremento para pago de facturas",
+                    "size": 3276628
+                },
+                {
+                    "name": "Servicios para estructuras del SESNSP",
+                    "size": 77800
+                }
+            ]
+        },
+        {
+            "name": " Compras Adicionales para Licitaciones Nacionales",
+            "children": [
+                {
+                    "name": "Decremento",
+                    "size": 6553257
+                },
+                {
+                    "name": "Decremento para adecuación",
+                    "size": 3276628
+                },
+                {
+                    "name": "Decremento para adecuación presupuestaria",
+                    "size": 3276628
+                },
+                {
+                    "name": "incremento para pago de Factura",
+                    "size": 3276628
+                },
+                {
+                    "name": "Servicio de arrendamiento de equipo de computo",
+                    "size": 3276628
+                },
+                {
+                    "name": "Servicio de alimentación en SEGOB y SESNSP",
+                    "size": 5458902
+                },
+                {
+                    "name": "Arrendamiento de oficinas del personal para el CEFERESO n2 OCC",
+                    "size": 54608
+                },
+                {
+                    "name": "Servicio de transporte para SEGOB y sus órganos administrativos",
+                    "size": 3456000
+                },
+                {
+                    "name": "Servicio de impresión, escaneo y recepcion y FAX en el OADPRS",
+                    "size": 46000000
+                }
+            ]
+        },
+        {
+            "name": "Licitación Nacional",
+            "children": [
+                {
+                    "name": "Ampliación para pago del servicio al mes de noviembre 2017",
+                    "size": 3276628
+                },
+                {
+                    "name": "Decremento",
+                    "size": 3276628
+                },
+                {
+                    "name": "Decremento al compromiso para adecuación",
+                    "size": 3276628
+                },
+                {
+                    "name": "Decremento para adecuación presupuestal",
+                    "size": 3276628
+                },
+                {
+                    "name": "incremento para pago de factura",
+                    "size": 3276628
+                },
+                {
+                    "name": "Adquisión de blancos para CEFERESO.",
+                    "size": 71872347
+                }
+            ]
+        }
+    ]
+}

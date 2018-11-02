@@ -16,9 +16,9 @@ class Interface extends Component {
 
   
   componentDidMount(){
-    var margin = {top: 40, right: 0, bottom: 0, left: 500},
-    width = 1280 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+    var margin = {top: 40, right: 0, bottom: 0, left: 400},
+    width = 1220 - margin.left - margin.right,
+    height = 1000 - margin.top - margin.bottom;
 
     var x = d3.scaleLinear()
         .range([0, width]);
@@ -62,6 +62,8 @@ class Interface extends Component {
       root = d3.hierarchy(root)
                     .sum(d => d.size)
                     .sort((a,b) => b.value - a.value);
+
+    console.log(root)
 
       partition(root);
       
@@ -212,12 +214,21 @@ class Interface extends Component {
           .on("click", down);
 
       bar.append("text")
-          .attr("x", -6)
+          .attr("x", -12)
           .attr("y", barHeight / 2)
           .attr("dy", ".2em")
           .style("text-anchor", "end")
-          .style("font-size", "1rem")
+          .style("font-size", "0.76rem")
           .text(function(d) { return d.data.name; });
+
+      bar.append("text")
+            .attr("class", "subtitle")
+            .attr("x", -12)
+            .attr("y", barHeight)
+            .style("text-anchor", "end")
+            .style("fill","#999")
+            .attr("dy", ".2em")
+            .text(function(d) { return d.data.subtitle; });
 
       bar.append("rect")
           .attr("width", function(d) { return x(d.value); })
@@ -258,7 +269,7 @@ class Interface extends Component {
     render() {
       return(
         <div>
-          <input type="file"  onChange={this.handleUploadFile} />
+          <h1 style={{margin:"0px", textAlign:"center"}} >Gastos de Hacienda</h1>
         </div>
       )
     }
