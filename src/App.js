@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Interface from "./Components/Interface";
-
-// import Main from "./Components/example1.2.js"
+import Interface from "./Components/Interface222";
 
 class App extends Component {
   render() {

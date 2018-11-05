@@ -1,0 +1,585 @@
+{
+    "name": "flare",
+    "children": [
+        {
+            "name": "Actividades de apoyo administrativo",
+            "children": [
+                {
+                    "name": "REDUCCION A PARTIDAS DE GASTO",
+                    "children": [
+                        {
+                            "name": "Gasto 41",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                },
+                {
+                    "name": "GASTOS EN MATERIALES Y SUMINISTROS",
+                    "children": [
+                        {
+                            "name": "Gasto 40",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 42",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 43",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 44",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 45",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 46",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 47",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 48",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 49",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 50",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 51",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 52",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 53",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Protecci\u00f3n y Defensa de los Usuarios de Servicios Financieros",
+            "children": [
+                {
+                    "name": "CONDUSEF CAP 2000",
+                    "children": [
+                        {
+                            "name": "Gasto 68",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 82",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 86",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 88",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 89",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 90",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 92",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 94",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 96",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "REDUCCION A PARTIDAS DE GASTO",
+                    "children": [
+                        {
+                            "name": "Gasto 2",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 6",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 9",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 13",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 16",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 22",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 26",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 30",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 35",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 39",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 74",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 79",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 84",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 87",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 93",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 97",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 99",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "GASTOS EN MATERIALES Y SUMINISTROS",
+                    "children": [
+                        {
+                            "name": "Gasto 1",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 3",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 5",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 8",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 11",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 15",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 17",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 18",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 19",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 21",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 23",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 25",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 27",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 29",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 31",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 32",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 34",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 36",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 38",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO DE ADQUISICI\u00d3N DE PERI\u00d3DICOS Y REVISTAS JULIO",
+                    "children": [
+                        {
+                            "name": "Gasto 75",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "REDUCCION A PARRIDAS DE GASTO",
+                    "children": [
+                        {
+                            "name": "Gasto 12",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMPLIACION A PARTIDAS DE GASTO",
+                    "children": [
+                        {
+                            "name": "Gasto 4",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 7",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 10",
+                            "size": 16559024,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 14",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 20",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 24",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 28",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 33",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 37",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 66",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 67",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 70",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 77",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 81",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 85",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 91",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 95",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 98",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 100",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "DESCONPROMISO PARA ADECUACION PRESUPUESTAL",
+                    "children": [
+                        {
+                            "name": "Gasto 72",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 78",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "SUFICIENCIA A PROVEEDOR",
+                    "children": [
+                        {
+                            "name": "Gasto 76",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "LIBERACI\u00d3N PARA ADECUACI\u00d3N",
+                    "children": [
+                        {
+                            "name": "Gasto 83",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "TRASPASO AL COMPROMISO 019307",
+                    "children": [
+                        {
+                            "name": "Gasto 80",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "LIBERACION DE RECURSOS PARA ADECUACION",
+                    "children": [
+                        {
+                            "name": "Gasto 73",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Actividades de apoyo a la funci\u00f3n p\u00fablica y buen gobierno",
+            "children": [
+                {
+                    "name": "REDUCCION A PARTIDAS DE GASTO",
+                    "children": [
+                        {
+                            "name": "Gasto 55",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                },
+                {
+                    "name": "GASTOS EN MATERIALES Y SUMINISTROS",
+                    "children": [
+                        {
+                            "name": "Gasto 54",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 56",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 57",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 58",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 59",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 60",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 61",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 62",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 63",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 64",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 65",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

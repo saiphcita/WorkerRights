@@ -63,8 +63,6 @@ class Interface extends Component {
                     .sum(d => d.size)
                     .sort((a,b) => b.value - a.value);
 
-    console.log(root)
-
       partition(root);
       
       x.domain([0, root.value]).nice();
