@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import Interface from "./Components/Interface222";
-import Graph2 from "./Components/graph2";
+import Graph1 from "./Components/Graph1";
+import Graph2 from "./Components/Graph2";
+import Statistics from "./Components/Statistics";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Interface/>
-        <br/>
+        <Graph1/>
         <Graph2/>
+
+        <Statistics/>
       </div>
     );
   }

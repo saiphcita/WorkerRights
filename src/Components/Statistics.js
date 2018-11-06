@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-
-import './CSS/Interface.css'
-
+import './CSS/statistics.css'
 import * as d3  from "d3";
-import XLSX from 'xlsx';
 
-class Interface extends Component {
+var  jsonData = require('./Data/file.json');
+
+
+class Statistics extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [ ]
     };
-    this.handleUploadFile = this.handleUploadFile.bind(this)
   }
 
   
@@ -37,7 +36,7 @@ class Interface extends Component {
     var xAxis = d3.axisTop()
         .scale(x);
 
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#stati")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
@@ -57,9 +56,7 @@ class Interface extends Component {
       .append("line")
         .attr("y1", "100%");
 
-
-    d3.json("file.json").then(function(root) {
-      root = d3.hierarchy(root)
+      var root = d3.hierarchy(jsonData)
                     .sum(d => d.size)
                     .sort((a,b) => b.value - a.value);
 
@@ -67,7 +64,7 @@ class Interface extends Component {
       
       x.domain([0, root.value]).nice();
       down(root, 0);
-    });
+      
 
     function down(d, i) {
       if (!d.children ) return;
@@ -246,32 +243,16 @@ class Interface extends Component {
     }
   }
 
-  
-  handleUploadFile = (event) => {
-    var f = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (evt) => {
-        const bstr = evt.target.result;
-        const wb = XLSX.read(bstr, {type:'binary'});
-        /* Get first worksheet */
-        const wsname = wb.SheetNames[0];
-        const ws = wb.Sheets[wsname];
-        /* Convert array of arrays */
-        const data = XLSX.utils.sheet_to_json(ws, {header:1});
-        /* Update state */
-        this.setState({data: data})
-    };
-    reader.readAsBinaryString(f);
-  }
     
     render() {
       return(
         <div>
           <h1 style={{margin:"0px", textAlign:"center"}} >Gastos de Hacienda</h1>
+          <svg id="stati"/>
         </div>
       )
     }
 }
 
 
-export default Interface;
+export default Statistics;

@@ -1,5 +1,7 @@
-text {
+#stati text {
     font: 0.8rem  sans-serif;
+    color: black;
+    fill: #000;
   }
   
   rect.background {

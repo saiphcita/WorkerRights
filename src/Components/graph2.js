@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './CSS/graph2.css'
 import * as d3  from "d3";
-var  jsonData = require('./fileRamo2.json');
+var  jsonData = require('./Data/fileRamo2.json');
 
 class Graph2 extends Component {
   constructor(props) {
@@ -13,12 +13,14 @@ class Graph2 extends Component {
 
   
   componentDidMount(){
-    const svg = d3.select('#svg');
-    // const svgContainer = d3.select('#container');
+    const svg = d3.select('#graph2');
     
     const margin = 80;
-    const width = 1320 - 2 * 50;
-    const height = 610 - 2 * margin;
+
+    const clientWidth =  document.getElementById('container2').clientWidth;
+    const width = clientWidth - 2 * 48;
+    
+    const height = 620 - 2 * margin;
 
     const chart = svg.append('g')
       .attr('transform', `translate(${margin}, ${margin})`);
@@ -35,10 +37,6 @@ class Graph2 extends Component {
       .range([height, 0])
       .domain([0, 10000]);
 
-    // vertical grid lines
-    // const makeXLines = () => d3.axisBottom()
-    //   .scale(xScale)
-
     const makeYLines = () => d3.axisLeft()
       .scale(yScale)
 
@@ -48,15 +46,6 @@ class Graph2 extends Component {
 
     chart.append('g')
       .call(d3.axisLeft(yScale));
-
-    // vertical grid lines
-    // chart.append('g')
-    //   .attr('class', 'grid')
-    //   .attr('transform', `translate(0, ${height})`)
-    //   .call(makeXLines()
-    //     .tickSize(-height, 0, 0)
-    //     .tickFormat('')
-    //   )
 
     chart.append('g')
       .attr('class', 'grid')
@@ -77,6 +66,7 @@ class Graph2 extends Component {
       .attr('y', (g) => yScale(g.value))
       .attr('height', (g) => height - yScale(g.value))
       .attr('width', xScale.bandwidth())
+      .on('click' , (g) => { console.log(g.value) })
       .on('mouseenter', function (actual, i) {
         d3.selectAll('.value')
           .attr('opacity', 0)
@@ -84,34 +74,18 @@ class Graph2 extends Component {
         d3.select(this)
           .transition()
           .duration(300)
-          .attr('opacity', 0.6)
-          .attr('x', (a) => xScale(a.name) - 5)
-          .attr('width', xScale.bandwidth() + 10)
-
-        // const y = yScale(actual.value)
-
-        // var line = chart.append('line')
-        //   .attr('id', 'limit')
-        //   .attr('x1', 0)
-        //   .attr('y1', y)
-        //   .attr('x2', width)
-        //   .attr('y2', y)
+          .attr('opacity', 0.5)
+          .attr('x', (a) => xScale(a.name) - 8)
+          .attr('width', xScale.bandwidth() + 20)
+          .style("cursor", "pointer")
 
         barGroups.append('text')
-          .attr('class', 'divergence')
+          .attr('class', 'text')
           .attr('x', (a) => xScale(a.name) + xScale.bandwidth() / 2)
-          .attr('y', (a) => yScale(a.value) + 30)
+          .attr('y', (a) => yScale(a.value) - 10)
           .attr('fill', 'white')
           .attr('text-anchor', 'middle')
-          .text((a, idx) => {
-            const divergence = (a.value - actual.value).toFixed(1)
-            
-            let text = ''
-            if (divergence > 0) text += '+'
-            text += `${divergence}`
-
-            return idx !== i ? text : '';
-          })
+          .text((a) => `${a.value}`)
 
       })
       .on('mouseleave', function () {
@@ -124,6 +98,7 @@ class Graph2 extends Component {
           .attr('opacity', 1)
           .attr('x', (a) => xScale(a.name))
           .attr('width', xScale.bandwidth())
+          .style("cursor", "default")
 
         chart.selectAll('#limit').remove()
         chart.selectAll('.divergence').remove()
@@ -158,7 +133,7 @@ class Graph2 extends Component {
       .attr('x', width / 2 + margin)
       .attr('y', 40)
       .attr('text-anchor', 'middle')
-      .text('Graph 2')
+      .text('Gastos del Gobierno Federal')
 
   }
     
@@ -167,7 +142,7 @@ class Graph2 extends Component {
         <div>
             <div id='layout2'>
                 <div id='container2'>
-                <svg id="svg"/>
+                  <svg id="graph2"/>
                 </div>
             </div>
         </div>
