@@ -23,8 +23,8 @@ svg {
   fill: #80cbc4;
 }
 
-text {
-  font-size: 14px;
+#graph1 text {
+  font-size: 16px;
   fill: #fff;
 }
 
@@ -51,25 +51,26 @@ line#limit {
   stroke-opacity: 0.3;
 }
 
-text.divergence {
-  font-size: 14px;
+
+#graph1 text.divergence {
+  font-size: 16px;
   fill: #2F4A6D;
 }
 
-text.value {
-  font-size: 14px;
+#graph1 text.value {
+  font-size: 16px;
 }
 
-text.title {
+#graph1 text.title {
   font-size: 22px;
   font-weight: 600;
 }
 
-text.label {
-  font-size: 16px;
+#graph1 text.label {
+  font-size: 18px;
   font-weight: 400;
 }
 
-text.source {
-  font-size: 10px;
+#graph1 text.source {
+  font-size: 16px;
 }

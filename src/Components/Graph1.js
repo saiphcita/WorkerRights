@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './CSS/graph1.css'
 import * as d3  from "d3";
-var  jsonData = require('./Data/fileRamo.json');
+var  jsonData = require('./Data/Programas.json');
 
 class Graph1 extends Component {
   constructor(props) {

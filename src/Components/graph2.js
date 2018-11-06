@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './CSS/graph2.css'
 import * as d3  from "d3";
-var  jsonData = require('./Data/fileRamo2.json');
+var  jsonData = require('./Data/Programas2.json');
 
 class Graph2 extends Component {
   constructor(props) {
@@ -35,7 +35,7 @@ class Graph2 extends Component {
     
     const yScale = d3.scaleLinear()
       .range([height, 0])
-      .domain([0, 10000]);
+      .domain([0, 1000]);
 
     const makeYLines = () => d3.axisLeft()
       .scale(yScale)

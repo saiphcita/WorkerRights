@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Politica Exterior",
+        "value": 902.7434,
+        "millones": true
+    },
+    {
+        "name": "Ciberseguridad Financiera",
+        "value": 418.1154,
+        "millones": true
+    },
+    {
+        "name": "C\u00e1rceles Mexicanas",
+        "value": 366.3631,
+        "millones": true
+    },
+    {
+        "name": "Asuntos Administrativos",
+        "value": 274.1946,
+        "millones": true
+    },
+    {
+        "name": "Manutenci\u00f3n del Acervo Nacional",
+        "value": 51.6543,
+        "millones": true
+    },
+    {
+        "name": "Protecci\u00f3n Derechos Humanos",
+        "value": 0.5625,
+        "millones": true
+    }
+]
