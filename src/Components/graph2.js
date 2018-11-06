@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import './CSS/graph2.css'
 import * as d3  from "d3";
-var  jsonData = require('./Data/Programas2.json');
+
+var  programas = require('./Data/Programas.json');
+var jsonData = []
+for (let i=0; i < programas.length; i++){
+  if(programas[i].millones){
+      jsonData.push(programas[i])
+  }
+}
 
 class Graph2 extends Component {
   constructor(props) {
@@ -66,7 +73,7 @@ class Graph2 extends Component {
       .attr('y', (g) => yScale(g.value))
       .attr('height', (g) => height - yScale(g.value))
       .attr('width', xScale.bandwidth())
-      .on('click' , (g) => { console.log(g.value) })
+      .on('click' , (g) => { localStorage.setItem("statePage", 1); localStorage.setItem("jsonData", g.name); window.location.reload(); })
       .on('mouseenter', function (actual, i) {
         d3.selectAll('.value')
           .attr('opacity', 0)

@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import './CSS/statistics.css'
 import * as d3  from "d3";
 
-var  jsonData = require('./Data/file.json');
+var  programas = require('./Data/Programas.json');
+var jsonName = String(localStorage.getItem("jsonData"));
+
+for (let i=0; i < programas.length; i++){
+    if(programas[i].name === jsonName){
+        var jsonData = programas[i].jsonD
+    }
+}
 
 
 class Statistics extends Component {
