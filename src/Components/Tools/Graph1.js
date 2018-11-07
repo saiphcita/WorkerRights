@@ -92,7 +92,7 @@ class Graph1 extends Component {
           .attr('y', (a) => yScale(a.value) + 30)
           .attr('fill', 'white')
           .attr('text-anchor', 'middle')
-          .text((a) => `${a.value} $`)
+          .text((a) => `$${a.value}`)
 
       })
       .on('mouseleave', function () {
@@ -117,7 +117,7 @@ class Graph1 extends Component {
       .attr('x', (a) => xScale(a.name) + xScale.bandwidth() / 2)
       .attr('y', (a) => yScale(a.value) + 30)
       .attr('text-anchor', 'middle')
-      .text((a) => `${a.value} $`)
+      .text((a) => `$${a.value}`)
     
     svg
       .append('text')

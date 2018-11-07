@@ -30,7 +30,7 @@ class Statistics extends Component {
     width = 980,
     height = heightJson-80;
 
-    var dollarFormat = function(d) { return d3.format(',')(d) + "$" };
+    var dollarFormat = function(d) { return "$"+d3.format(',')(d) };
 
     var x = d3.scaleLinear()
         .range([0, width]);
@@ -116,7 +116,7 @@ class Statistics extends Component {
           .duration(duration)
           .call(xAxis)
 
-        var dollarFormat = function(d) { return d3.format(',')(d) + "$" };
+        var dollarFormat = function(d) { return "$"+d3.format(',')(d) };
         xAxis.tickFormat(dollarFormat)
 
       // Transition entering bars to their new position.
