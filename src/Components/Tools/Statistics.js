@@ -30,8 +30,12 @@ class Statistics extends Component {
     width = 980,
     height = heightJson-80;
 
+    var dollarFormat = function(d) { return d3.format(',')(d) + "$" };
+
     var x = d3.scaleLinear()
         .range([0, width]);
+
+    x.tickFormat(dollarFormat)
 
     var barHeight = 28;
 
@@ -46,6 +50,8 @@ class Statistics extends Component {
 
     var xAxis = d3.axisTop()
         .scale(x);
+
+    xAxis.tickFormat(dollarFormat)
 
     var svg = d3.select("#stati")
         .attr("width", width + margin.left + margin.right)
@@ -75,6 +81,8 @@ class Statistics extends Component {
       
       x.domain([0, root.value]).nice();
       down(root, 0);
+
+      x.tickFormat(dollarFormat)
       
 
     function down(d, i) {
@@ -101,12 +109,15 @@ class Statistics extends Component {
       enter.select("rect").style("fill", color(true));
 
       // Update the x-scale domain.
-      x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice();
+      x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice()
 
       // Update the x-axis.
       svg.selectAll(".x.axis").transition()
           .duration(duration)
-          .call(xAxis);
+          .call(xAxis)
+
+        var dollarFormat = function(d) { return d3.format(',')(d) + "$" };
+        xAxis.tickFormat(dollarFormat)
 
       // Transition entering bars to their new position.
       var enterTransition = enter.transition()
