@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import './CSS/graph2.css'
+import '../CSS/graph1.css'
 import * as d3  from "d3";
 
-var  programas = require('./Data/Programas.json');
+var  programas = require('../Data/Programas.json');
 var jsonData = []
 for (let i=0; i < programas.length; i++){
-  if(programas[i].millones){
+  if(!programas[i].millones){
       jsonData.push(programas[i])
   }
 }
 
-class Graph2 extends Component {
+class Graph1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,11 +20,11 @@ class Graph2 extends Component {
 
   
   componentDidMount(){
-    const svg = d3.select('#graph2');
-    
+    const svg = d3.select('#graph1');
+
     const margin = 80;
 
-    const clientWidth =  document.getElementById('container2').clientWidth;
+    const clientWidth =  document.getElementById('container').clientWidth;
     const width = clientWidth - 2 * 48;
     
     const height = 620 - 2 * margin;
@@ -42,7 +42,7 @@ class Graph2 extends Component {
     
     const yScale = d3.scaleLinear()
       .range([height, 0])
-      .domain([0, 1000]);
+      .domain([0, 500]);
 
     const makeYLines = () => d3.axisLeft()
       .scale(yScale)
@@ -89,7 +89,7 @@ class Graph2 extends Component {
         barGroups.append('text')
           .attr('class', 'text')
           .attr('x', (a) => xScale(a.name) + xScale.bandwidth() / 2)
-          .attr('y', (a) => yScale(a.value) - 10)
+          .attr('y', (a) => yScale(a.value) + 30)
           .attr('fill', 'white')
           .attr('text-anchor', 'middle')
           .text((a) => `${a.value}`)
@@ -115,7 +115,7 @@ class Graph2 extends Component {
       .append('text')
       .attr('class', 'value')
       .attr('x', (a) => xScale(a.name) + xScale.bandwidth() / 2)
-      .attr('y', (a) => yScale(a.value) + -10)
+      .attr('y', (a) => yScale(a.value) + 30)
       .attr('text-anchor', 'middle')
       .text((a) => `${a.value}`)
     
@@ -126,7 +126,7 @@ class Graph2 extends Component {
       .attr('y', margin / 2.4)
       .attr('transform', 'rotate(-90)')
       .attr('text-anchor', 'middle')
-      .text('Montos en Millones de Pesos')
+      .text('Montos en Billones de Pesos')
 
     svg.append('text')
       .attr('class', 'label')
@@ -147,9 +147,9 @@ class Graph2 extends Component {
     render() {
       return(
         <div>
-            <div id='layout2'>
-                <div id='container2'>
-                  <svg id="graph2"/>
+            <div id='layout'>
+                <div id='container'>
+                  <svg id="graph1"/>
                 </div>
             </div>
         </div>
@@ -158,4 +158,4 @@ class Graph2 extends Component {
 }
 
 
-export default Graph2;
+export default Graph1;

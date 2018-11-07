@@ -1,0 +1,1877 @@
+[
+    {
+        "name": "Defensa y Soberan\u00eda Nacional",
+        "value": 499.2866,
+        "jsonD": {
+            "name": "flare",
+            "children": [
+                {
+                    "name": "DIF CAMBIARIA DEL MES DE ENERO 20180002",
+                    "children": [
+                        {
+                            "name": "Gasto 29",
+                            "size": 52300,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD14GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 26",
+                            "size": 3295022,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 30",
+                            "size": 52300,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD15GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 47",
+                            "size": 590515,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 50",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "GASTOS DE OPERACION PARA LAS REPRESENTACIONES",
+                    "children": [
+                        {
+                            "name": "Gasto 27",
+                            "size": 86504052,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        },
+                        {
+                            "name": "Gasto 48",
+                            "size": 68747268,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "D",
+                    "children": [
+                        {
+                            "name": "Gasto 28",
+                            "size": 4519542,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        },
+                        {
+                            "name": "Gasto 49",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        }
+                    ]
+                }
+            ]
+        },
+        "millones": false
+    },
+    {
+        "name": "Gastos Militares",
+        "value": 335.6418,
+        "jsonD": {
+            "name": "flare",
+            "children": [
+                {
+                    "name": "COMPROMISO DE NOMINA",
+                    "children": [
+                        {
+                            "name": "Gasto 1",
+                            "size": 57415156815,
+                            "subtitle": "Autorizador: S.PPTO. JOSE OCTAVIO VERA GARDU\u00d1O"
+                        },
+                        {
+                            "name": "Gasto 6",
+                            "size": 220796478120,
+                            "subtitle": "Autorizador: S.PPTO. JOSE OCTAVIO VERA GARDU\u00d1O"
+                        }
+                    ]
+                }
+            ]
+        },
+        "millones": false
+    },
+    {
+        "name": "Inmuebles Oficinas",
+        "value": 55.5197,
+        "jsonD": {
+            "name": "flare",
+            "children": [
+                {
+                    "name": "PAGODECAPITALQARROJAELARRENDAMIENTOFINANCIEROEDFOTLATELOLCOFEBRERO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 93",
+                            "size": 12312848,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMPLIACION PARA PAGOS AL 28 SEPT2018",
+                    "children": [
+                        {
+                            "name": "Gasto 95",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "CAPITAL ARRENDAMIENTO FINANCIERO EDFO TLATELOLCO SRE FEBRERO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 97",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMPLIACION PARA PAGO DE INTERESES DE ARRENDAMIENTO FINANCIERO ENERO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 60",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE INTERESES QUE ARROJA EL ARRENDAMIENTO FINANCIERO EDFO TLATELOLCO AGOSTO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 72",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE INRTERESES DE ARRENDAMIENTO FINANCIERO EDFO TLATELOLCO MARZO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 65",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "INTERESES ARRENDAMIENTO FINANCIERO EDIFICIO TLATELOLCO",
+                    "children": [
+                        {
+                            "name": "Gasto 64",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE INTERESES ARRENDAMIENTO FINANCIERO EDFO TLATELOLCO ENERO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 67",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE CAPITAL ARRENDAMIENTO FINANCIERO DEL EDIFICIOTLATELOLCO JULIO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 99",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODECAPITALARRENDAMIENTOFIANCIEROEDFOTLATELOLCOENERO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 89",
+                            "size": 12232420,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODINTERESESDARRENDAMIENTOFINANCIEROEDFOTLATELOLCOJULIO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 73",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: JES\u00daS ALEJANDRO CRUZ DO\u00d1AN"
+                        },
+                        {
+                            "name": "Gasto 80",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODCAPITALQARROJAELARRENDAMIENTOFINANCIEROEDFOTLATELOLCOAGOSTO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 86",
+                            "size": 12806645,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODEINTERESESARRENDAMIENTOFINANCIEROEDFOTLATELOLCOMAYO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 55",
+                            "size": 11391883,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        },
+                        {
+                            "name": "Gasto 78",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE INTERESES AL ARRENDAMIENTO FINANCIERO EDFO TLATELOLCO ABRIL 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 66",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE CAPITAL ARRENDAMIENTO FIANANCIERO EDFO TLATELOLCO ENERO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 98",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMPLIACION PARA PAGO DE ARRENDAMIENTO MES DE SEPTIEMBRE 26/09/2018",
+                    "children": [
+                        {
+                            "name": "Gasto 94",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "CAPITAL ARRENDAMIENTO FINANCIERO EDFO TLATELOLCO SRE",
+                    "children": [
+                        {
+                            "name": "Gasto 96",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODEINRTERESESDEARRENDAMIENTOFINANCIEROEDFOTLATELOLCOMARZO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 52",
+                            "size": 10670592,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        },
+                        {
+                            "name": "Gasto 75",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODINTERESESQARROJAELARRENDAMIENTOFINANCIEROEDFOTLATELOLCOAGOSTO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 57",
+                            "size": 10746316,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        },
+                        {
+                            "name": "Gasto 81",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMPLIACION PARA PAGO DE INTERESES MES DE SEPTIEMBRE 26/09/2018",
+                    "children": [
+                        {
+                            "name": "Gasto 61",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE INTERESES ARRENDAMIENTO FINANCIERO EDFO TLATELOLCO MAYO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 68",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODECAPITALDEARRENDAMIENTOFINANCIEROEDFOTLATELOLCOMARZO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 92",
+                            "size": 12393805,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODEINTERESESQARROJAELARRENDAMIENTOFINANCIEROEDFOTLATELOLCOFEBRERO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 56",
+                            "size": 9152640,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        },
+                        {
+                            "name": "Gasto 79",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "CAPITALARRENDAMIENTOFINANCIEROEDFOTLATELOLCOABRIL2018",
+                    "children": [
+                        {
+                            "name": "Gasto 85",
+                            "size": 12475294,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMPLIACION PARA PAGOS AL 28SEPT2018",
+                    "children": [
+                        {
+                            "name": "Gasto 62",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODINTERESESQARROJAELARRENDAMIENTOFINANCIEROEDFOTLATELOLCOOCTUBRE2018",
+                    "children": [
+                        {
+                            "name": "Gasto 58",
+                            "size": 10337319,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        },
+                        {
+                            "name": "Gasto 82",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODINTERESESQARROJAELARRENDAMIENTOFINANCIEROEDFOTLATELOLCOSEPTIEMBRE2018",
+                    "children": [
+                        {
+                            "name": "Gasto 59",
+                            "size": 10179805,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        },
+                        {
+                            "name": "Gasto 83",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "INTERESES ARRENDAMIENTO FINANCIERO EDFO TLATELOLCO FEBRERO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 63",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "INTERESESARRENDAMIENTOFINANCIEROEDFOTLATELOLCOABRIL2018",
+                    "children": [
+                        {
+                            "name": "Gasto 51",
+                            "size": 10636573,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        },
+                        {
+                            "name": "Gasto 74",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODCAPITALQARROJAELARRENDAMIENTOFINANCIEROEDFOTLATELOLCOSEPTIEMBRE2018",
+                    "children": [
+                        {
+                            "name": "Gasto 88",
+                            "size": 12890849,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODECAPITALARRENDAMIENTOFINANCIEROEDFOTLATELOLCOMAYO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 91",
+                            "size": 12557320,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODCAPITALDEARRENDAMIENTOFINANCIEROEDFOTLATELOLCOJULIO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 84",
+                            "size": 12722991,
+                            "subtitle": "Autorizador: ALFREDO MEDINA TORIZ"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODCAPITALQARROJAELARRENDAMIENTOFINANCIEROEDFOTLATELOLCOOCTUBRE2018",
+                    "children": [
+                        {
+                            "name": "Gasto 87",
+                            "size": 12975606,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE INTERESES DEL ARRENDAMIENTO FINANCIERO DEL EDFO TLATELOLCO JUNIO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 71",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODEINTERESESARRENDAMIENTOFINANCIEROEDFOTLATELOLCOENERO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 53",
+                            "size": 10157480,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        },
+                        {
+                            "name": "Gasto 76",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE INTERESES DE ARRENDAMIENTO FINANCIERO DEL EDFO TLATELOLCO JUNIO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 70",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODEINTERESESARRENDAMIENTOFINANCIEROEDFOTLATELOLCOJUNIO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 54",
+                            "size": 11796152,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        },
+                        {
+                            "name": "Gasto 77",
+                            "size": 11504015,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGODECAPITALARRENDAMIENTOFINANCIEROEDFOTLATELOLCOJUNIO2018",
+                    "children": [
+                        {
+                            "name": "Gasto 90",
+                            "size": 12639884,
+                            "subtitle": "Autorizador: CARLOS IV\u00c1N P\u00c9REZ MEJ\u00cdA"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE INTERESES ARRENDAMIENTO FINANCIERO EDIFICIO TLATELOLCO JULIO 2018",
+                    "children": [
+                        {
+                            "name": "Gasto 69",
+                            "size": 2903794624,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                }
+            ]
+        },
+        "millones": false
+    },
+    {
+        "name": "Politica Exterior",
+        "value": 908.0264,
+        "jsonD": {
+            "name": "flare",
+            "children": [
+                {
+                    "name": "SOLICITUD5GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 1",
+                            "size": 12805549,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 5",
+                            "size": 203256,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD12GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 21",
+                            "size": 26782586,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 25",
+                            "size": 425107,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD11GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 39",
+                            "size": 1902623,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 42",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD13GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 43",
+                            "size": 3568774,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 46",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "DIF CAMBIARIA DEL MES DE ENERO 20180002",
+                    "children": [
+                        {
+                            "name": "Gasto 4",
+                            "size": 203256,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        },
+                        {
+                            "name": "Gasto 9",
+                            "size": 342095,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        },
+                        {
+                            "name": "Gasto 14",
+                            "size": 71361,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        },
+                        {
+                            "name": "Gasto 19",
+                            "size": 278916,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        },
+                        {
+                            "name": "Gasto 24",
+                            "size": 425107,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD6GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 6",
+                            "size": 21552689,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 10",
+                            "size": 342095,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD9GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 35",
+                            "size": 61600619,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 38",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD8GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 11",
+                            "size": 4495898,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 15",
+                            "size": 71361,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "GASTOS DE OPERACION PARA LAS REPRESENTACIONES",
+                    "children": [
+                        {
+                            "name": "Gasto 2",
+                            "size": 86504052,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        },
+                        {
+                            "name": "Gasto 7",
+                            "size": 86504052,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        },
+                        {
+                            "name": "Gasto 12",
+                            "size": 86504052,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        },
+                        {
+                            "name": "Gasto 17",
+                            "size": 86504052,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        },
+                        {
+                            "name": "Gasto 22",
+                            "size": 86504052,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        },
+                        {
+                            "name": "Gasto 32",
+                            "size": 68747268,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        },
+                        {
+                            "name": "Gasto 36",
+                            "size": 68747268,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        },
+                        {
+                            "name": "Gasto 40",
+                            "size": 68747268,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        },
+                        {
+                            "name": "Gasto 44",
+                            "size": 68747268,
+                            "subtitle": "Autorizador: ISRAEL FERNANDO GONZ\u00c1LEZ REYES"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD10GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 16",
+                            "size": 17572307,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 20",
+                            "size": 278916,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "D",
+                    "children": [
+                        {
+                            "name": "Gasto 3",
+                            "size": 4519542,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        },
+                        {
+                            "name": "Gasto 8",
+                            "size": 4519542,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        },
+                        {
+                            "name": "Gasto 13",
+                            "size": 4519542,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        },
+                        {
+                            "name": "Gasto 18",
+                            "size": 4519542,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        },
+                        {
+                            "name": "Gasto 23",
+                            "size": 4519542,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        },
+                        {
+                            "name": "Gasto 33",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        },
+                        {
+                            "name": "Gasto 37",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        },
+                        {
+                            "name": "Gasto 41",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        },
+                        {
+                            "name": "Gasto 45",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: MAR\u00cdA GUADALUPE PLANCARTE GONZ\u00c1LEZ"
+                        }
+                    ]
+                },
+                {
+                    "name": "SOLICITUD7GASTOSDEOPERACION1(SOLPAG)",
+                    "children": [
+                        {
+                            "name": "Gasto 31",
+                            "size": 1084735,
+                            "subtitle": "Autorizador: ALBA LUCIA RUIZ SALCIDO"
+                        },
+                        {
+                            "name": "Gasto 34",
+                            "size": 2989011,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                }
+            ]
+        },
+        "millones": true
+    },
+    {
+        "name": "Ciberseguridad Financiera",
+        "value": 418.1154,
+        "jsonD": {
+            "name": "flare",
+            "children": [
+                {
+                    "name": "ADEC 2018-6-G3A-3606  2000",
+                    "children": [
+                        {
+                            "name": "Gasto 69",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "REDUCCION A PARTIDAS DE GASTO",
+                    "children": [
+                        {
+                            "name": "Gasto 2",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 6",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 9",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 13",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 16",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 22",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 26",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 30",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 35",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 39",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 74",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 79",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 84",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 87",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 93",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 97",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 99",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "LIBERACI\u00d3N PARA ADECUACI\u00d3N",
+                    "children": [
+                        {
+                            "name": "Gasto 83",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "COMPROMISO ADEC CAMBIO DE ACTIVIDAD RECURSOS SEMANA NAC EDUC FIN",
+                    "children": [
+                        {
+                            "name": "Gasto 71",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "COMPROMISO ORIGINAL CAPITULO 2000",
+                    "children": [
+                        {
+                            "name": "Gasto 1",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 3",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 5",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 8",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 11",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 15",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 17",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 18",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 19",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 21",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 23",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 25",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 27",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 29",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 31",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 32",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 34",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 36",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 38",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                },
+                {
+                    "name": "CONDUSEF CAP 2000",
+                    "children": [
+                        {
+                            "name": "Gasto 68",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 82",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 86",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 88",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 89",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 90",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 92",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 94",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 96",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "REDUCCION A PARRIDAS DE GASTO",
+                    "children": [
+                        {
+                            "name": "Gasto 12",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                },
+                {
+                    "name": "SUFICIENCIA A PROVEEDOR",
+                    "children": [
+                        {
+                            "name": "Gasto 76",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "TRASPASO AL COMPROMISO 019307",
+                    "children": [
+                        {
+                            "name": "Gasto 80",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "DESCONPROMISO PARA ADECUACION PRESUPUESTAL",
+                    "children": [
+                        {
+                            "name": "Gasto 72",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 78",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO DE ADQUISICI\u00d3N DE PERI\u00d3DICOS Y REVISTAS JULIO",
+                    "children": [
+                        {
+                            "name": "Gasto 75",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "LIBERACION DE RECURSOS PARA ADECUACION",
+                    "children": [
+                        {
+                            "name": "Gasto 73",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMPLIACION A PARTIDAS DE GASTO",
+                    "children": [
+                        {
+                            "name": "Gasto 4",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 7",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 10",
+                            "size": 16559024,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 14",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 20",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 24",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 28",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 33",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 37",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 66",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 67",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 70",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 77",
+                            "size": 12419268,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 81",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 85",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 91",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 95",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        },
+                        {
+                            "name": "Gasto 98",
+                            "size": 8279512,
+                            "subtitle": "Autorizador: Ignacio Alberto Larrondo Aguado"
+                        }
+                    ]
+                }
+            ]
+        },
+        "millones": true
+    },
+    {
+        "name": "C\u00e1rceles Mexicanas",
+        "value": 366.3631,
+        "jsonD": {
+            "name": "flare",
+            "children": [
+                {
+                    "name": "PDP PEDIDO 017/2016",
+                    "children": [
+                        {
+                            "name": "Gasto 61",
+                            "size": 1651434,
+                            "subtitle": "Autorizador: Angelica J\u00faarez Aguilar"
+                        },
+                        {
+                            "name": "Gasto 65",
+                            "size": 21593492,
+                            "subtitle": "Autorizador: Jos\u00e9 N. Trejo Andrade"
+                        },
+                        {
+                            "name": "Gasto 66",
+                            "size": 21593492,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "ADQUISICI\u00d3N DE BLANCOS PARA LOS CENTROS FEDERALES DE READAPTACI\u00d3N SOCIAL, CEFEREPSI Y CPIM.",
+                    "children": [
+                        {
+                            "name": "Gasto 64",
+                            "size": 71872347,
+                            "subtitle": "Autorizador: Jos\u00e9 Carlos Torres Rosas"
+                        }
+                    ]
+                },
+                {
+                    "name": "POR EL ARRENDAMIENTO DE EDIFICIO HABILITADO PARA OFICINAS DE RECLUTAMIENTO, SELECCI\u00d3N Y CAPACITACION DEL PERSONAL PARA EL CEFERESO N.2 OCCIDENTE.",
+                    "children": [
+                        {
+                            "name": "Gasto 69",
+                            "size": 54608,
+                            "subtitle": "Autorizador: Jos\u00e9 Carlos Torres Rosas"
+                        }
+                    ]
+                },
+                {
+                    "name": "PEDIDO 017/2016",
+                    "children": [
+                        {
+                            "name": "Gasto 63",
+                            "size": 10042827,
+                            "subtitle": "Autorizador: Gabriela Ofelia Mart\u00ednez Santiago"
+                        },
+                        {
+                            "name": "Gasto 68",
+                            "size": 21593492,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO INTEGRAL DE FOTOCOPIADO, IMPRESI\u00d3N, ESCANEO Y RECEPCION Y ENVIO DE FAX EN BLANCO Y NEGRO EN EL OADPRS.",
+                    "children": [
+                        {
+                            "name": "Gasto 94",
+                            "size": 46000000,
+                            "subtitle": "Autorizador: Jos\u00e9 Carlos Torres Rosas"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO INTEGRAL DE FOTOCOPIADO, IMPRESI\u00d3N, ESCANEO Y RECEPCION Y ENVIO DE FAX EN BLANCO Y NEGRO EN EL OADPRS",
+                    "children": [
+                        {
+                            "name": "Gasto 93",
+                            "size": 46000000,
+                            "subtitle": "Autorizador: Jos\u00e9 Carlos Torres Rosas"
+                        }
+                    ]
+                },
+                {
+                    "name": "PEDIDO N\u00b0 017/2016",
+                    "children": [
+                        {
+                            "name": "Gasto 62",
+                            "size": 3803442,
+                            "subtitle": "Autorizador: ELIMINAR Martha Elena Quintero Morales"
+                        },
+                        {
+                            "name": "Gasto 67",
+                            "size": 21593492,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PDP ARR/02/2015",
+                    "children": [
+                        {
+                            "name": "Gasto 70",
+                            "size": 3862,
+                            "subtitle": "Autorizador: Jos\u00e9 N. Trejo Andrade"
+                        },
+                        {
+                            "name": "Gasto 71",
+                            "size": 3862,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO INTEGRAL DE FOTOCOPIADO, IMPRESI\u00d3N, ESCANEO Y RECEPCION Y ENVIO DE FAX EN BLANCO Y NEGRO EN EL OADPRS. ESTE COMPROMISO SE PAGA BAJO EL AMPARO DEL ART. 41 FRACC. IV LAASSP",
+                    "children": [
+                        {
+                            "name": "Gasto 95",
+                            "size": 46000000,
+                            "subtitle": "Autorizador: Jos\u00e9 Carlos Torres Rosas"
+                        }
+                    ]
+                },
+                {
+                    "name": "PDP S/025/2016",
+                    "children": [
+                        {
+                            "name": "Gasto 91",
+                            "size": 8552937,
+                            "subtitle": "Autorizador: ELIMINAR Martha Elena Quintero Morales"
+                        },
+                        {
+                            "name": "Gasto 99",
+                            "size": 46000000,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE IVA-ISR",
+                    "children": [
+                        {
+                            "name": "Gasto 72",
+                            "size": 3862,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                }
+            ]
+        },
+        "millones": true
+    },
+    {
+        "name": "Asuntos Administrativos",
+        "value": 274.1946,
+        "jsonD": {
+            "name": "flare",
+            "children": [
+                {
+                    "name": "COMPROMISO ORIGINAL CAPITULO 2000",
+                    "children": [
+                        {
+                            "name": "Gasto 40",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 42",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 43",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 44",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 45",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 46",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 47",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 48",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 49",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 50",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 51",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 52",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        },
+                        {
+                            "name": "Gasto 53",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                },
+                {
+                    "name": "REDUCCION A PARTIDAS DE GASTO",
+                    "children": [
+                        {
+                            "name": "Gasto 41",
+                            "size": 4139756,
+                            "subtitle": "Autorizador: David Bonilla Ramirez"
+                        }
+                    ]
+                }
+            ]
+        },
+        "millones": true
+    },
+    {
+        "name": "Manutenci\u00f3n del Acervo Nacional",
+        "value": 51.6543,
+        "jsonD": {
+            "name": "flare",
+            "children": [
+                {
+                    "name": "Decremento al compromiso para adecuaci\u00f3n presupuestal",
+                    "children": [
+                        {
+                            "name": "Gasto 10",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "DECREMENTO",
+                    "children": [
+                        {
+                            "name": "Gasto 12",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        },
+                        {
+                            "name": "Gasto 16",
+                            "size": 6553257,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "DECREMENTO PARA ADECUACI\u00d3N PRESUPUESTAL",
+                    "children": [
+                        {
+                            "name": "Gasto 14",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DEL SERVICIO DE COMPUTO DEL MES DE MARZO 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 5",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Diana Mancilla Montiel"
+                        },
+                        {
+                            "name": "Gasto 30",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "DECREMENTO POR CIERRE DE MES",
+                    "children": [
+                        {
+                            "name": "Gasto 21",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "DECREMENTO PARA ADECUACI\u00d3N PRESUPUESTARIA",
+                    "children": [
+                        {
+                            "name": "Gasto 18",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE SERVICIO DE COMPUTO",
+                    "children": [
+                        {
+                            "name": "Gasto 1",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Diana Mancilla Montiel"
+                        },
+                        {
+                            "name": "Gasto 26",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DEL SERVICIO DE COMPUTO E IMPRESI\u00d3N JUNIO 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 6",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Diana Mancilla Montiel"
+                        },
+                        {
+                            "name": "Gasto 31",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO INTEGRAL DE ARRENDAMIENTO DE EQUIPO DE COMPUTO PARA EL ARCHIVO GENERAL DE LA NACI\u00d3N",
+                    "children": [
+                        {
+                            "name": "Gasto 20",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "Decremento para adecuaci\u00f3n",
+                    "children": [
+                        {
+                            "name": "Gasto 17",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "incremento para pago de factura",
+                    "children": [
+                        {
+                            "name": "Gasto 15",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMPLIACI\u00d3N PARA PAGO DEL SERVICIO CORRESPONDIENTE AL MES DE NOVIEMBRE 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 11",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO INTEGRAL DE ARRENDAMIENTO DE EQUIPO DE COMPUTO DEL MES DE ENERO 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 9",
+                            "size": 203348,
+                            "subtitle": "Autorizador: ELIMINAR Ana Lilia Gonz\u00e1lez Ortiz"
+                        },
+                        {
+                            "name": "Gasto 34",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DE SERVICIO INTEGRAL DE ARRENDAMIENTO DE EQUIPO DE COMPUTO",
+                    "children": [
+                        {
+                            "name": "Gasto 2",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Diana Mancilla Montiel"
+                        },
+                        {
+                            "name": "Gasto 27",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO DE ARRENDAMIENTO DE COMPUTO FEBRERO 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 8",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Diana Mancilla Montiel"
+                        },
+                        {
+                            "name": "Gasto 33",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO INTEGRAL DE ARRENDAMIENTO DE EQUIPO DE C\u00d3MPUTO PARA EL ARCHIVO GENERAL DE LA NACI\u00d3N DEL MES DE SEPTIEMBRE DE 2017, DEL CONTRATO No. AGN/SRMSG/ADQ/007/2015.",
+                    "children": [
+                        {
+                            "name": "Gasto 24",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Marilyn Camacho N\u00fa\u00f1ez"
+                        },
+                        {
+                            "name": "Gasto 36",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "Servicio integral de arrendamiento de equipo de c\u00f3mputo y equipo de impresi\u00f3n del mes de septiembre 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 25",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Marilyn Camacho N\u00fa\u00f1ez"
+                        },
+                        {
+                            "name": "Gasto 37",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DEL SERVICIO DE IMPRESI\u00d3N CORRESPONDIENTE AL MES DE ENERO DE 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 7",
+                            "size": 48024,
+                            "subtitle": "Autorizador: Diana Mancilla Montiel"
+                        },
+                        {
+                            "name": "Gasto 32",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "incremento para pago de Factura",
+                    "children": [
+                        {
+                            "name": "Gasto 19",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "INCREMENTO PARA PAGO DE FACTURAS",
+                    "children": [
+                        {
+                            "name": "Gasto 22",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DEL SERVICIO DE ARRENDAMIENTO DE COMPUTO E IMPRESI\u00d3N JULIO 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 4",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Diana Mancilla Montiel"
+                        },
+                        {
+                            "name": "Gasto 29",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "PAGO DEL ARRENDAMIENTO EQUIPO DE COMPUTO MAYO 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 3",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Diana Mancilla Montiel"
+                        },
+                        {
+                            "name": "Gasto 28",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "SERVICIO INTEGRAL DE ARRENDAMIENTO DE EQUIPO DE C\u00d3MPUTO PARA EL ARCHIVO GENERAL DE LA NACI\u00d3N DEL MES DE OCTUBRE DE 2017, DEL CONTRATO No. AGN/SRMSG/ADQ/007/2015.",
+                    "children": [
+                        {
+                            "name": "Gasto 23",
+                            "size": 251372,
+                            "subtitle": "Autorizador: Marilyn Camacho N\u00fa\u00f1ez"
+                        },
+                        {
+                            "name": "Gasto 35",
+                            "size": 251372,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "Decremento al compromiso para adecuaci\u00f3n",
+                    "children": [
+                        {
+                            "name": "Gasto 13",
+                            "size": 3276628,
+                            "subtitle": "Autorizador: Fortunato Antonio Hern\u00e1ndez"
+                        }
+                    ]
+                }
+            ]
+        },
+        "millones": true
+    },
+    {
+        "name": "Protecci\u00f3n Derechos Humanos",
+        "value": 0.9375,
+        "jsonD": {
+            "name": "flare",
+            "children": [
+                {
+                    "name": "FONDO ROTATORIO 2017",
+                    "children": [
+                        {
+                            "name": "Gasto 38",
+                            "size": 187500,
+                            "subtitle": "Autorizador: ELIMINAR Laura Evelyn G\u00f3mez Mart\u00ednez"
+                        },
+                        {
+                            "name": "Gasto 40",
+                            "size": 187500,
+                            "subtitle": "Autorizador: Salvador Flores Rodriguez"
+                        },
+                        {
+                            "name": "Gasto 41",
+                            "size": 187500,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                },
+                {
+                    "name": "REDUCCION AL COMPROMISO",
+                    "children": [
+                        {
+                            "name": "Gasto 39",
+                            "size": 187500,
+                            "subtitle": "Autorizador: Ricardo G\u00f3mez N\u00e1jar"
+                        }
+                    ]
+                },
+                {
+                    "name": "REINTEGRO DEL FONDO ROTATORIO",
+                    "children": [
+                        {
+                            "name": "Gasto 42",
+                            "size": 187500,
+                            "subtitle": "Autorizador: SERVICIO_WEB"
+                        }
+                    ]
+                }
+            ]
+        },
+        "millones": true
+    }
+]

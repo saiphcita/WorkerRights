@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import './CSS/statistics.css'
+import '../CSS/statistics.css'
 import * as d3  from "d3";
 
-var  programas = require('./Data/Programas.json');
+var  programas = require('../Data/Programas.json');
 var jsonName = String(localStorage.getItem("jsonData"));
 
 for (let i=0; i < programas.length; i++){
     if(programas[i].name === jsonName){
         var jsonData = programas[i].jsonD
+
+        var MarginLeftJson = programas[i].sizes[0]
+        var heightJson = programas[i].sizes[1]
     }
 }
 
@@ -16,15 +19,16 @@ class Statistics extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [ ]
+      data: [ ],
+      titleStati: localStorage.getItem("jsonData")
     };
   }
 
   
-  componentDidMount(){
-    var margin = {top: 40, right: 0, bottom: 0, left: 400},
-    width = 1220 - margin.left - margin.right,
-    height = 1000 - margin.top - margin.bottom;
+  componentDidMount(){    
+    var margin = {top: 40, right: 0, bottom: 0, left: MarginLeftJson},
+    width = 980,
+    height = heightJson-80;
 
     var x = d3.scaleLinear()
         .range([0, width]);
@@ -32,7 +36,7 @@ class Statistics extends Component {
     var barHeight = 28;
 
     var color = d3.scaleOrdinal()
-        .range(["black", "#ccc"]);
+        .range(["#80cbc4", "#ccc"]);
 
     var duration = 750,
         delay = 32;
@@ -220,7 +224,7 @@ class Statistics extends Component {
           .attr("y", barHeight / 2)
           .attr("dy", ".2em")
           .style("text-anchor", "end")
-          .style("font-size", "0.76rem")
+          .style("font-size", "0.7rem")
           .text(function(d) { return d.data.name; });
 
       bar.append("text")
@@ -229,8 +233,19 @@ class Statistics extends Component {
             .attr("y", barHeight)
             .style("text-anchor", "end")
             .style("fill","#999")
+            .style("font-size", "0.6rem")
             .attr("dy", ".2em")
             .text(function(d) { return d.data.subtitle; });
+
+        bar.append("text")
+            .attr("class", "subtitle")
+            .attr("x", -80)
+            .attr("y", barHeight/2)
+            .style("text-anchor", "end")
+            .style("fill","black")
+            .style("font-size", "0.6rem")
+            .attr("dy", ".2em")
+            .text(function(d) { return d.data.ramo; });
 
       bar.append("rect")
           .attr("width", function(d) { return x(d.value); })
@@ -254,8 +269,10 @@ class Statistics extends Component {
     render() {
       return(
         <div>
-          <h1 style={{margin:"0px", textAlign:"center"}} >Gastos de Hacienda</h1>
-          <svg id="stati"/>
+            <h1 style={{margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >{this.state.titleStati}</h1>
+            <div id='containerStatis' style={{height:{heightJson}+"px"}}>
+                <svg id="stati"/>
+            </div>
         </div>
       )
     }

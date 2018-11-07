@@ -1,19 +1,26 @@
+#containerStatis {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 8px;
+  background-color: #2F4A6D;
+}
+
 #stati text {
-    font: 0.8rem  sans-serif;
-    color: black;
-    fill: #000;
-  }
-  
-  rect.background {
-    fill: white;
-  }
-  
-  .axis {
-    shape-rendering: crispEdges;
-  }
-  
-  .axis path,
-  .axis line {
-    fill: none;
-    stroke: #000;
-  }
+  font: 0.76rem  sans-serif;
+  color: white;
+  fill: white;
+}
+
+rect.background {
+  fill: #2F4A6D;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: white;
+}
