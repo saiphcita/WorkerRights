@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     var button = <button onClick={()=>{ localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>return</button>
-    var page = ""
+    var page = <div><Graph1/><Graph2/></div>
     
     if(this.state.statePage === "0"){
       page = <div><Graph1/><Graph2/></div>
