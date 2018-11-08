@@ -48,6 +48,7 @@ for (let i=0; i < programas.length; i++){
 
         //Para la Sub-Grafica de institciones
         var jsonSubGraph  = [];
+        //para Millones
         if(programas[i].millones){
             for(let i=0; i<uniqueInstituciones.length;i++){
                 const objectSubGraph = {
@@ -57,15 +58,25 @@ for (let i=0; i < programas.length; i++){
     
                 jsonSubGraph.push(objectSubGraph)
             }
+        //para Billones
         }else{
-            for(let i=0; i<uniqueInstituciones.length;i++){
-                const objectSubGraph = {
-                    "name": uniqueInstituciones[i][0],
-                    "value": (uniqueInstituciones[i][1].reduce((a, b) => a + b, 0) / 1000000000)
+            if(jsonName === "Defensa y Soberanía Nacional"){
+                var objectSubGraph = {
+                    "name": uniqueInstituciones[0][0],
+                    "value": (uniqueInstituciones[0][1].reduce((a, b) => a + b, 0) / 1000000000)
                 };
 
                 jsonSubGraph.push(objectSubGraph)
-            } 
+            }else{
+                for(let i=0; i<uniqueInstituciones.length;i++){
+                    objectSubGraph = {
+                        "name": uniqueInstituciones[i][0],
+                        "value": (uniqueInstituciones[i][1].reduce((a, b) => a + b, 0) / 1000000000)
+                    };
+        
+                    jsonSubGraph.push(objectSubGraph)
+                }
+            }
         }
 
         var miBi = programas[i].millones

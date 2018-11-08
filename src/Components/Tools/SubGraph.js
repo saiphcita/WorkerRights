@@ -18,13 +18,14 @@ class SubGraph extends Component {
     const clientWidth =  document.getElementById('containerSub').clientWidth;
     const width = clientWidth - 2 * 48;
     
-    const height = 480 - 2 * margin;
+    const height = 420 - 2 * margin;
 
     const chart = svg.append('g')
       .attr('transform', `translate(${margin}, ${margin})`);
 
       
     const sample = this.props.jsonData;
+    console.log(sample)
 
     const xScale = d3.scaleBand()
       .range([0, width])
@@ -36,7 +37,7 @@ class SubGraph extends Component {
         .range([height, 0])
         .domain([0, 1000]);
     }else{
-      var yScale = d3.scaleLinear()
+      yScale = d3.scaleLinear()
         .range([height, 0])
         .domain([0, 500]);
     }
