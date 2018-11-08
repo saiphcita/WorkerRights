@@ -9,8 +9,10 @@ div#layoutSub {
 div#containerSub {
   width: 1340px;
   height: 420px;
-  margin: 0 !important;
-  background-color: #2F4A6D;
+  margin: auto;
+  float: left;
+  border-bottom: 8px solid black;
+  background-color: white;
 }
 
 svg {
@@ -24,7 +26,7 @@ svg {
 
 #graphSub text {
   font-size: 12px;
-  fill: #fff;
+  fill: black;
 }
 
 path {

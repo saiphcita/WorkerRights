@@ -25,7 +25,6 @@ class SubGraph extends Component {
 
       
     const sample = this.props.jsonData;
-    console.log(sample)
 
     const xScale = d3.scaleBand()
       .range([0, width])

@@ -353,11 +353,12 @@ class Statistics extends Component {
     render() {
       return(
         <div>
-            <h1 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >{this.state.titleStati}</h1>
+            <h1 style={{width:"1340px", margin:"0px", padding:"20px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"black"}} >{this.state.titleStati}</h1>
+            <SubGraph jsonData={jsonSubGraph} miBi={miBi}/>
+            <h2 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >Razón de Gasto</h2>
             <div id='containerStatis' style={{height:{heightJson}+"px"}}>
                 <svg id="stati"/>
             </div>
-            <SubGraph jsonData={jsonSubGraph} miBi={miBi}/>
         </div>
       )
     }

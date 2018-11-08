@@ -25,7 +25,6 @@ class Graph1 extends Component {
     const margin = 80;
 
     const clientWidth =  document.getElementById('container').clientWidth;
-    console.log(clientWidth)
     const width = clientWidth - 2 * 48;
     
     const height = 620 - 2 * margin;
