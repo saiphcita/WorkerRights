@@ -17,9 +17,9 @@ class Interface extends Component {
 };
 
   render() {
-    var button = <div style={{width:"100%", height:"32px", backgroundColor:"black"}}>
+    var button = <div style={{width:"1340px", height:"32px", backgroundColor:"black"}}>
                     <button
-                      style={{width:"24%", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
+                      style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
                       onClick={()=>{ localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>Volver</button>
                   </div>
 

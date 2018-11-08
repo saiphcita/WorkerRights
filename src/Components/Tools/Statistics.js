@@ -353,7 +353,7 @@ class Statistics extends Component {
     render() {
       return(
         <div>
-            <h1 style={{margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >{this.state.titleStati}</h1>
+            <h1 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >{this.state.titleStati}</h1>
             <div id='containerStatis' style={{height:{heightJson}+"px"}}>
                 <svg id="stati"/>
             </div>
