@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../CSS/statistics.css'
+import SubGraph from "./SubGraph.js"
 import * as d3  from "d3";
 
 var  programas = require('../Data/Programas.json');
@@ -7,8 +8,69 @@ var jsonName = String(localStorage.getItem("jsonData"));
 
 for (let i=0; i < programas.length; i++){
     if(programas[i].name === jsonName){
-        var jsonData = programas[i].jsonD
 
+        var jsonData = programas[i].jsonD;
+
+        var arrayInstituciones = [];
+        var arrayInstitucionesMontos = [];
+
+        //Nombrando instituciones
+        for (let j=0; j < programas[i].jsonD.children.length; j++){
+            for (let t=0; t < programas[i].jsonD.children[j].children.length; t++){
+
+                if(programas[i].jsonD.children[j].children[t].ramo === "Relaciones"){
+                    programas[i].jsonD.children[j].children[t].ramo = "Relaciones Exteriores"
+                }else if(programas[i].jsonD.children[j].children[t].ramo === "Defensa"){
+                    programas[i].jsonD.children[j].children[t].ramo = "Defensa Nacional"
+                }else if(programas[i].jsonD.children[j].children[t].ramo === "Hacienda"){
+                    programas[i].jsonD.children[j].children[t].ramo = "Hacienda y Crédito Público"
+                }else if(programas[i].jsonD.children[j].children[t].ramo === "Gobernacion"){
+                    programas[i].jsonD.children[j].children[t].ramo = "Gobernación"
+                };
+
+                arrayInstituciones.push(programas[i].jsonD.children[j].children[t].ramo);
+                arrayInstitucionesMontos.push([programas[i].jsonD.children[j].children[t].ramo, programas[i].jsonD.children[j].children[t].size]);
+            }
+        };
+
+        var uniqueInstituciones = [...new Set(arrayInstituciones)];
+        for(let i=0; i<uniqueInstituciones.length;i++){
+
+            var UI = [uniqueInstituciones[i], []]
+
+            for(let j=0; j < arrayInstitucionesMontos.length;j++){
+                if(uniqueInstituciones[i] === arrayInstitucionesMontos[j][0]){
+                    UI[1].push(arrayInstitucionesMontos[j][1])
+                }
+            }
+            uniqueInstituciones[i] = UI
+        }
+
+        //Para la Sub-Grafica de institciones
+        var jsonSubGraph  = [];
+        if(programas[i].millones){
+            for(let i=0; i<uniqueInstituciones.length;i++){
+                const objectSubGraph = {
+                    "name": uniqueInstituciones[i][0],
+                    "value": (uniqueInstituciones[i][1].reduce((a, b) => a + b, 0) / 1000000)
+                };
+    
+                jsonSubGraph.push(objectSubGraph)
+            }
+        }else{
+            for(let i=0; i<uniqueInstituciones.length;i++){
+                const objectSubGraph = {
+                    "name": uniqueInstituciones[i][0],
+                    "value": (uniqueInstituciones[i][1].reduce((a, b) => a + b, 0) / 1000000000)
+                };
+
+                jsonSubGraph.push(objectSubGraph)
+            } 
+        }
+
+        var miBi = programas[i].millones
+       
+        //tamaños de la grafica
         var MarginLeftJson = programas[i].sizes[0]
         var heightJson = programas[i].sizes[1]
     }
@@ -250,11 +312,11 @@ class Statistics extends Component {
 
         bar.append("text")
             .attr("class", "subtitle")
-            .attr("x", -80)
+            .attr("x", -68)
             .attr("y", barHeight/2)
             .style("text-anchor", "end")
             .style("fill","black")
-            .style("font-size", "0.6rem")
+            .style("font-size", "0.65rem")
             .attr("dy", ".2em")
             .text(function(d) { return d.data.ramo; });
 
@@ -284,6 +346,7 @@ class Statistics extends Component {
             <div id='containerStatis' style={{height:{heightJson}+"px"}}>
                 <svg id="stati"/>
             </div>
+            <SubGraph jsonData={jsonSubGraph} miBi={miBi}/>
         </div>
       )
     }

@@ -1,0 +1,76 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+div#layoutSub {
+  text-align: center;
+}
+
+div#containerSub {
+  width: 100%;
+  height: 480px;
+  margin: auto;
+  background-color: #2F4A6D;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  fill: #80cbc4;
+}
+
+#graphSub text {
+  font-size: 12px;
+  fill: #fff;
+}
+
+path {
+  stroke: gray;
+}
+
+line {
+  stroke: gray;
+}
+
+line#limit {
+  stroke: #FED966;
+  stroke-width: 3;
+  stroke-dasharray: 3 6;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.grid .tick line {
+  stroke: #9FAAAE;
+  stroke-opacity: 0.3;
+}
+
+
+
+#graphSub text.divergence {
+  font-size: 12px;
+  fill: #2F4A6D;
+}
+
+#graphSub text.value {
+  font-size: 12px;
+}
+
+#graphSub text.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#graphSub text.label {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#graphSub text.source {
+  font-size: 12px;
+}
