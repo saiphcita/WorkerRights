@@ -150,7 +150,7 @@ class Interface2 extends Component {
     render() {
       return(
         <div>
-            <h1 style={{width:"1340px", margin:"0px", padding:"20px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"black"}} >{this.state.titleStati}</h1>
+            <h1 style={{width:"1340px", margin:"0px", padding:"20px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >{this.state.titleStati}</h1>
             <SubGraph data = {jsonSubGraph} miBi={miBi}/>
             <Statistics1 MarginLeftJson={MarginLeftJson} heightJson={heightJson} jsonData={dataArrayBi} miBi={miBi}/>
             <Statistics2 MarginLeftJson={MarginLeftJson} heightJson={heightJson} jsonData={dataArrayMi} miBi={miBi}/>
