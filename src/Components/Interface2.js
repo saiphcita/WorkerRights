@@ -3,7 +3,6 @@ import SubGraph from "./Tools/SubGraph.js"
 import Statistics1 from "./Tools/Statistics1"
 import Statistics2 from "./Tools/Statistics2"
 
-
 var  programas = require('./Data/Programas.json');
 var jsonName = String(localStorage.getItem("jsonData"));
 
@@ -40,7 +39,7 @@ for (let i=0; i < programas.length; i++){
             }
             var sizeTotal = arraySizes.reduce((a, b) => a + b, 0)
             if(sizeTotal > 1000000000){
-                programas[i].jsonD.children[j].millones = false
+                programas[i].jsonD.children[j].millones = 0;
             }
         }
 
@@ -115,28 +114,23 @@ for (let i=0; i < programas.length; i++){
         var MarginLeftJson = programas[i].sizes[0]
         var heightJson = programas[i].sizes[1]
 
-        //LOS DATOS DEL JSON
-        var jsonData = programas[i].jsonD;
+        //TODA LOS DATOS PARA STATISTICS
+        var jsonData = programas[i].jsonD
 
-        // //Millones
-        // var jsonDataMI = programas[i].jsonD.children.map(i => {if(i.millones){ return i}else{ return undefined} });
-        // jsonDataMI = jsonDataMI.filter(function( element ) {
-        //     return element !== undefined;
-        // });
-        // var Jmillones = programas[i].jsonD
-        // Jmillones.children = jsonDataMI
-
-        // //Billones
-        // var jsonDataBI = programas[i].jsonD.children.map(i => {if(!i.millones){ return i}else{ return undefined} });;
-        // jsonDataBI = jsonDataBI.filter(function( element ) {
-        //     return element !== undefined;
-        // });
-        // var Jbillones = programas[i].jsonD
-        // Jbillones.children = jsonDataBI
-
-        // console.log(Jmillones)
-        // console.log(Jbillones)
-
+        var dataArrayMi = []
+        for(let i=0; i<jsonData.children.length; i++){
+            if(jsonData.children[i].millones){
+                dataArrayMi.push(jsonData.children[i])
+            }
+        
+        }
+        var dataArrayBi = []
+        for(let i=0; i<jsonData.children.length; i++){
+            if(!jsonData.children[i].millones){
+                dataArrayBi.push(jsonData.children[i])
+            }
+        
+        }
 
     }
 }
@@ -157,11 +151,9 @@ class Interface2 extends Component {
       return(
         <div>
             <h1 style={{width:"1340px", margin:"0px", padding:"20px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"black"}} >{this.state.titleStati}</h1>
-            <SubGraph jsonData={jsonSubGraph} miBi={miBi}/>
-            <h2 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >Razón de Gasto Principal</h2>
-            <Statistics1 MarginLeftJson={MarginLeftJson} heightJson={heightJson} jsonData={jsonData}/>
-            <h2 style={{borderTop: "8px solid black", width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >Razón de Gasto Secundaria </h2>
-            <Statistics2 MarginLeftJson={MarginLeftJson} heightJson={heightJson} jsonData={jsonData}/>
+            <SubGraph data = {jsonSubGraph} miBi={miBi}/>
+            <Statistics1 MarginLeftJson={MarginLeftJson} heightJson={heightJson} jsonData={dataArrayBi} miBi={miBi}/>
+            <Statistics2 MarginLeftJson={MarginLeftJson} heightJson={heightJson} jsonData={dataArrayMi} miBi={miBi}/>
         </div>
       )
     }

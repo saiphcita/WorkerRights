@@ -24,7 +24,7 @@ class SubGraph extends Component {
       .attr('transform', `translate(${margin}, ${margin})`);
 
       
-    const sample = this.props.jsonData;
+    const sample = this.props.data;
 
     const xScale = d3.scaleBand()
       .range([0, width])

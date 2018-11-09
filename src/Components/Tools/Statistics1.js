@@ -7,12 +7,19 @@ class Statistics1 extends Component {
     super(props);
     this.state = {
       data: [ ],
-      titleStati: localStorage.getItem("jsonData")
+      titleStati: localStorage.getItem("jsonData"),
+      theData: this.props.jsonData
     };
   }
 
   
-  componentDidMount(){ 
+  componentDidMount(){
+    
+    var losDatos = {
+        "name": "flare",
+        "children": this.state.theData
+    }
+
     var margin = {top: 40, right: 0, bottom: 0, left: this.props.MarginLeftJson},
     width = 980,
     height = this.props.heightJson-80;
@@ -60,7 +67,7 @@ class Statistics1 extends Component {
       .append("line")
         .attr("y1", "100%");
 
-      var root = d3.hierarchy(this.props.jsonData)
+      var root = d3.hierarchy(losDatos)
                     .sum(d => d.size)
                     .sort((a,b) => b.value - a.value);
 
@@ -265,13 +272,18 @@ class Statistics1 extends Component {
 
     
     render() {
-      return(
-        <div>
-            <div id='containerStatis1'>
-                <svg id="stati1"/>
-            </div>
-        </div>
-      )
+        if(this.state.theData.length === 0){
+            return("")
+        }else{
+            return(
+                <div>
+                    <h2 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Primarios</h2>
+                    <div id='containerStatis1'>
+                        <svg id="stati1"/>
+                    </div>
+                </div>
+            )
+        }
     }
 }
 
