@@ -1,0 +1,28 @@
+#containerStatis1 {
+  width: 1340px;
+  height: 1800px;
+  float: left;
+  margin: auto;
+  margin-bottom: 12px;
+  background-color: #2F4A6D;
+}
+
+#stati1 text {
+  font: 0.72rem  sans-serif;
+  color: white;
+  fill: white;
+}
+
+rect.background {
+  fill: #2F4A6D;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: white;
+}

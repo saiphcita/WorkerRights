@@ -140,7 +140,7 @@ class Graph1 extends Component {
       .attr('x', width / 2 + margin)
       .attr('y', 40)
       .attr('text-anchor', 'middle')
-      .text('Gastos Principales')
+      .text('Gastos Federales Principales')
 
   }
     

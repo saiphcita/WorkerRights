@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Graph1 from "./Tools/Graph1";
 import Graph2 from "./Tools/Graph2";
-import Statistics from "./Tools/Statistics";
+import Interface2 from "./Interface2";
 
 class Interface extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class Interface extends Component {
     if(this.state.statePage === "0"){
       page = <div><Graph1/><Graph2/></div>
     }else if(this.state.statePage === "1"){
-      page = <div>{button}<Statistics/></div>
+      page = <div>{button}<Interface2/></div>
     }
 
     return (

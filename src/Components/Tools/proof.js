@@ -6,13 +6,44 @@ import * as d3  from "d3";
 var  programas = require('../Data/Programas.json');
 var jsonName = String(localStorage.getItem("jsonData"));
 
+
+//JSON DATA
 for (let i=0; i < programas.length; i++){
     if(programas[i].name === jsonName){
 
-        var jsonData = programas[i].jsonD;
-
         var arrayInstituciones = [];
         var arrayInstitucionesMontos = [];
+
+
+        //Si los childrenDads se repiten
+        var arreyOfChildrenDads = programas[i].jsonD.children.map(i => {return i.name})
+        var uniqueChildrenDads = [...new Set(arreyOfChildrenDads)];
+        uniqueChildrenDads = uniqueChildrenDads.map(i => {return {"name":i, "children":[], "millones": true}})
+
+        for(let j=0; j<programas[i].jsonD.children.length; j++){
+            for(let k=0; k<uniqueChildrenDads.length; k++){
+                if(uniqueChildrenDads[k].name === programas[i].jsonD.children[j].name){
+                    for(let l=0; l<programas[i].jsonD.children[j].children.length ;l++){
+                        uniqueChildrenDads[k].children.push(programas[i].jsonD.children[j].children[l])
+                    }
+                }
+            }
+        }
+
+        programas[i].jsonD.children = uniqueChildrenDads
+
+        //verificando si los datos de los childrenDads son millones o billones
+        for(let j=0; j<programas[i].jsonD.children.length; j++){
+            var arraySizes = []
+            for(let l=0; l<programas[i].jsonD.children[j].children.length ;l++){
+                arraySizes.push(programas[i].jsonD.children[j].children[l].size)
+            }
+            var sizeTotal = arraySizes.reduce((a, b) => a + b, 0)
+            if(sizeTotal > 1000000000){
+                programas[i].jsonD.children[j].millones = false
+            }
+        }
+
 
         //Nombrando instituciones
         for (let j=0; j < programas[i].jsonD.children.length; j++){
@@ -46,7 +77,7 @@ for (let i=0; i < programas.length; i++){
             uniqueInstituciones[i] = UI
         }
 
-        //Para la Sub-Grafica de institciones
+        //Para la Sub-Grafica de instituciones
         var jsonSubGraph  = [];
         //para Millones
         if(programas[i].millones){
@@ -78,14 +109,18 @@ for (let i=0; i < programas.length; i++){
                 }
             }
         }
-
         var miBi = programas[i].millones
        
         //tamaños de la grafica
         var MarginLeftJson = programas[i].sizes[0]
         var heightJson = programas[i].sizes[1]
+
+        //JSON DATA
+        var jsonData = programas[i].jsonD;
     }
 }
+
+//AQUI TERMINA JSON DATA
 
 
 class Statistics extends Component {
