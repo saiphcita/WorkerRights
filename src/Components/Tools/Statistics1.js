@@ -14,17 +14,30 @@ class Statistics1 extends Component {
 
   
   componentDidMount(){
+
+    var LenghtOfBars = [];
+    LenghtOfBars.push(this.state.theData.length);
+
+    var AD = this.state.theData
+    for(let i=0; i<AD.length; i++){
+        LenghtOfBars.push(AD[i].children.length)
+        for(let j=0; j<AD[i].children.length; j++){
+            AD[i].children[j].size = (AD[i].children[j].size/1000000000);
+        }
+    };
+
+    var BarsInTheGraph = (Math.max(...LenghtOfBars));
     
     var losDatos = {
         "name": "flare",
         "children": this.state.theData
-    }
+    };
 
-    var margin = {top: 40, right: 0, bottom: 0, left: this.props.MarginLeftJson},
-    width = 980,
-    height = this.props.heightJson-80;
+    var margin = {top: 40, right: 0, bottom: 0, left: 292},
+    width = 900,
+    height = BarsInTheGraph*40;
 
-    var dollarFormat = function(d) { return "$"+d3.format(',')(d) };
+    var dollarFormat = function(d) { return "$"+d3.format(',')(d)+" B." };
 
     var x = d3.scaleLinear()
         .range([0, width]);
@@ -110,7 +123,7 @@ class Statistics1 extends Component {
           .duration(duration)
           .call(xAxis)
 
-        var dollarFormat = function(d) { return "$"+d3.format(',')(d) };
+        var dollarFormat = function(d) { return "$"+d3.format(',')(d)+" B." };
         xAxis.tickFormat(dollarFormat)
 
       // Transition entering bars to their new position.

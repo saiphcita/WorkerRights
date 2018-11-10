@@ -15,14 +15,30 @@ class Statistics2 extends Component {
   
   componentDidMount(){
 
+    var LenghtOfBars = [];
+    LenghtOfBars.push(this.state.theData.length);
+
+    var lenghOfName = []
+
+    var AD = this.state.theData
+    for(let i=0; i<AD.length; i++){
+        LenghtOfBars.push(AD[i].children.length)
+        lenghOfName.push(AD[i].name.length)
+        if(AD[i].name.length > 60){
+            console.log('"'+AD[i].name+'"')
+        }
+    };
+
+    var BarsInTheGraph = (Math.max(...LenghtOfBars));
+
     var losDatos = {
         "name": "flare",
         "children": this.state.theData
     }
 
-    var margin = {top: 40, right: 0, bottom: 0, left: this.props.MarginLeftJson},
-    width = 980,
-    height = this.props.heightJson-80;
+    var margin = {top: 40, right: 0, bottom: 0, left: 318},
+    width = 972,
+    height = BarsInTheGraph*40;
 
     var dollarFormat = function(d) { return "$"+d3.format(',')(d) };
 
@@ -278,7 +294,7 @@ class Statistics2 extends Component {
             }else{
                 return(
                     <div>
-                        <h2 style={{borderTop: "8px solid black", width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h2>
+                        <h2 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h2>
                         <div id='containerStatis2'>
                             <svg id="stati2"/>
                         </div>
@@ -291,7 +307,7 @@ class Statistics2 extends Component {
             }else{
                 return(
                     <div>
-                        <h2 style={{borderTop: "8px solid black", width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Secundarios</h2>
+                        <h2 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Secundarios</h2>
                         <div id='containerStatis2'>
                             <svg id="stati2"/>
                         </div>

@@ -24,7 +24,7 @@
                     ]
                 },
                 {
-                    "name": "Vi\u00e1ticos en el extranjero para servidores p\u00fablicos en el desempe\u00f1o de comisiones y funciones oficiales",
+                    "name": "Vi\u00e1ticos en el extranjero para servidores p\u00fablicos",
                     "children": [
                         {
                             "name": "Gasto 11",
@@ -122,7 +122,7 @@
                     ]
                 },
                 {
-                    "name": "Mantenimiento Y Conservaci\u00f3n de Veh\u00edculos Terrestres, A\u00e9reos, Mar\u00edtimos, Lacustres Y Fluviales",
+                    "name": "Mantenimiento Y Conservaci\u00f3n de Veh\u00edculos",
                     "children": [
                         {
                             "name": "Gasto 91",
@@ -139,7 +139,7 @@
                     ]
                 },
                 {
-                    "name": "Refacciones Y Accesorios Menores Otros Bienes Muebles",
+                    "name": "Refacciones y Accesorios de Bienes y Muebles",
                     "children": [
                         {
                             "name": "Gasto 53",
@@ -156,7 +156,7 @@
                     ]
                 },
                 {
-                    "name": "Materiales y \u00fatiles consumibles para el procesamiento en equipos y bienes inform\u00e1ticos",
+                    "name": "Materiales consumibles en equipos y bienes inform\u00e1ticos",
                     "children": [
                         {
                             "name": "Gasto 34",
@@ -219,7 +219,7 @@
                     ]
                 },
                 {
-                    "name": "Pasajes Terrestres Nacionales Para Servidores P\u00fablicos de Mando En El desempe\u00f1o de Comisiones Y Funciones Oficiales",
+                    "name": "Pasajes Terrestres Nacionales Para Servidores de Mando",
                     "children": [
                         {
                             "name": "Gasto 64",
@@ -248,7 +248,7 @@
                     ]
                 },
                 {
-                    "name": "Refacciones Y Accesorios Menores de Equipo de Transporte",
+                    "name": "Refacciones y Accesorios de Equipo de Transporte",
                     "children": [
                         {
                             "name": "Gasto 90",
@@ -316,7 +316,7 @@
                     ]
                 },
                 {
-                    "name": "Material Para Informaci\u00f3n En Actividades de Investigaci\u00f3n Cient\u00edfica Y Tecnol\u00f3gica",
+                    "name": "Material Para Datos de Investigaci\u00f3n Cient\u00edfica-Tecnol\u00f3gica",
                     "children": [
                         {
                             "name": "Gasto 86",
@@ -350,7 +350,7 @@
                     ]
                 },
                 {
-                    "name": "Refacciones Y Accesorios Menores de Maquinaria Y Otros Equipos",
+                    "name": "Refacciones y Accesorios de Maquinaria Y Equipos",
                     "children": [
                         {
                             "name": "Gasto 66",
@@ -367,7 +367,7 @@
                     ]
                 },
                 {
-                    "name": "Combustibles, lubricantes y aditivos para veh\u00edculos terrestres, a\u00e9reos, mar\u00edtimos, lacustres y fluviales destinados a la ejecuci\u00f3n de programas de seguridad p\u00fablica y nacional",
+                    "name": "Combustibles, lubricantes y aditivos para veh\u00edculos",
                     "children": [
                         {
                             "name": "Gasto 89",
@@ -429,7 +429,7 @@
                     ]
                 },
                 {
-                    "name": "Refacciones Y Accesorios Para Equipo de C\u00f3mputo Y Telecomunicaciones",
+                    "name": "Refacciones y Accesorios de Equipos de C\u00f3mputo",
                     "children": [
                         {
                             "name": "Gasto 38",
@@ -521,7 +521,7 @@
                     ]
                 },
                 {
-                    "name": "Arrendamiento de Veh\u00edculos Terrestres, A\u00e9reos, Mar\u00edtimos, Lacustres Y Fluviales Para Servicios Administrativos",
+                    "name": "Arrendamiento de Veh\u00edculos Para Servicios Administrativos",
                     "children": [
                         {
                             "name": "Gasto 74",
@@ -844,7 +844,7 @@
                     ]
                 },
                 {
-                    "name": "Refacciones Y Accesorios Menores Otros Bienes Muebles",
+                    "name": "Refacciones y Accesorios de Bienes y Muebles",
                     "children": [
                         {
                             "name": "Gasto 19",
@@ -1704,7 +1704,7 @@
                     ]
                 },
                 {
-                    "name": "Productos Alimenticios Para El Personal En Las Instalaciones de Las dependencias Y Entidades",
+                    "name": "Productos Alimenticios Para El Personal de Entidades",
                     "children": [
                         {
                             "name": "Gasto 10",
@@ -1757,7 +1757,7 @@
                     ]
                 },
                 {
-                    "name": "Refacciones Y Accesorios Menores de Equipo de Transporte",
+                    "name": "Refacciones y Accesorios de Equipo de Transporte",
                     "children": [
                         {
                             "name": "Gasto 37",
@@ -1826,7 +1826,7 @@
                     ]
                 },
                 {
-                    "name": "Combustibles, lubricantes y aditivos para veh\u00edculos terrestres, a\u00e9reos, mar\u00edtimos, lacustres y fluviales destinados a servicios administrativos",
+                    "name": "Combustibles, lubricantes y aditivos para veh\u00edculos",
                     "children": [
                         {
                             "name": "Gasto 28",
@@ -1890,7 +1890,7 @@
                     ]
                 },
                 {
-                    "name": "Materiales y \u00fatiles consumibles para el procesamiento en equipos y bienes inform\u00e1ticos",
+                    "name": "Materiales consumibles en equipos y bienes inform\u00e1ticos",
                     "children": [
                         {
                             "name": "Gasto 3",
@@ -2036,7 +2036,7 @@
                     ]
                 },
                 {
-                    "name": "Refacciones Y Accesorios Para Equipo de C\u00f3mputo Y Telecomunicaciones",
+                    "name": "Refacciones y Accesorios de Equipos de C\u00f3mputo",
                     "children": [
                         {
                             "name": "Gasto 36",
@@ -2127,7 +2127,7 @@
                     ]
                 },
                 {
-                    "name": "Blancos y otros productos textiles, excepto prendas de vestir",
+                    "name": "Blancos y otros productos textiles",
                     "children": [
                         {
                             "name": "Gasto 61",
@@ -2261,7 +2261,7 @@
                     ]
                 },
                 {
-                    "name": "Arrendamiento de Veh\u00edculos Terrestres, A\u00e9reos, Mar\u00edtimos, Lacustres Y Fluviales Para Servicios Administrativos",
+                    "name": "Arrendamiento de Veh\u00edculos Para Servicios Administrativos",
                     "children": [
                         {
                             "name": "Gasto 73",
@@ -2372,7 +2372,7 @@
                     ]
                 },
                 {
-                    "name": "Combustibles, lubricantes y aditivos para veh\u00edculos terrestres, a\u00e9reos, mar\u00edtimos, lacustres y fluviales destinados a servicios administrativos",
+                    "name": "Combustibles, lubricantes y aditivos para veh\u00edculos",
                     "children": [
                         {
                             "name": "Gasto 64",
@@ -2460,7 +2460,7 @@
                     ]
                 },
                 {
-                    "name": "Productos Alimenticios Para El Personal En Las Instalaciones de Las dependencias Y Entidades",
+                    "name": "Productos Alimenticios Para El Personal de Entidades",
                     "children": [
                         {
                             "name": "Gasto 59",
@@ -2471,7 +2471,7 @@
                     ]
                 },
                 {
-                    "name": "Materiales y \u00fatiles consumibles para el procesamiento en equipos y bienes inform\u00e1ticos",
+                    "name": "Materiales consumibles en equipos y bienes inform\u00e1ticos",
                     "children": [
                         {
                             "name": "Gasto 56",
@@ -2510,7 +2510,7 @@
                     ]
                 },
                 {
-                    "name": "Combustibles, lubricantes y aditivos para veh\u00edculos terrestres, a\u00e9reos, mar\u00edtimos, lacustres y fluviales destinados a servicios administrativos",
+                    "name": "Combustibles, lubricantes y aditivos para veh\u00edculos",
                     "children": [
                         {
                             "name": "Gasto 50",
@@ -2609,7 +2609,7 @@
                     ]
                 },
                 {
-                    "name": "Productos Alimenticios Para El Personal En Las Instalaciones de Las dependencias Y Entidades",
+                    "name": "Productos Alimenticios Para El Personal de Entidades",
                     "children": [
                         {
                             "name": "Gasto 45",
@@ -2620,7 +2620,7 @@
                     ]
                 },
                 {
-                    "name": "Materiales y \u00fatiles consumibles para el procesamiento en equipos y bienes inform\u00e1ticos",
+                    "name": "Materiales consumibles en equipos y bienes inform\u00e1ticos",
                     "children": [
                         {
                             "name": "Gasto 42",

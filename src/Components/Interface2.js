@@ -109,10 +109,6 @@ for (let i=0; i < programas.length; i++){
             }
         }
         var miBi = programas[i].millones
-       
-        //tamaños de la grafica
-        var MarginLeftJson = programas[i].sizes[0]
-        var heightJson = programas[i].sizes[1]
 
         //TODA LOS DATOS PARA STATISTICS
         var jsonData = programas[i].jsonD
@@ -152,8 +148,8 @@ class Interface2 extends Component {
         <div>
             <h1 style={{width:"1340px", margin:"0px", padding:"20px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >{this.state.titleStati}</h1>
             <SubGraph data = {jsonSubGraph} miBi={miBi}/>
-            <Statistics1 MarginLeftJson={MarginLeftJson} heightJson={heightJson} jsonData={dataArrayBi} miBi={miBi}/>
-            <Statistics2 MarginLeftJson={MarginLeftJson} heightJson={heightJson} jsonData={dataArrayMi} miBi={miBi}/>
+            <Statistics1 jsonData={dataArrayBi} miBi={miBi}/>
+            <Statistics2 jsonData={dataArrayMi} miBi={miBi}/>
         </div>
       )
     }
