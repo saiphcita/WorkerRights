@@ -144,6 +144,9 @@ class Interface2 extends Component {
       }
 
     render() {
+        window.onbeforeunload = function() {
+            localStorage.clear();
+         }
       return(
         <div>
             <h1 style={{width:"1340px", margin:"0px", padding:"20px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >{this.state.titleStati}</h1>
