@@ -282,7 +282,6 @@ class Statistics1 extends Component {
       };
     }
   }
-
     
     render() {
         if(this.state.theData.length === 0){

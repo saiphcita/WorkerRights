@@ -18,15 +18,9 @@ class Statistics2 extends Component {
     var LenghtOfBars = [];
     LenghtOfBars.push(this.state.theData.length);
 
-    var lenghOfName = []
-
     var AD = this.state.theData
     for(let i=0; i<AD.length; i++){
         LenghtOfBars.push(AD[i].children.length)
-        lenghOfName.push(AD[i].name.length)
-        if(AD[i].name.length > 60){
-            console.log('"'+AD[i].name+'"')
-        }
     };
 
     var BarsInTheGraph = (Math.max(...LenghtOfBars));
