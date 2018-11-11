@@ -42,7 +42,7 @@ class Graph2 extends Component {
     
     const yScale = d3.scaleLinear()
       .range([height, 0])
-      .domain([0, 1000]);
+      .domain([0, 900]);
 
     const makeYLines = () => d3.axisLeft()
       .scale(yScale)
