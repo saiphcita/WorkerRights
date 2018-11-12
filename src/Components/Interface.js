@@ -7,13 +7,25 @@ import Statistics2 from "./Tools/Statistics2"
 
 var  programas = require('./Data/Programas.json');
 var jsonName = String(localStorage.getItem("jsonData"));
-//JSON DATA
+
+//viendo si el jsonData ha mutado o no existe
+if (jsonName.length !== 0){
+    var arrayofNames = []
+    for (let i=0; i < programas.length; i++){
+        arrayofNames.push(programas[i].name)
+    }
+
+    if (!arrayofNames.includes(jsonName)){
+        localStorage.setItem("statePage", 0);
+        window.location.reload();
+    }
+}
+
 for (let i=0; i < programas.length; i++){
     if(programas[i].name === jsonName){
 
         var arrayInstituciones = [];
         var arrayInstitucionesMontos = [];
-
 
         //Si los childrenDads se repiten
         var arreyOfChildrenDads = programas[i].jsonD.children.map(i => {return i.name})
@@ -116,7 +128,6 @@ for (let i=0; i < programas.length; i++){
             if(!jsonData.children[i].millones){
                 dataArrayBi.push(jsonData.children[i])
             }
-        
         }
 
     }
