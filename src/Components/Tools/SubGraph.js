@@ -81,7 +81,7 @@ class SubGraph extends Component {
       .attr('y', (g) => yScale(g.value))
       .attr('height', (g) => height - yScale(g.value))
       .attr('width', xScale.bandwidth())
-      .on('click' , (g) => { localStorage.setItem("subData", g.name); localStorage.setItem("showGraph", true); window.location.reload(); })
+      .on('click' , (g) => {localStorage.setItem("statePage", 2);  localStorage.setItem("subData", g.name); localStorage.setItem("showGraph", true); window.location.reload(); })
       .on('mouseenter', function (actual, i) {
         d3.selectAll('.value')
           .attr('opacity', 0)
