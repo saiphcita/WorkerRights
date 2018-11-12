@@ -11,6 +11,23 @@ class SubGraph extends Component {
 
   
   componentDidMount(){
+
+    var arrayOfValues = [];
+    for(let i=0; i<this.props.data.length; i++){
+      arrayOfValues.push(this.props.data[i].value);
+    };
+
+    arrayOfValues = Math.ceil(Math.max(...arrayOfValues));
+    var stringNumber = arrayOfValues.toString().slice(0,1)
+    var addingNumber = 1 + parseInt(stringNumber)
+
+    while(addingNumber.toString().length < arrayOfValues.toString().length){
+      addingNumber*=10
+    }
+
+    var numberOfDomainY = addingNumber
+
+
     const svg = d3.select('#graphSub');
 
     const margin = 80;
@@ -18,7 +35,7 @@ class SubGraph extends Component {
     const clientWidth =  document.getElementById('containerSub').clientWidth;
     const width = clientWidth - 2 * 48;
     
-    const height = 420 - 2 * margin;
+    const height = 500 - 2 * margin;
 
     const chart = svg.append('g')
       .attr('transform', `translate(${margin}, ${margin})`);
@@ -31,15 +48,9 @@ class SubGraph extends Component {
       .domain(sample.map((s) => s.name))
       .padding(0.4)
     
-    if(this.props.miBi){
-      var yScale = d3.scaleLinear()
-        .range([height, 0])
-        .domain([0, 1000]);
-    }else{
-      yScale = d3.scaleLinear()
-        .range([height, 0])
-        .domain([0, 500]);
-    }
+    var yScale = d3.scaleLinear()
+      .range([height, 0])
+      .domain([0, numberOfDomainY]);
     
     const makeYLines = () => d3.axisLeft()
       .scale(yScale)
@@ -70,6 +81,43 @@ class SubGraph extends Component {
       .attr('y', (g) => yScale(g.value))
       .attr('height', (g) => height - yScale(g.value))
       .attr('width', xScale.bandwidth())
+      .on('click' , (g) => { localStorage.setItem("subData", g.name); localStorage.setItem("showGraph", true); window.location.reload(); })
+      .on('mouseenter', function (actual, i) {
+        d3.selectAll('.value')
+          .attr('opacity', 0)
+
+        d3.select(this)
+          .transition()
+          .duration(300)
+          .attr('opacity', 0.5)
+          .attr('x', (a) => xScale(a.name) - 8)
+          .attr('width', xScale.bandwidth() + 20)
+          .style("cursor", "pointer")
+
+        barGroups.append('text')
+          .attr('class', 'text')
+          .attr('x', (a) => xScale(a.name) + xScale.bandwidth() / 2)
+          .attr('y', (a) => yScale(a.value) - 10)
+          .attr('fill', 'white')
+          .attr('text-anchor', 'middle')
+          .text((a) => `$${a.value}`)
+
+      })
+      .on('mouseleave', function () {
+        d3.selectAll('.value')
+          .attr('opacity', 1)
+
+        d3.select(this)
+          .transition()
+          .duration(300)
+          .attr('opacity', 1)
+          .attr('x', (a) => xScale(a.name))
+          .attr('width', xScale.bandwidth())
+          .style("cursor", "default")
+
+        chart.selectAll('#limit').remove()
+        chart.selectAll('.divergence').remove()
+      })
 
     barGroups 
       .append('text')
@@ -109,7 +157,7 @@ class SubGraph extends Component {
 
     svg.append('text')
       .attr('class', 'title')
-      .attr('x', width / 2 + margin)
+      .attr('x', width / 2.1 + margin)
       .attr('y', 40)
       .attr('text-anchor', 'middle')
       .text('Gastos por Instituciones')

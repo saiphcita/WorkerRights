@@ -12,17 +12,41 @@ class Statistics1 extends Component {
     };
   }
 
+  componentWillMount(){
+    var AD = this.state.theData
+    //Sacando los children en base al nombre de la institucion
+    var arrayDataByInst = []
+    for(let i=0; i<AD.length; i++){
+        arrayDataByInst.push({"name": AD[i].name, "children": []})
+        for(let j=0; j<AD[i].children.length; j++){ 
+            if(AD[i].children[j].ramo === localStorage.getItem("subData")){
+                arrayDataByInst[i].children.push(AD[i].children[j])
+            }
+        }
+    }
+
+    //Eliminando los children que esten vacios
+    var orderDatatoUse = []
+    for(let i=0; i<arrayDataByInst.length; i++){
+        if(arrayDataByInst[i].children.length !== 0){
+            orderDatatoUse.push(arrayDataByInst[i])
+        }
+    }
+    this.setState({newJD: orderDatatoUse})
+
+  }
+
   
   componentDidMount(){
+    var dataToUse = this.state.newJD
 
     var LenghtOfBars = [];
-    LenghtOfBars.push(this.state.theData.length);
+    LenghtOfBars.push(dataToUse.length);
 
-    var AD = this.state.theData
-    for(let i=0; i<AD.length; i++){
-        LenghtOfBars.push(AD[i].children.length)
-        for(let j=0; j<AD[i].children.length; j++){
-            AD[i].children[j].size = (AD[i].children[j].size/1000000000);
+    for(let i=0; i<dataToUse.length; i++){
+        LenghtOfBars.push(dataToUse[i].children.length)
+        for(let j=0; j<dataToUse[i].children.length; j++){
+            dataToUse[i].children[j].size = (dataToUse[i].children[j].size/1000000000);
         }
     };
 
@@ -30,7 +54,7 @@ class Statistics1 extends Component {
     
     var losDatos = {
         "name": "flare",
-        "children": this.state.theData
+        "children": dataToUse
     };
 
     var margin = {top: 40, right: 0, bottom: 0, left: 292},
@@ -284,12 +308,12 @@ class Statistics1 extends Component {
   }
     
     render() {
-        if(this.state.theData.length === 0){
+        if(this.state.newJD.length === 0){
             return("")
         }else{
             return(
                 <div>
-                    <h2 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Primarios</h2>
+                    <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Primarios</h3>
                     <div id='containerStatis1'>
                         <svg id="stati1"/>
                     </div>

@@ -48,16 +48,6 @@ for (let i=0; i < programas.length; i++){
         for (let j=0; j < programas[i].jsonD.children.length; j++){
             for (let t=0; t < programas[i].jsonD.children[j].children.length; t++){
 
-                if(programas[i].jsonD.children[j].children[t].ramo === "Relaciones"){
-                    programas[i].jsonD.children[j].children[t].ramo = "Relaciones Exteriores"
-                }else if(programas[i].jsonD.children[j].children[t].ramo === "Defensa"){
-                    programas[i].jsonD.children[j].children[t].ramo = "Defensa Nacional"
-                }else if(programas[i].jsonD.children[j].children[t].ramo === "Hacienda"){
-                    programas[i].jsonD.children[j].children[t].ramo = "Hacienda y Crédito Público"
-                }else if(programas[i].jsonD.children[j].children[t].ramo === "Gobernacion"){
-                    programas[i].jsonD.children[j].children[t].ramo = "Gobernación"
-                };
-
                 arrayInstituciones.push(programas[i].jsonD.children[j].children[t].ramo);
                 arrayInstitucionesMontos.push([programas[i].jsonD.children[j].children[t].ramo, programas[i].jsonD.children[j].children[t].size]);
             }
@@ -144,15 +134,23 @@ class Interface2 extends Component {
       }
 
     render() {
-        window.onbeforeunload = function() {
-            localStorage.clear();
-         }
+        var page = <div></div>
+
+        if(!localStorage.getItem("showGraph")){
+            page =  <div> </div>
+        }else{
+            page = <div>
+                <h2 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("subData")}</h2>
+                <Statistics1 jsonData={dataArrayBi} miBi={miBi}/>
+                <Statistics2 jsonData={dataArrayMi} miBi={miBi}/>
+            </div>
+        }
+
       return(
         <div>
             <h1 style={{width:"1340px", margin:"0px", padding:"20px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}} >{this.state.titleStati}</h1>
             <SubGraph data = {jsonSubGraph} miBi={miBi}/>
-            <Statistics1 jsonData={dataArrayBi} miBi={miBi}/>
-            <Statistics2 jsonData={dataArrayMi} miBi={miBi}/>
+            {page}
         </div>
       )
     }
