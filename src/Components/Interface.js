@@ -17,6 +17,7 @@ if (jsonName.length !== 0){
 
     if (!arrayofNames.includes(jsonName)){
         localStorage.setItem("statePage", 0);
+        localStorage.setItem("jsonData", "")
         window.location.reload();
     }
 }
