@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../CSS/statistics1.css'
+import '../CSS/statistics.css'
 import * as d3  from "d3";
 
-class Statistics1 extends Component {
+class StatisticsBi extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -84,7 +84,7 @@ class Statistics1 extends Component {
 
     xAxis.tickFormat(dollarFormat)
 
-    var svg = d3.select("#stati1")
+    var svg = d3.select("#statiBI")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
@@ -281,7 +281,7 @@ class Statistics1 extends Component {
 
         bar.append("text")
             .attr("class", "subtitle")
-            .attr("x", -68)
+            .attr("x", -92)
             .attr("y", barHeight/2)
             .style("text-anchor", "end")
             .style("fill","black")
@@ -314,8 +314,8 @@ class Statistics1 extends Component {
             return(
                 <div>
                     <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Primarios</h3>
-                    <div id='containerStatis1'>
-                        <svg id="stati1"/>
+                    <div id='containerStatisBI' className="containerStatis">
+                        <svg id="statiBI" className="stati"/>
                     </div>
                 </div>
             )
@@ -324,4 +324,4 @@ class Statistics1 extends Component {
 }
 
 
-export default Statistics1;
+export default StatisticsBi;

@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+
 import Graph1 from "./Tools/Graph1";
 import Graph2 from "./Tools/Graph2";
-import Interface2 from "./Interface2";
-import Statistics1 from "./Tools/Statistics1"
-import Statistics2 from "./Tools/Statistics2"
+
+import SubGraph from "./Tools/SubGraph";
+
+import StatisticsBi from "./Tools/StatisticsBi";
+import StatisticsMi from "./Tools/StatisticsMi";
+import StatisticsK from "./Tools/StatisticsK";
 
 var  programas = require('./Data/Programas.json');
 var jsonName = String(localStorage.getItem("jsonData"));
@@ -31,7 +35,7 @@ for (let i=0; i < programas.length; i++){
         //Si los childrenDads se repiten
         var arreyOfChildrenDads = programas[i].jsonD.children.map(i => {return i.name})
         var uniqueChildrenDads = [...new Set(arreyOfChildrenDads)];
-        uniqueChildrenDads = uniqueChildrenDads.map(i => {return {"name":i, "children":[], "millones": true}})
+        uniqueChildrenDads = uniqueChildrenDads.map(i => {return {"name":i, "children":[], "type": ""}})
 
         for(let j=0; j<programas[i].jsonD.children.length; j++){
             for(let k=0; k<uniqueChildrenDads.length; k++){
@@ -45,17 +49,31 @@ for (let i=0; i < programas.length; i++){
 
         programas[i].jsonD.children = uniqueChildrenDads
 
-        //verificando si los datos de los childrenDads son millones o billones
+        //verificando si los datos de los childrenDads son billones, millones o miles
         for(let j=0; j<programas[i].jsonD.children.length; j++){
             var arraySizes = []
             for(let l=0; l<programas[i].jsonD.children[j].children.length ;l++){
                 arraySizes.push(programas[i].jsonD.children[j].children[l].size)
+                if(programas[i].jsonD.children[j].children[l].size.toString().length >= 10){
+                    programas[i].jsonD.children[j].children[l].num = "bi"
+                }else if(programas[i].jsonD.children[j].children[l].size.toString().length >= 7 && programas[i].jsonD.children[j].children[l].size.toString().length < 10){
+                    programas[i].jsonD.children[j].children[l].num = "mi"
+                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 5){
+                    programas[i].jsonD.children[j].children[l].num = "k"
+                }
             }
+
             var sizeTotal = arraySizes.reduce((a, b) => a + b, 0)
             if(sizeTotal > 1000000000){
-                programas[i].jsonD.children[j].millones = 0;
+                programas[i].jsonD.children[j].type = "bi";
+            }else if(sizeTotal > 1000000){
+                programas[i].jsonD.children[j].type = "mi";
+            }else if(sizeTotal > 1000){
+                programas[i].jsonD.children[j].type = "k";
             }
+
         }
+
 
 
         //Nombrando instituciones
@@ -117,20 +135,26 @@ for (let i=0; i < programas.length; i++){
         //TODA LOS DATOS PARA STATISTICS
         var jsonData = programas[i].jsonD
 
-        var dataArrayMi = []
-        for(let i=0; i<jsonData.children.length; i++){
-            if(jsonData.children[i].millones){
-                dataArrayMi.push(jsonData.children[i])
-            }
-        
-        }
         var dataArrayBi = []
         for(let i=0; i<jsonData.children.length; i++){
-            if(!jsonData.children[i].millones){
+            if(jsonData.children[i].type === "bi"){
                 dataArrayBi.push(jsonData.children[i])
             }
         }
 
+        var dataArrayMi = []
+        for(let i=0; i<jsonData.children.length; i++){
+            if(jsonData.children[i].type === "mi"){
+                dataArrayMi.push(jsonData.children[i])
+            }
+        }
+
+        var dataArrayK = []
+        for(let i=0; i<jsonData.children.length; i++){
+            if(jsonData.children[i].type === "k"){
+                dataArrayK.push(jsonData.children[i])
+            }
+        }
     }
 }
 //AQUI TERMINA JSON DATA -----------------------------------------------------------------
@@ -151,32 +175,55 @@ class Interface extends Component {
 
   render() {
     var button = <div style={{width:"1340px", height:"45px", backgroundColor:"black"}}>
-                    <button style={{backgroundColor:"black", width:"420px", height:"100%", color:"white", float:"left", border:"none", padding:"0"}}>Gráfica de Instituciones</button>
-                    <button
-                      style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
-                      onClick={()=>{ localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>Volver</button>
-                  </div>
+        <button style={{backgroundColor:"black", width:"420px", height:"100%", color:"white", float:"left", border:"none", padding:"0"}}>Gráfica de Instituciones</button>
+        <button
+        style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
+        onClick={()=>{ localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>
+            Volver
+        </button>
+    </div>
 
     var button2 = <div style={{width:"1340px", height:"45px", backgroundColor:"black"}}>
-                  <button style={{backgroundColor:"black", width:"420px", height:"100%", color:"white", float:"left", border:"none", padding:"0"}}>Gráfica de Razones de Gastos</button>
-                  <button
-                    style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
-                    onClick={()=>{ localStorage.setItem("statePage", 1); window.location.reload();}}>Volver</button>
-                  </div>
+        <button style={{backgroundColor:"black", width:"420px", height:"100%", color:"white", float:"left", border:"none", padding:"0"}}>Gráfica de Razones de Gastos</button>
+        <button
+        style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
+        onClick={()=>{ localStorage.setItem("statePage", 1); window.location.reload();}}>
+            Volver
+        </button>
+    </div>
 
-    var page = <div><Graph1/><Graph2/></div>
+    var page = <div>
+        <Graph1/>
+        <Graph2/>
+    </div>
     
-    if(this.state.statePage === "0"){
-      page = <div><h3 style={{width:"1340px", margin:"0", padding:"12px 0", backgroundColor:"black", color:"white", textAlign:"center"}}>Gráfica Principal</h3><Graph1/><Graph2/></div>
-    }else if(this.state.statePage === "1"){
-      page = <div>{button}<Interface2 jsonSubGraph={jsonSubGraph} miBi={miBi}/></div>
-    }else if(this.state.statePage === "2"){
-      page = <div>
-                {button2}
-                <h2 style={{width:"1340px", margin:"0", padding:"24px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("subData")}</h2>
-                <Statistics1 jsonData={dataArrayBi} miBi={miBi}/>
-                <Statistics2 jsonData={dataArrayMi} miBi={miBi}/>
-            </div>
+    //PAGINA PRINCIPAL
+    if(this.state.statePage === "0" || this.state.statePage === ""){
+        page = <div>
+            <h3 style={{width:"1340px", margin:"0", padding:"12px 0", backgroundColor:"black", color:"white", textAlign:"center"}}>
+                Gráfica Principal
+            </h3>
+            <Graph1/>
+            <Graph2/>
+        </div>
+    }
+    //PAGINA DE LAS INSTITUCIONES
+    else if(this.state.statePage === "1"){
+        page = <div>
+            {button}
+            <h1 style={{width:"1340px", margin:"0px", padding:"12px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("jsonData")}</h1>
+            <SubGraph data={jsonSubGraph} miBi={miBi}/>
+        </div>
+    }
+    //PAGINA DE LAS RAZONES DE GASTOS
+    else if(this.state.statePage === "2"){
+        page = <div>
+            {button2}
+            <h2 style={{width:"1340px", margin:"0", padding:"14px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("subData")}</h2>
+            <StatisticsBi jsonData={dataArrayBi} miBi={miBi}/>
+            <StatisticsMi jsonData={dataArrayMi} miBi={miBi}/>
+            <StatisticsK jsonData={dataArrayK} miBi={miBi}/>
+        </div>
     }
 
     return (

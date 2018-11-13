@@ -1,12 +1,13 @@
-#containerStatis2 {
+.containerStatis {
   width: 1340px;
   float: left;
   margin: auto;
-  margin-bottom: 12px;
+  border-bottom: 8px solid black;
+  margin-bottom: 8px;
   background-color: #2F4A6D;
 }
 
-#stati2 text {
+.stati text {
   font: 0.72rem  sans-serif;
   color: white;
   fill: white;

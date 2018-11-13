@@ -20,20 +20,32 @@ class Graph2 extends Component {
 
   
   componentDidMount(){
-    const svg = d3.select('#graph2');
-    
-    const margin = 80;
+    // var arrayOfValues = [];
+    // for(let i=0; i<jsonData.length; i++){
+    //   arrayOfValues.push(jsonData[i].value);
+    // };
 
+    // arrayOfValues = Math.ceil(Math.max(...arrayOfValues));
+    // var stringNumber = arrayOfValues.toString().slice(0,1)
+    // var addingNumber = 1 + parseInt(stringNumber)
+
+    // while(addingNumber.toString().length < arrayOfValues.toString().length){
+    //   addingNumber*=10
+    // }
+    // var numberOfDomainY = addingNumber
+    
+    //gragph
+    const svg = d3.select('#graph2');
+    const sample = jsonData;
+
+    //sizes
+    const margin = 80;
     const clientWidth =  document.getElementById('container2').clientWidth;
     const width = clientWidth - 2 * 48;
-    
-    const height = 620 - 2 * margin;
+    const height = 620 - 2 * 48;
 
     const chart = svg.append('g')
-      .attr('transform', `translate(${margin}, ${margin})`);
-
-      
-    const sample = jsonData;
+      .attr('transform', `translate(${margin}, ${20})`);
 
     const xScale = d3.scaleBand()
       .range([0, width])
@@ -42,7 +54,7 @@ class Graph2 extends Component {
     
     const yScale = d3.scaleLinear()
       .range([height, 0])
-      .domain([0, 900]);
+      .domain([0, 1000]);
 
     const makeYLines = () => d3.axisLeft()
       .scale(yScale)
@@ -89,7 +101,7 @@ class Graph2 extends Component {
         barGroups.append('text')
           .attr('class', 'text')
           .attr('x', (a) => xScale(a.name) + xScale.bandwidth() / 2)
-          .attr('y', (a) => yScale(a.value) - 10)
+          .attr('y', (a) => yScale(a.value) -10)
           .attr('fill', 'white')
           .attr('text-anchor', 'middle')
           .text((a) => `$${a.value}`)
@@ -122,8 +134,8 @@ class Graph2 extends Component {
     svg
       .append('text')
       .attr('class', 'label')
-      .attr('x', -(height / 2) - margin)
-      .attr('y', margin / 2.4)
+      .attr('x', -(height / 2.8) - margin)
+      .attr('y', margin / 2.8)
       .attr('transform', 'rotate(-90)')
       .attr('text-anchor', 'middle')
       .text('Montos en Millones de Pesos')
@@ -131,23 +143,16 @@ class Graph2 extends Component {
     svg.append('text')
       .attr('class', 'label')
       .attr('x', width / 2 + margin)
-      .attr('y', height + margin * 1.7)
+      .attr('y', height + margin * 1)
       .attr('text-anchor', 'middle')
       .text('Programa')
-
-    svg.append('text')
-      .attr('class', 'title')
-      .attr('x', width / 2 + margin)
-      .attr('y', 40)
-      .attr('text-anchor', 'middle')
-      .text('Gastos Federales Secundarios')
-
   }
     
     render() {
       return(
         <div>
             <div id='layout2'>
+              <h2 style={{width:"1340px", margin:"0", padding:"8px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Gastos Federales Secundarios</h2>
                 <div id='container2'>
                   <svg id="graph2"/>
                 </div>

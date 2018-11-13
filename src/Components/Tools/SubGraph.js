@@ -11,7 +11,6 @@ class SubGraph extends Component {
 
   
   componentDidMount(){
-
     var arrayOfValues = [];
     for(let i=0; i<this.props.data.length; i++){
       arrayOfValues.push(this.props.data[i].value);
@@ -29,19 +28,16 @@ class SubGraph extends Component {
 
 
     const svg = d3.select('#graphSub');
+    const sample = this.props.data;
+
 
     const margin = 80;
-
     const clientWidth =  document.getElementById('containerSub').clientWidth;
     const width = clientWidth - 2 * 48;
-    
-    const height = 500 - 2 * margin;
+    const height = 482 - 2 * 40;
 
     const chart = svg.append('g')
-      .attr('transform', `translate(${margin}, ${margin})`);
-
-      
-    const sample = this.props.data;
+      .attr('transform', `translate(${margin}, ${18})`);
 
     const xScale = d3.scaleBand()
       .range([0, width])
@@ -132,8 +128,8 @@ class SubGraph extends Component {
       svg
       .append('text')
       .attr('class', 'label')
-      .attr('x', -(height / 2) - margin)
-      .attr('y', margin / 2.4)
+      .attr('x', -(height / 2.8) - margin)
+      .attr('y', margin / 2.8)
       .attr('transform', 'rotate(-90)')
       .attr('text-anchor', 'middle')
       .text('Millones de Pesos')
@@ -141,8 +137,8 @@ class SubGraph extends Component {
       svg
       .append('text')
       .attr('class', 'label')
-      .attr('x', -(height / 2) - margin)
-      .attr('y', margin / 2.4)
+      .attr('x', -(height / 2.8) - margin)
+      .attr('y', margin / 2.8)
       .attr('transform', 'rotate(-90)')
       .attr('text-anchor', 'middle')
       .text('Billones de Pesos')
@@ -151,23 +147,16 @@ class SubGraph extends Component {
     svg.append('text')
       .attr('class', 'label')
       .attr('x', width / 2 + margin)
-      .attr('y', height + margin * 1.7)
+      .attr('y', height + margin * 0.8)
       .attr('text-anchor', 'middle')
       .text('Instituciones')
-
-    svg.append('text')
-      .attr('class', 'title')
-      .attr('x', width / 2.1 + margin)
-      .attr('y', 40)
-      .attr('text-anchor', 'middle')
-      .text('Gastos por Instituciones')
-
   }
     
     render() {
       return(
         <div>
             <div id='layoutSub'>
+            <h2 style={{width:"1340px", margin:"0", padding:"4px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Gastos por Instituciones</h2>
                 <div id='containerSub'>
                   <svg id="graphSub"/>
                 </div>

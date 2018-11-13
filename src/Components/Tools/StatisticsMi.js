@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../CSS/statistics2.css'
+import '../CSS/statistics.css'
 import * as d3  from "d3";
 
-class Statistics2 extends Component {
+class StatisticsMi extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -82,7 +82,7 @@ class Statistics2 extends Component {
 
     xAxis.tickFormat(dollarFormat)
 
-    var svg = d3.select("#stati2")
+    var svg = d3.select("#statiMI")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
@@ -279,7 +279,7 @@ class Statistics2 extends Component {
 
         bar.append("text")
             .attr("class", "subtitle")
-            .attr("x", -68)
+            .attr("x", -92)
             .attr("y", barHeight/2)
             .style("text-anchor", "end")
             .style("fill","black")
@@ -314,8 +314,8 @@ class Statistics2 extends Component {
                 return(
                     <div>
                         <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
-                        <div id='containerStatis2'>
-                            <svg id="stati2"/>
+                        <div id='containerStatisMI' className="containerStatis">
+                            <svg id="statiMI" className="stati"/>
                         </div>
                     </div>
                 )
@@ -327,8 +327,8 @@ class Statistics2 extends Component {
                 return(
                     <div>
                         <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Secundarios</h3>
-                        <div id='containerStatis2'>
-                            <svg id="stati2"/>
+                        <div id='containerStatisMI' className="containerStatis">
+                            <svg id="statiMI" className="stati"/>
                         </div>
                     </div>
                 )
@@ -338,4 +338,4 @@ class Statistics2 extends Component {
 }
 
 
-export default Statistics2;
+export default StatisticsMi;
