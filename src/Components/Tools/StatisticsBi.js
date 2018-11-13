@@ -40,17 +40,11 @@ class StatisticsBi extends Component {
   componentDidMount(){
     var dataToUse = this.state.newJD
 
-    var LenghtOfBars = [];
-    LenghtOfBars.push(dataToUse.length);
-
     for(let i=0; i<dataToUse.length; i++){
-        LenghtOfBars.push(dataToUse[i].children.length)
         for(let j=0; j<dataToUse[i].children.length; j++){
             dataToUse[i].children[j].size = (dataToUse[i].children[j].size/1000000000);
         }
     };
-
-    var BarsInTheGraph = (Math.max(...LenghtOfBars));
     
     var losDatos = {
         "name": "flare",
@@ -58,8 +52,8 @@ class StatisticsBi extends Component {
     };
 
     var margin = {top: 40, right: 0, bottom: 0, left: 292},
-    width = 900,
-    height = BarsInTheGraph*40;
+    width = 900
+    var heightDad = dataToUse.length*40;
 
     var dollarFormat = function(d) { return "$"+d3.format(',')(d)+" B." };
 
@@ -86,15 +80,16 @@ class StatisticsBi extends Component {
 
     var svg = d3.select("#statiBI")
         .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("height", heightDad + margin.top + margin.bottom)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     svg.append("rect")
+        .attr("id", "rectBI")
         .attr("class", "background")
         .attr("width", width)
-        .attr("height", height)
-        .on("click", up);
+        .attr("height", heightDad + margin.top + margin.bottom)
+        .style("cursor", "default");
 
     svg.append("g")
         .attr("class", "x axis");
@@ -111,12 +106,12 @@ class StatisticsBi extends Component {
       partition(root);
       
       x.domain([0, root.value]).nice();
-      down(root, 0);
+      downInit(root, 0);
 
       x.tickFormat(dollarFormat)
       
 
-    function down(d, i) {
+    function downInit(d, i) {
       if (!d.children ) return;
       var end = duration + d.children.length * delay;
 
@@ -184,9 +179,95 @@ class StatisticsBi extends Component {
       d.index = i;
     }
 
+    function down(d, i) {
+        if (!d.children ) return;
+        var end = duration + d.children.length * delay;
+
+        var heightChildren = (d.children.length+3) *38
+
+        d3.select("#statiBI")
+            .attr("height", heightChildren + margin.top + margin.bottom)
+
+        d3.select("#rectBI")
+            .attr("height", heightChildren + margin.top + margin.bottom)
+            .style("cursor", "pointer")
+            .on("click", up)
+        
+        // Mark any currently-displayed bars as exiting.
+        var exit = svg.selectAll(".enter")
+            .attr("class", "exit");
+  
+        // Entering nodes immediately obscure the clicked-on bar, so hide it.
+        exit.selectAll("rect").filter(function(p) { return p === d; })
+            .style("fill-opacity", 1e-6);
+  
+        // Enter the new bars for the clicked-on data.
+        // Per above, entering bars are immediately visible.
+        var enter = bar(d)
+            .attr("transform", stack(i))
+            .style("opacity", 1);
+  
+        // Have the text fade-in, even though the bars are visible.
+        // Color the bars as parents; they will fade to children if appropriate.
+        enter.select("text").style("fill-opacity", 1e-6);
+        enter.select("rect").style("fill", color(true));
+  
+        // Update the x-scale domain.
+        x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice()
+  
+        // Update the x-axis.
+        svg.selectAll(".x.axis").transition()
+            .duration(duration)
+            .call(xAxis)
+  
+          var dollarFormat = function(d) { return "$"+d3.format(',')(d)+" B." };
+          xAxis.tickFormat(dollarFormat)
+  
+        // Transition entering bars to their new position.
+        var enterTransition = enter.transition()
+            .duration(duration)
+            .delay(function(d, i) { return i * delay; })
+            .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.4 + ")"; });
+  
+        // Transition entering text.
+        enterTransition.select("text")
+            .style("fill-opacity", 1);
+  
+        // Transition entering rects to the new x-scale.
+        enterTransition.select("rect")
+            .attr("width", function(d) { return x(d.value); })
+            .style("fill", function(d) { return color(!!d.children); });
+  
+        // Transition exiting bars to fade out.
+        var exitTransition = exit.transition()
+            .duration(duration)
+            .style("opacity", 1e-6)
+            .remove();
+  
+        // Transition exiting bars to the new x-scale.
+        exitTransition.selectAll("rect")
+            .attr("width", function(d) { return x(d.value); });
+  
+        // Rebind the current node to the background.
+        svg.select(".background")
+            .datum(d)
+          .transition()
+            .duration(end);
+  
+        d.index = i;
+      }
+
     function up(d) {
       if (!d.parent || this.__transition__) return;
       var end = duration + d.children.length * delay;
+
+      d3.select("#statiBI")
+      .attr("height", heightDad + margin.top + margin.bottom)
+
+    d3.select("#rectBI")
+        .attr("height", heightDad + margin.top + margin.bottom)
+        .style("cursor", "default")
+        .on("click", up)
 
       // Mark any currently-displayed bars as exiting.
       var exit = svg.selectAll(".enter")

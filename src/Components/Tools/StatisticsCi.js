@@ -37,18 +37,8 @@ class StatisticsCi extends Component {
   }
 
 
-  componentDidMount(){
-    
+  componentDidMount(){ 
     var dataToUse = this.state.newJD
-
-    var LenghtOfBars = [];
-    LenghtOfBars.push(dataToUse.length);
-
-    for(let i=0; i<dataToUse.length; i++){
-        LenghtOfBars.push(dataToUse[i].children.length)
-    };
-
-    var BarsInTheGraph = (Math.max(...LenghtOfBars));
 
     var losDatos = {
         "name": "flare",
@@ -56,8 +46,8 @@ class StatisticsCi extends Component {
     }
 
     var margin = {top: 40, right: 0, bottom: 0, left: 318},
-    width = 972,
-    height = BarsInTheGraph*40;
+    width = 972
+    var heightDad = dataToUse.length*40;
 
     var dollarFormat = function(d) { return "$"+d3.format(',')(d) };
 
@@ -82,17 +72,18 @@ class StatisticsCi extends Component {
 
     xAxis.tickFormat(dollarFormat)
 
-    var svg = d3.select("#statiCi")
+    var svg = d3.select("#statiCI")
         .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("height", heightDad + margin.top + margin.bottom)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     svg.append("rect")
+        .attr("id", "rectCI")
         .attr("class", "background")
         .attr("width", width)
-        .attr("height", height)
-        .on("click", up);
+        .attr("height", heightDad + margin.top + margin.bottom)
+        .style("cursor", "default");
 
     svg.append("g")
         .attr("class", "x axis");
@@ -109,12 +100,12 @@ class StatisticsCi extends Component {
       partition(root);
       
       x.domain([0, root.value]).nice();
-      down(root, 0);
+      downInit(root, 0);
 
       x.tickFormat(dollarFormat)
       
 
-    function down(d, i) {
+    function downInit(d, i) {
       if (!d.children ) return;
       var end = duration + d.children.length * delay;
 
@@ -182,9 +173,95 @@ class StatisticsCi extends Component {
       d.index = i;
     }
 
+    function down(d, i) {
+        if (!d.children ) return;
+        var end = duration + d.children.length * delay;
+
+        var heightChildren = (d.children.length+3) *38
+
+        d3.select("#statiCI")
+            .attr("height", heightChildren + margin.top + margin.bottom)
+
+        d3.select("#rectCI")
+            .attr("height", heightChildren  + margin.top + margin.bottom)
+            .style("cursor", "pointer")
+            .on("click", up)
+  
+        // Mark any currently-displayed bars as exiting.
+        var exit = svg.selectAll(".enter")
+            .attr("class", "exit");
+  
+        // Entering nodes immediately obscure the clicked-on bar, so hide it.
+        exit.selectAll("rect").filter(function(p) { return p === d; })
+            .style("fill-opacity", 1e-6);
+  
+        // Enter the new bars for the clicked-on data.
+        // Per above, entering bars are immediately visible.
+        var enter = bar(d)
+            .attr("transform", stack(i))
+            .style("opacity", 1);
+  
+        // Have the text fade-in, even though the bars are visible.
+        // Color the bars as parents; they will fade to children if appropriate.
+        enter.select("text").style("fill-opacity", 1e-6);
+        enter.select("rect").style("fill", color(true));
+  
+        // Update the x-scale domain.
+        x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice()
+  
+        // Update the x-axis.
+        svg.selectAll(".x.axis").transition()
+            .duration(duration)
+            .call(xAxis)
+  
+          var dollarFormat = function(d) { return "$"+d3.format(',')(d) };
+          xAxis.tickFormat(dollarFormat)
+  
+        // Transition entering bars to their new position.
+        var enterTransition = enter.transition()
+            .duration(duration)
+            .delay(function(d, i) { return i * delay; })
+            .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.4 + ")"; });
+  
+        // Transition entering text.
+        enterTransition.select("text")
+            .style("fill-opacity", 1);
+  
+        // Transition entering rects to the new x-scale.
+        enterTransition.select("rect")
+            .attr("width", function(d) { return x(d.value); })
+            .style("fill", function(d) { return color(!!d.children); });
+  
+        // Transition exiting bars to fade out.
+        var exitTransition = exit.transition()
+            .duration(duration)
+            .style("opacity", 1e-6)
+            .remove();
+  
+        // Transition exiting bars to the new x-scale.
+        exitTransition.selectAll("rect")
+            .attr("width", function(d) { return x(d.value); });
+  
+        // Rebind the current node to the background.
+        svg.select(".background")
+            .datum(d)
+          .transition()
+            .duration(end);
+  
+        d.index = i;
+      }
+
     function up(d) {
       if (!d.parent || this.__transition__) return;
       var end = duration + d.children.length * delay;
+
+      d3.select("#statiCI")
+      .attr("height", heightDad + margin.top + margin.bottom)
+
+    d3.select("#rectCI")
+        .attr("height", heightDad + margin.top + margin.bottom)
+        .style("cursor", "default")
+        .on("click", up)
 
       // Mark any currently-displayed bars as exiting.
       var exit = svg.selectAll(".enter")
@@ -315,7 +392,7 @@ class StatisticsCi extends Component {
                     <div>
                         <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
                         <div id='containerStatisCi' className="containerStatis">
-                            <svg id="statiCi" className="stati"/>
+                            <svg id="statiCI" className="stati"/>
                         </div>
                     </div>
                 )
@@ -328,7 +405,7 @@ class StatisticsCi extends Component {
                     <div>
                         <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Menores</h3>
                         <div id='containerStatisCi' className="containerStatis">
-                            <svg id="statiCi" className="stati"/>
+                            <svg id="statiCI" className="stati"/>
                         </div>
                     </div>
                 )

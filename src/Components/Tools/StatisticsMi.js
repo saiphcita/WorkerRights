@@ -53,7 +53,6 @@ class StatisticsMi extends Component {
 
     var margin = {top: 40, right: 0, bottom: 0, left: 318},
     width = 972
-
     var heightDad = dataToUse.length*40;
 
     var dollarFormat = function(d) { return "$"+d3.format(',')(d)+" M." };
@@ -191,7 +190,7 @@ class StatisticsMi extends Component {
             .attr("height", heightChildren + margin.top + margin.bottom)
 
         d3.select("#rectMI")
-            .attr("height", heightChildren)
+            .attr("height", heightChildren  + margin.top + margin.bottom)
             .style("cursor", "pointer")
             .on("click", up)
   
@@ -268,7 +267,7 @@ class StatisticsMi extends Component {
 
     d3.select("#rectMI")
         .attr("height", heightDad + margin.top + margin.bottom)
-        .style("cursor", "pointer")
+        .style("cursor", "default")
         .on("click", up)
 
       // Mark any currently-displayed bars as exiting.
