@@ -50,30 +50,50 @@ for (let i=0; i < programas.length; i++){
         programas[i].jsonD.children = uniqueChildrenDads
 
         //verificando si los datos de los childrenDads son billones, millones o miles
+        var newChildrensDivideByType = []
+        for(let j=0; j<programas[i].jsonD.children.length; j++){
+            newChildrensDivideByType.push( {"name": programas[i].jsonD.children[j].name, "children": [], "type":[]} )
+        }
+
         for(let j=0; j<programas[i].jsonD.children.length; j++){
             var arraySizes = []
             for(let l=0; l<programas[i].jsonD.children[j].children.length ;l++){
                 arraySizes.push(programas[i].jsonD.children[j].children[l].size)
                 if(programas[i].jsonD.children[j].children[l].size.toString().length >= 10){
                     programas[i].jsonD.children[j].children[l].num = "bi"
-                }else if(programas[i].jsonD.children[j].children[l].size.toString().length >= 7 && programas[i].jsonD.children[j].children[l].size.toString().length < 10){
+                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 9 && programas[i].jsonD.children[j].children[l].size.toString().length > 6){
                     programas[i].jsonD.children[j].children[l].num = "mi"
-                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 5){
+                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 6){
                     programas[i].jsonD.children[j].children[l].num = "k"
                 }
+                newChildrensDivideByType[j].type.push(programas[i].jsonD.children[j].children[l].num)
+                newChildrensDivideByType[j].children.push(programas[i].jsonD.children[j].children[l])
             }
-
-            var sizeTotal = arraySizes.reduce((a, b) => a + b, 0)
-            if(sizeTotal > 1000000000){
-                programas[i].jsonD.children[j].type = "bi";
-            }else if(sizeTotal > 1000000){
-                programas[i].jsonD.children[j].type = "mi";
-            }else if(sizeTotal > 1000){
-                programas[i].jsonD.children[j].type = "k";
-            }
-
         }
 
+        var newChildrensDivideByNum = []
+        for(let j=0; j<newChildrensDivideByType.length; j++){
+
+            newChildrensDivideByType[j].type = [...new Set(newChildrensDivideByType[j].type)]
+
+            for(let l=0; l<newChildrensDivideByType[j].type.length; l++){
+                newChildrensDivideByNum.push({"name": newChildrensDivideByType[j].name, "children": newChildrensDivideByType[j].children, "type":newChildrensDivideByType[j].type[l]})
+            }
+        }
+
+
+        var arrayOfChildrenDivide = []
+        for(let j=0; j<newChildrensDivideByNum.length; j++){
+            arrayOfChildrenDivide.push({"name": newChildrensDivideByNum[j].name, "children": [], "type":newChildrensDivideByNum[j].type })
+
+            for(let l=0; l<newChildrensDivideByNum[j].children.length; l++){
+                if(arrayOfChildrenDivide[j].type === newChildrensDivideByNum[j].children[l].num){
+                    arrayOfChildrenDivide[j].children.push(newChildrensDivideByNum[j].children[l])
+                }
+            }
+        }
+
+        programas[i].jsonD.children = arrayOfChildrenDivide
 
 
         //Nombrando instituciones
@@ -112,24 +132,16 @@ for (let i=0; i < programas.length; i++){
             }
         //para Billones
         }else{
-            if(jsonName === "Defensa y Soberanía Nacional"){
-                var objectSubGraph = {
-                    "name": uniqueInstituciones[0][0],
-                    "value": (uniqueInstituciones[0][1].reduce((a, b) => a + b, 0) / 1000000000)
+            for(let i=0; i<uniqueInstituciones.length;i++){
+                const objectSubGraph = {
+                    "name": uniqueInstituciones[i][0],
+                    "value": (uniqueInstituciones[i][1].reduce((a, b) => a + b, 0) / 1000000000)
                 };
-
+    
                 jsonSubGraph.push(objectSubGraph)
-            }else{
-                for(let i=0; i<uniqueInstituciones.length;i++){
-                    objectSubGraph = {
-                        "name": uniqueInstituciones[i][0],
-                        "value": (uniqueInstituciones[i][1].reduce((a, b) => a + b, 0) / 1000000000)
-                    };
-        
-                    jsonSubGraph.push(objectSubGraph)
-                }
             }
         }
+        
         var miBi = programas[i].millones
 
         //TODA LOS DATOS PARA STATISTICS

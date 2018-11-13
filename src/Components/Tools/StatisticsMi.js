@@ -46,6 +46,9 @@ class StatisticsMi extends Component {
 
     for(let i=0; i<dataToUse.length; i++){
         LenghtOfBars.push(dataToUse[i].children.length)
+        for(let j=0; j<dataToUse[i].children.length; j++){
+            dataToUse[i].children[j].size = (dataToUse[i].children[j].size/1000000);
+        }
     };
 
     var BarsInTheGraph = (Math.max(...LenghtOfBars));
@@ -59,7 +62,7 @@ class StatisticsMi extends Component {
     width = 972,
     height = BarsInTheGraph*40;
 
-    var dollarFormat = function(d) { return "$"+d3.format(',')(d) };
+    var dollarFormat = function(d) { return "$"+d3.format(',')(d)+" M." };
 
     var x = d3.scaleLinear()
         .range([0, width]);
@@ -145,7 +148,7 @@ class StatisticsMi extends Component {
           .duration(duration)
           .call(xAxis)
 
-        var dollarFormat = function(d) { return "$"+d3.format(',')(d) };
+        var dollarFormat = function(d) { return "$"+d3.format(',')(d)+" M." };
         xAxis.tickFormat(dollarFormat)
 
       // Transition entering bars to their new position.
