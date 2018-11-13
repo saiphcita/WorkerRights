@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../CSS/subGraph.css'
+import '../CSS/RamoGraph.css'
 import * as d3  from "d3";
 
-class SubGraph extends Component {
+class RamoGraph extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -167,4 +167,4 @@ class SubGraph extends Component {
 }
 
 
-export default SubGraph;
+export default RamoGraph;

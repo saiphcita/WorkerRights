@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 import Graph1 from "./Tools/Graph1";
 import Graph2 from "./Tools/Graph2";
 
-import SubGraph from "./Tools/SubGraph";
+import RamoGraph from "./Tools/RamoGraph";
 
 import StatisticsBi from "./Tools/StatisticsBi";
 import StatisticsMi from "./Tools/StatisticsMi";
 import StatisticsK from "./Tools/StatisticsK";
+import StatisticsCi from "./Tools/StatisticsCi";
 
 var  programas = require('./Data/Programas.json');
 var jsonName = String(localStorage.getItem("jsonData"));
@@ -26,6 +27,7 @@ if (jsonName.length !== 0){
     }
 }
 
+//MINANDO EL JSON
 for (let i=0; i < programas.length; i++){
     if(programas[i].name === jsonName){
 
@@ -63,14 +65,17 @@ for (let i=0; i < programas.length; i++){
                     programas[i].jsonD.children[j].children[l].num = "bi"
                 }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 9 && programas[i].jsonD.children[j].children[l].size.toString().length > 6){
                     programas[i].jsonD.children[j].children[l].num = "mi"
-                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 6){
+                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 6 && programas[i].jsonD.children[j].children[l].size.toString().length > 4){
                     programas[i].jsonD.children[j].children[l].num = "k"
+                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 4){
+                    programas[i].jsonD.children[j].children[l].num = "ci"
                 }
                 newChildrensDivideByType[j].type.push(programas[i].jsonD.children[j].children[l].num)
                 newChildrensDivideByType[j].children.push(programas[i].jsonD.children[j].children[l])
             }
         }
 
+        //CREANDO LOS NUEVOS CHILDRENS
         var newChildrensDivideByNum = []
         for(let j=0; j<newChildrensDivideByType.length; j++){
 
@@ -96,7 +101,7 @@ for (let i=0; i < programas.length; i++){
         programas[i].jsonD.children = arrayOfChildrenDivide
 
 
-        //Nombrando instituciones
+        //Generalizando cada Institucion
         for (let j=0; j < programas[i].jsonD.children.length; j++){
             for (let t=0; t < programas[i].jsonD.children[j].children.length; t++){
 
@@ -141,8 +146,8 @@ for (let i=0; i < programas.length; i++){
                 jsonSubGraph.push(objectSubGraph)
             }
         }
-        
         var miBi = programas[i].millones
+
 
         //TODA LOS DATOS PARA STATISTICS
         var jsonData = programas[i].jsonD
@@ -165,6 +170,13 @@ for (let i=0; i < programas.length; i++){
         for(let i=0; i<jsonData.children.length; i++){
             if(jsonData.children[i].type === "k"){
                 dataArrayK.push(jsonData.children[i])
+            }
+        }
+
+        var dataArrayCi = []
+        for(let i=0; i<jsonData.children.length; i++){
+            if(jsonData.children[i].type === "ci"){
+                dataArrayCi.push(jsonData.children[i])
             }
         }
     }
@@ -224,7 +236,7 @@ class Interface extends Component {
         page = <div>
             {button}
             <h1 style={{width:"1340px", margin:"0px", padding:"12px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("jsonData")}</h1>
-            <SubGraph data={jsonSubGraph} miBi={miBi}/>
+            <RamoGraph data={jsonSubGraph} miBi={miBi}/>
         </div>
     }
     //PAGINA DE LAS RAZONES DE GASTOS
@@ -235,6 +247,7 @@ class Interface extends Component {
             <StatisticsBi jsonData={dataArrayBi} miBi={miBi}/>
             <StatisticsMi jsonData={dataArrayMi} miBi={miBi}/>
             <StatisticsK jsonData={dataArrayK} miBi={miBi}/>
+            <StatisticsCi jsonData={dataArrayCi} miBi={miBi}/>
         </div>
     }
 
