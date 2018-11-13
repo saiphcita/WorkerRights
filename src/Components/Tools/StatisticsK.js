@@ -177,6 +177,8 @@ class StatisticsK extends Component {
         if (!d.children ) return;
         var end = duration + d.children.length * delay;
 
+        window.location.href='#Terciario'
+
         var heightChildren = (d.children.length+3) *38
 
         d3.select("#statiK")
@@ -390,7 +392,7 @@ class StatisticsK extends Component {
             }else{
                 return(
                     <div>
-                        <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
+                        <h3 id="Terciario" style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
                         <div id='containerStatisK' className="containerStatis">
                             <svg id="statiK" className="stati"/>
                         </div>
@@ -403,7 +405,7 @@ class StatisticsK extends Component {
             }else{
                 return(
                     <div>
-                        <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Terciarios</h3>
+                        <h3 id="Terciario" style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Terciarios</h3>
                         <div id='containerStatisK' className="containerStatis">
                             <svg id="statiK" className="stati"/>
                         </div>

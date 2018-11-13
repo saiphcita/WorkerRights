@@ -183,6 +183,8 @@ class StatisticsBi extends Component {
         if (!d.children ) return;
         var end = duration + d.children.length * delay;
 
+        window.location.href='#Primario'
+
         var heightChildren = (d.children.length+3) *38
 
         d3.select("#statiBI")
@@ -394,7 +396,7 @@ class StatisticsBi extends Component {
         }else{
             return(
                 <div>
-                    <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Primarios</h3>
+                    <h3 id="Primario" style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Primarios</h3>
                     <div id='containerStatisBI' className="containerStatis">
                         <svg id="statiBI" className="stati"/>
                     </div>

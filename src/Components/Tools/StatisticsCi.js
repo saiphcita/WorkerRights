@@ -177,6 +177,8 @@ class StatisticsCi extends Component {
         if (!d.children ) return;
         var end = duration + d.children.length * delay;
 
+        window.location.href='#Menor'
+
         var heightChildren = (d.children.length+3) *38
 
         d3.select("#statiCI")
@@ -390,7 +392,7 @@ class StatisticsCi extends Component {
             }else{
                 return(
                     <div>
-                        <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
+                        <h3 id="Menores" style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
                         <div id='containerStatisCi' className="containerStatis">
                             <svg id="statiCI" className="stati"/>
                         </div>
@@ -403,7 +405,7 @@ class StatisticsCi extends Component {
             }else{
                 return(
                     <div>
-                        <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Menores</h3>
+                        <h3 id="Menores" style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Menores</h3>
                         <div id='containerStatisCi' className="containerStatis">
                             <svg id="statiCI" className="stati"/>
                         </div>
