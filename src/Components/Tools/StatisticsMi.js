@@ -51,8 +51,8 @@ class StatisticsMi extends Component {
         "children": dataToUse
     }
 
-    var margin = {top: 40, right: 0, bottom: 0, left: 318},
-    width = 972
+    var margin = {top: 40, right: 0, bottom: 0, left: 312},
+    width = 978
     var heightDad = dataToUse.length*40;
 
     var dollarFormat = function(d) { return "$"+d3.format(',')(d)+" M." };

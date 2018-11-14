@@ -202,7 +202,7 @@ class Interface extends Component {
         <button style={{backgroundColor:"black", width:"420px", height:"100%", color:"white", float:"left", border:"none", padding:"0"}}>Gráfica de Instituciones</button>
         <button
         style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
-        onClick={()=>{ localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>
+        onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>
             Volver
         </button>
     </div>
@@ -211,7 +211,7 @@ class Interface extends Component {
         <button style={{backgroundColor:"black", width:"420px", height:"100%", color:"white", float:"left", border:"none", padding:"0"}}>Gráfica de Razones de Gastos</button>
         <button
         style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
-        onClick={()=>{ localStorage.setItem("statePage", 1); window.location.reload();}}>
+        onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 1); window.location.reload();}}>
             Volver
         </button>
     </div>
