@@ -24,7 +24,7 @@ svg {
 }
 
 #graphSub text {
-  font-size: 12px;
+  font-size: 16px;
   fill: white;
 }
 
@@ -54,12 +54,12 @@ line#limit {
 
 
 #graphSub text.divergence {
-  font-size: 12px;
+  font-size: 16px;
   fill: #2F4A6D;
 }
 
 #graphSub text.value {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 #graphSub text.title {
@@ -68,10 +68,10 @@ line#limit {
 }
 
 #graphSub text.label {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
 }
 
 #graphSub text.source {
-  font-size: 12px;
+  font-size: 16px;
 }

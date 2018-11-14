@@ -61,13 +61,13 @@ for (let i=0; i < programas.length; i++){
             var arraySizes = []
             for(let l=0; l<programas[i].jsonD.children[j].children.length ;l++){
                 arraySizes.push(programas[i].jsonD.children[j].children[l].size)
-                if(programas[i].jsonD.children[j].children[l].size.toString().length >= 10){
+                if(programas[i].jsonD.children[j].children[l].size.toString().length >= 9){
                     programas[i].jsonD.children[j].children[l].num = "bi"
-                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 9 && programas[i].jsonD.children[j].children[l].size.toString().length > 6){
+                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 8 && programas[i].jsonD.children[j].children[l].size.toString().length > 5){
                     programas[i].jsonD.children[j].children[l].num = "mi"
-                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 6 && programas[i].jsonD.children[j].children[l].size.toString().length > 4){
+                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 5 && programas[i].jsonD.children[j].children[l].size.toString().length > 3){
                     programas[i].jsonD.children[j].children[l].num = "k"
-                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 4){
+                }else if(programas[i].jsonD.children[j].children[l].size.toString().length <= 3){
                     programas[i].jsonD.children[j].children[l].num = "ci"
                 }
                 newChildrensDivideByType[j].type.push(programas[i].jsonD.children[j].children[l].num)

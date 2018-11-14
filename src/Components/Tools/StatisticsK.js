@@ -356,16 +356,6 @@ class StatisticsK extends Component {
             .attr("dy", ".2em")
             .text(function(d) { return d.data.subtitle; });
 
-        bar.append("text")
-            .attr("class", "subtitle")
-            .attr("x", -92)
-            .attr("y", barHeight/2)
-            .style("text-anchor", "end")
-            .style("fill","black")
-            .style("font-size", "0.65rem")
-            .attr("dy", ".2em")
-            .text(function(d) { return d.data.ramo; });
-
       bar.append("rect")
           .attr("width", function(d) { return x(d.value); })
           .attr("height", barHeight);
@@ -392,8 +382,9 @@ class StatisticsK extends Component {
             }else{
                 return(
                     <div>
-                        <h3 id="Terciario" style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
+                        <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
                         <div id='containerStatisK' className="containerStatis">
+                            <div id="Terciario" />
                             <svg id="statiK" className="stati"/>
                         </div>
                     </div>
@@ -405,8 +396,9 @@ class StatisticsK extends Component {
             }else{
                 return(
                     <div>
-                        <h3 id="Terciario" style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Terciarios</h3>
+                        <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Terciarios</h3>
                         <div id='containerStatisK' className="containerStatis">
+                            <div id="Terciario" />
                             <svg id="statiK" className="stati"/>
                         </div>
                     </div>

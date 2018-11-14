@@ -356,16 +356,6 @@ class StatisticsCi extends Component {
             .attr("dy", ".2em")
             .text(function(d) { return d.data.subtitle; });
 
-        bar.append("text")
-            .attr("class", "subtitle")
-            .attr("x", -92)
-            .attr("y", barHeight/2)
-            .style("text-anchor", "end")
-            .style("fill","black")
-            .style("font-size", "0.65rem")
-            .attr("dy", ".2em")
-            .text(function(d) { return d.data.ramo; });
-
       bar.append("rect")
           .attr("width", function(d) { return x(d.value); })
           .attr("height", barHeight);
@@ -392,8 +382,9 @@ class StatisticsCi extends Component {
             }else{
                 return(
                     <div>
-                        <h3 id="Menores" style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
+                        <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto</h3>
                         <div id='containerStatisCi' className="containerStatis">
+                            <div id="Menor" />
                             <svg id="statiCI" className="stati"/>
                         </div>
                     </div>
@@ -405,8 +396,9 @@ class StatisticsCi extends Component {
             }else{
                 return(
                     <div>
-                        <h3 id="Menores" style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Menores</h3>
+                        <h3 style={{width:"1340px", margin:"0px", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>Razón de Gasto Menores</h3>
                         <div id='containerStatisCi' className="containerStatis">
+                            <div id="Menor" />
                             <svg id="statiCI" className="stati"/>
                         </div>
                     </div>
