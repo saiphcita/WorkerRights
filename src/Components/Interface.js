@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Graph1 from "./Tools/Graph1";
-import Graph2 from "./Tools/Graph2";
+import Graph3 from "./Tools/Graph3";
 
 import RamoGraph from "./Tools/RamoGraph";
 
@@ -10,8 +10,108 @@ import StatisticsMi from "./Tools/StatisticsMi";
 import StatisticsK from "./Tools/StatisticsK";
 import StatisticsCi from "./Tools/StatisticsCi";
 
-var  programas = require('./Data/Programas.json');
+// var  programas = require('./Data/Programas.json');
 var jsonName = String(localStorage.getItem("jsonData"));
+
+var  D1 = require('./Data/defensa.json');
+var  D2 = require('./Data/gobernacion.json');
+var  D3 = require('./Data/hacienda.json');
+var  D4 = require('./Data/relaciones.json');
+
+D1 =  D1.map(i => {if(i.value !== 0){ return i }else{
+    return null
+}} )
+D1 =  D1.filter(i => { return i != null} )
+D1 =  D1.filter(i => { return i != null} )
+for(let i = 0; i < D1.length; i++){
+    for(let j = 0; j < D1[i].jsonD.children.length; j++){
+        for(let l = 0; l < D1[i].jsonD.children[j].children.length; l++){
+            D1[i].jsonD.children[j].children[l].ramo = "Defensa Nacional"
+        }
+    }
+}
+
+
+D2 =  D2.map(i => {if(i.value !== 0){ return i }else{
+    return null
+}} )
+D2 =  D2.filter(i => { return i != null} )
+D2 =  D2.filter(i => { return i != null} )
+for(let i = 0; i < D2.length; i++){
+    for(let j = 0; j < D2[i].jsonD.children.length; j++){
+        for(let l = 0; l < D2[i].jsonD.children[j].children.length; l++){
+            D2[i].jsonD.children[j].children[l].ramo = "Gobernación"
+        }
+    }
+}
+
+
+D3 =  D3.map(i => {if(i.value !== 0){ return i }else{
+    return null
+}} )
+D3 =  D3.filter(i => { return i != null} )
+D3 =  D3.filter(i => { return i != null} )
+for(let i = 0; i < D3.length; i++){
+    for(let j = 0; j < D3[i].jsonD.children.length; j++){
+        for(let l = 0; l < D3[i].jsonD.children[j].children.length; l++){
+            D3[i].jsonD.children[j].children[l].ramo = "Hacienda"
+        }
+    }
+}
+
+
+D4 =  D4.map(i => {if(i.value !== 0){ return i }else{
+    return null
+}} )
+D4 =  D4.filter(i => { return i != null} )
+for(let i = 0; i < D4.length; i++){
+    for(let j = 0; j < D4[i].jsonD.children.length; j++){
+        for(let l = 0; l < D4[i].jsonD.children[j].children.length; l++){
+            D4[i].jsonD.children[j].children[l].ramo = "Relaciones Exteriores"
+        }
+    }
+}
+
+var totalProgramas = []
+totalProgramas.push(...D1)
+totalProgramas.push(...D2)
+totalProgramas.push(...D3)
+totalProgramas.push(...D4)
+
+var nameProgramas = []
+for(let i = 0; i < totalProgramas.length; i++){
+    nameProgramas.push(totalProgramas[i].name)
+}
+nameProgramas = [...new Set(nameProgramas)]
+for(let i = 0; i < nameProgramas.length; i++){
+    nameProgramas[i] = {
+        "name": nameProgramas[i],
+        "value": [],
+        "jsonD": {
+            "name": "flare",
+            "children": []
+        },
+        "millones": false
+    }
+}
+for(let i = 0; i < totalProgramas.length; i++){
+    for(let j = 0; j < nameProgramas.length; j++){
+        if(totalProgramas[i].name === nameProgramas[j].name){
+            if(totalProgramas[i].millones){
+                nameProgramas[j].value.push((totalProgramas[i].value)/1000)
+            }else{
+                nameProgramas[j].value.push(totalProgramas[i].value)
+            }
+            nameProgramas[j].jsonD.children.push(...totalProgramas[i].jsonD.children)
+        }
+    }
+}
+for(let i = 0; i < nameProgramas.length; i++){
+    nameProgramas[i].value = Number(nameProgramas[i].value.reduce(function(a, b) { return a + b; }, 0)).toFixed(4);
+}
+
+//nameProgamas es ahora los datos
+var programas = nameProgramas
 
 //viendo si el jsonData ha mutado o no existe
 if (jsonName.length !== 0){
@@ -217,8 +317,8 @@ class Interface extends Component {
     </div>
 
     var page = <div>
-        <Graph1/>
-        <Graph2/>
+        <Graph1 programas={programas}/>
+        <Graph3 programas={programas}/>
     </div>
     
     //PAGINA PRINCIPAL
@@ -227,8 +327,8 @@ class Interface extends Component {
             <h3 style={{width:"1340px", margin:"0", padding:"12px 0", backgroundColor:"black", color:"white", textAlign:"center"}}>
                 Gráfica Principal
             </h3>
-            <Graph1/>
-            <Graph2/>
+            <Graph1 programas={programas}/>
+            <Graph3 programas={programas}/>
         </div>
     }
     //PAGINA DE LAS INSTITUCIONES

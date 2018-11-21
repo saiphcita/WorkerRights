@@ -37,7 +37,7 @@ class RamoGraph extends Component {
     const height = 482 - 2 * 40;
 
     const chart = svg.append('g')
-      .attr('transform', `translate(${margin}, ${18})`);
+      .attr('transform', `translate(${90}, ${22})`);
 
     const xScale = d3.scaleBand()
       .range([0, width])

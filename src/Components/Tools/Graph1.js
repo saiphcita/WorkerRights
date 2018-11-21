@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import '../CSS/graph1.css'
 import * as d3  from "d3";
 
-var  programas = require('../Data/Programas.json');
-var jsonData = []
-for (let i=0; i < programas.length; i++){
-  if(!programas[i].millones){
-      jsonData.push(programas[i])
-  }
-}
-
 class Graph1 extends Component {
   constructor(props) {
     super(props);
@@ -20,6 +12,15 @@ class Graph1 extends Component {
 
   
   componentDidMount(){
+    var jsonData = []
+    for (let i=0; i < this.props.programas.length; i++){
+      if(!this.props.programas[i].millones){
+        if(this.props.programas[i].value > 200){
+          jsonData.push(this.props.programas[i])
+        }
+      }
+    }
+
     var arrayOfValues = [];
     for(let i=0; i<jsonData.length; i++){
       arrayOfValues.push(jsonData[i].value);
@@ -45,7 +46,7 @@ class Graph1 extends Component {
     const height = 620 - 2 * 48;
 
     const chart = svg.append('g')
-      .attr('transform', `translate(${margin}, ${20})`);
+      .attr('transform', `translate(${90}, ${20})`);
 
     const xScale = d3.scaleBand()
       .range([0, width])

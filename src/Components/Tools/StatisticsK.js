@@ -346,15 +346,13 @@ class StatisticsK extends Component {
           .style("font-size", "0.7rem")
           .text(function(d) { return d.data.name; });
 
-      bar.append("text")
-            .attr("class", "subtitle")
-            .attr("x", -12)
-            .attr("y", barHeight)
-            .style("text-anchor", "end")
-            .style("fill","#999")
-            .style("font-size", "0.6rem")
-            .attr("dy", ".2em")
-            .text(function(d) { return d.data.subtitle; });
+        bar.append("text")
+          .attr("x", -12)
+          .attr("y", barHeight/2)
+          .style("text-anchor", "end")
+          .style("font-size", "0.58rem")
+          .attr("dy", ".2em")
+          .text(function(d) { return d.data.subtitle; });
 
       bar.append("rect")
           .attr("width", function(d) { return x(d.value); })

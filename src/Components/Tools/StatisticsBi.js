@@ -353,12 +353,10 @@ class StatisticsBi extends Component {
           .text(function(d) { return d.data.name; });
 
       bar.append("text")
-            .attr("class", "subtitle")
             .attr("x", -12)
-            .attr("y", barHeight)
+            .attr("y", barHeight/2)
             .style("text-anchor", "end")
-            .style("fill","#999")
-            .style("font-size", "0.6rem")
+            .style("font-size", "0.58rem")
             .attr("dy", ".2em")
             .text(function(d) { return d.data.subtitle; });
 
