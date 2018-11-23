@@ -1,0 +1,16 @@
+.container {
+  width: 1000px;
+  min-width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+  margin-bottom: 0;
+  color: white;
+  background-color: #2F4A6D;
+}
+
+.linkG{
+  text-align: left;
+  display: block;
+  color: white;
+  font-size: 1.4rem;
+}

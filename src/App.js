@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
-import Interface from "./Components/Interface";
+import React  from 'react';
+import Routes from "./Routes"
 
-class App extends Component {
-  render() {
-    return (
-      <Interface/>
-    );
-  }
-}
+const App = () => (
+    <Routes/>
+);
 
 export default App;
