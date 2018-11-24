@@ -3,7 +3,7 @@ import "./CSS/FirstInterface.css";
 import { Link } from 'react-router-dom'
 import ListCompras from "./TOOLS/ListCompras.js";
 
-var  listaDeCompras = require('./DATA/lista.json');
+var  listaDeCompras = require('./DATA/ComprasJData.json');
 
 class FirstInterface extends Component {
   constructor(props) {

@@ -1,0 +1,145 @@
+[
+    {
+        "name": "Infraestructura",
+        "children": [
+            "INFRAESTRUCTURA URBANA",
+            "Construcci\u00f3n y modernizaci\u00f3n",
+            "AMPLIACION DE LA RED ELECTRICA",
+            "TRABAJOS DE RECONSTRUCCION DE PUENTES",
+            "Construcci\u00f3n de Espacios Educativos",
+            "MODERNIZACION Y PAVIMENTACION DE CAMINO"
+        ]
+    },
+    {
+        "name": "Otros",
+        "children": [
+            "BANCOS DE CAPACITORES",
+            "Vales nacionales de gasolina",
+            "GRUPO 372",
+            "Adquisici\u00f3n de Vales de Combustible",
+            "pruebas de an\u00fdlisis de gases en sangre",
+            "Adquisici\u00fdn de bienes de inversi\u00fdn",
+            "SUMINISTRO DE VALES DE GASOLINA",
+            "TRABAJOS DE SE\u00d1ALAMIENTO",
+            "SEGURO COLECTIVO DE RETIRO",
+            "Conservaci\u00fdn Rutinaria"
+        ]
+    },
+    {
+        "name": "Mantenimiento",
+        "children": [
+            "MANTENIMIENTO A MONTACARGAS",
+            "REPARACION Y MANTENIMIENTO DE INMUEBLE",
+            "MANTENIMIENTO A EQUIPO DE LAVANDERIA",
+            "Mantenimiento a Equipos de Lavanderia"
+        ]
+    },
+    {
+        "name": "Materiales",
+        "children": [
+            "CABLE DE ALUMINIO",
+            "Medicinas y Materiales de Curaci\u00fdn",
+            "Adquisici\u00f3n de Material de laboratorio",
+            "Adquisici\u00f3n de Material de Oficina",
+            "ADQUISICION DE ARENA, PIEDRA Y GRAVA",
+            "ADQUISICION DE CEMENTO GRIS",
+            "Material Deportivo",
+            "Abarrotes",
+            "Reproducci\u00fdn de Materiales",
+            "Adquisicion de material de construcci\u00f3n",
+            "Suministro de Gas L.P.",
+            "MATERIALES Y SUMINISTROS",
+            "CABLES Y CONDUCTORES",
+            "Materias Primas y Materiales",
+            "SUMINISTRO DE BOYA DE MARCACION DE CANAL",
+            "MATERIALES SUBTERRANEOS",
+            "MATERIALES Y UTILES DE OFICINA",
+            "Material de oficina",
+            "Suministro de Oxigeno Medicinal",
+            "medicamentos y material de curaci\u00fdn",
+            "Material Didactico"
+        ]
+    },
+    {
+        "name": "Vestimenta",
+        "children": [
+            "uniformes y prendas de protecci\u00fdn",
+            "Vestuario, Uniformes y Blancos"
+        ]
+    },
+    {
+        "name": "Vehiculos",
+        "children": [
+            "VEH\u00cdCULOS Y EQUIPAMIENTO DE VEH\u00cdCULOS",
+            "TRANSPORTE DE PERSONAL",
+            "Camionetas Pick-Up"
+        ]
+    },
+    {
+        "name": "Servicios",
+        "children": [
+            "servicio de \"Suministro de Gas Propano\"",
+            "Servicio de Fotocopiado",
+            "Servicio de Fumigaci\u00f3n y desratizaci\u00f3n",
+            "Servicio Telecomunicaciones",
+            "Fotocopiado",
+            "Servicios M\u00fddicos Subrogados",
+            "SERVICIO INTEGRAL DE LIMPIEZA",
+            "SERVICIO DE SEGURIDAD",
+            "Servicio de Medicina Magistral",
+            "Servicio de Limpieza de Oficinas",
+            "CONTRATACION DEL SERVICIO DE COMEDOR",
+            "Servicio de Fumigaci\u00f3n",
+            "Servicios de limpieza",
+            "Vigilancia",
+            "SERVICIO DE MANTENIMIENTO DE LIMPIEZA",
+            "SERVICIO DE FOTOCOPIADO Y DUPLICADO",
+            "Servicio Integral de Lavander\u00fda",
+            "Adquisicion de Servicio de Vigilancia",
+            "Servicio de Limpieza y Fumigaci\u00fdn",
+            "Servicio Subrogado de Vigilancia",
+            "Servicio de Oxigeno.",
+            "Contratacion de servicio de vigilancia",
+            "Servicio de Vigilancia"
+        ]
+    },
+    {
+        "name": "Equipos",
+        "children": [
+            "renta de equipo de audio y video",
+            "Adquisicion de equipo de proyeccion",
+            "Arrendamiento de maquinaria y equipo",
+            "Equipo El\u00fdctrico y Electr\u00fdnico",
+            "Equipo M\u00e9dico y de Laboratorio",
+            "Veh\u00edculos y Equipo Terrestre",
+            "LAVABOS Y TUBOS DE CONCRETO",
+            "ADQUISICION DE COMPUTADORAS",
+            "Arrendamiento de m\u00e1quinas fotocopiadoras",
+            "Adquisici\u00fdn de Bienes Informaticos",
+            "Mobiliario y Equipo Medico",
+            "Vehiculos y Equipo Terrestre",
+            "Mobiliario y Equipo Administrativo",
+            "MOBILIARIO Y EQUIPO DE C\u00d3MPUTO",
+            "MOBILIARIO Y EQUIPO DE AUDIO Y VIDEO",
+            "Adquisici\u00fdn de equipo de c\u00fdmputo.",
+            "Mobiliario y Equipo M\u00fddico",
+            "Consumibles equipos medicos",
+            "EQUIPOS ELECTROMECANICOS"
+        ]
+    },
+    {
+        "name": "Productos",
+        "children": [
+            "PRODUCTOS ALIMENTICIOS",
+            "CUCHILLAS DESCONECTADORAS",
+            "Utensilios y Enseres para Cocina",
+            "MEDICINA NUCLEAR",
+            "AISLADOR SINTETICO",
+            "Focos Especiales",
+            "Agua purificada embotellada",
+            "ADQUISICION DE HERRAMIENTAS DE MANO",
+            "LLANTAS",
+            "Consumibles de C\u00f3mputo"
+        ]
+    }
+]
