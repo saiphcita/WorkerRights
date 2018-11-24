@@ -21,21 +21,14 @@ class ListCompras extends Component {
             return(
               <div>
 
-                <p style={{marginBottom:"0px", color:"#80cbc4", fontSize:"1.2rem"}}>{val["name"]}</p>
-
-                <div className="titleList">
-                  <li style={{width:"8%", maxWidth:"8%"}}>No.</li>
-                  <li style={{width:"78%", maxWidth:"78%", textAlign:"left", paddingLeft:"8px"}}>Compra</li>
-                  <li style={{width:"14%", maxWidth:"14%", textAlign:"left", paddingLeft:"8px"}}></li>
-                </div>
+                <p style={{color:"#80cbc4", fontSize:"1.4rem"}}>{val["name"]}</p>
 
                 <div style={{border: "1px solid black"}}>
                   {val["children"].map((value, indx) =>{
                     return (
                       <div key={indx} className="Clist">
-                        <li style={{width:"8%", maxWidth:"8%"}}>{indx+1}</li>
-                        <li style={{width:"78%", maxWidth:"78%", textAlign:"left", paddingLeft:"8px"}}>{value}</li>
-                        <li style={{width:"14%", maxWidth:"14%"}}> <input type="checkbox" name="compras" value={value}/> </li>
+                        <li style={{width:"80%", maxWidth:"80%", textAlign:"left", paddingLeft:"8px", fontSize:"1rem"}}>{value.toUpperCase()}</li>
+                        <li style={{width:"20%", maxWidth:"20%"}}> <input type="checkbox" name="compras" value={value}/> </li>
                       </div>
                     )
                   })}
