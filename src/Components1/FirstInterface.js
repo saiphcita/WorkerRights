@@ -21,8 +21,13 @@ class FirstInterface extends Component {
           <h1 style={{marginTop:"10px"}}>Especificaciones de Nuevo Contrato Público </h1>
 
           <div style={{textAlign:"left", marginBottom:"20px"}}>
+            <h4 style={{marginBottom:"0px"}}>Nombre del Contrato:</h4>
+            <textarea rows="1" cols="34" placeholder="Nombre." name="nombre" form="usrform"/>
+          </div>
+
+          <div style={{textAlign:"left", marginBottom:"20px"}}>
             <h4 style={{marginBottom:"0px"}}>Describe el Contrato:</h4>
-            <textarea rows="6" cols="68" placeholder="Descripción." name="comment" form="usrform"/>
+            <textarea rows="6" cols="68" placeholder="Descripción." name="descripción" form="usrform"/>
           </div>
 
           <h3>Escoge Especificaciones de Infraestructura y Material que deben ir incluidos en el Contrato: </h3>
@@ -30,7 +35,7 @@ class FirstInterface extends Component {
 
           <div style={{textAlign:"left", marginBottom:"20px"}}>
             <h4 style={{marginBottom:"0px"}}>COMENTARIO</h4>
-            <textarea rows="6" cols="68" placeholder="Escribe tu comentario aquí." name="comment" form="usrform"/>
+            <textarea rows="6" cols="68" placeholder="Escribe tu comentario aquí." name="comentario" form="usrform"/>
           </div>
 
           <button>TERMINAR</button>
