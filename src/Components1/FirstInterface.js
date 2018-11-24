@@ -15,30 +15,34 @@ class FirstInterface extends Component {
   render() {
     return (
       <div className="container">
-        <div style={{padding:"20px", height:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center"}}>
-          <Link to="/Graph" className="linkG">Ir a las Gráficas</Link>
+        <div style={{height:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center"}}>
+          <div style={{margin:"2.8% 4%"}}>
 
-          <h1 style={{marginTop:"10px"}}>Especificaciones de Nuevo Contrato Público </h1>
+            <Link to="/Graph" className="linkG">Ir a las Gráficas</Link>
 
-          <div style={{textAlign:"left", marginBottom:"20px"}}>
-            <h4 style={{marginBottom:"0px"}}>Nombre del Contrato:</h4>
-            <textarea rows="1" cols="34" placeholder="Nombre." name="nombre" form="usrform"/>
+            <h1 style={{marginTop:"2%"}}>Especificaciones de Nuevo Contrato Público </h1>
+
+            <div style={{textAlign:"left", marginBottom:"5%"}}>
+              <h4 style={{marginBottom:"0"}}>Nombre del Contrato:</h4>
+              <textarea rows="1" placeholder="Nombre." name="nombre" form="usrform"/>
+            </div>
+
+            <div style={{textAlign:"left", marginBottom:"5%"}}>
+              <h4 style={{marginBottom:"0"}}>Describe el Contrato:</h4>
+              <textarea rows="6" placeholder="Descripción." name="descripción" form="usrform"/>
+            </div>
+
+            <h3>Escoge Especificaciones de Infraestructura y Material que deben ir incluidos en el Contrato: </h3>
+            <ListCompras data={listaDeCompras} />
+
+            <div style={{textAlign:"left", marginBottom:"5%"}}>
+              <h4 style={{marginBottom:"0"}}>COMENTARIO</h4>
+              <textarea rows="6" placeholder="Escribe tu comentario aquí." name="comentario" form="usrform"/>
+            </div>
+            
+            <button>TERMINAR</button>
+
           </div>
-
-          <div style={{textAlign:"left", marginBottom:"20px"}}>
-            <h4 style={{marginBottom:"0px"}}>Describe el Contrato:</h4>
-            <textarea rows="6" cols="68" placeholder="Descripción." name="descripción" form="usrform"/>
-          </div>
-
-          <h3>Escoge Especificaciones de Infraestructura y Material que deben ir incluidos en el Contrato: </h3>
-          <ListCompras data={listaDeCompras} />
-
-          <div style={{textAlign:"left", marginBottom:"20px"}}>
-            <h4 style={{marginBottom:"0px"}}>COMENTARIO</h4>
-            <textarea rows="6" cols="68" placeholder="Escribe tu comentario aquí." name="comentario" form="usrform"/>
-          </div>
-
-          <button>TERMINAR</button>
         </div>
       </div>
     );
