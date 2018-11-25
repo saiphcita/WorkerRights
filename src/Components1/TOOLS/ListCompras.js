@@ -5,21 +5,16 @@ class ListCompras extends Component {
     constructor(props) {
       super(props);
       this.state = {
+        dataJ: this.props.data
       }
     };
-  
-    // componentDidMount() {
-    //   for(let i = 0; i < this.props.data.length; i++){
-    //     console.log(this.props.data[i])
-    //   }
-    // }
   
     render() {
       return (
         <div className="DivCompras">
-          {this.props.data.map((val, ind) =>{
+          {this.state.dataJ.map((val, ind) =>{
             return(
-              <div>
+              <div key={val["name"]}>
 
                 <p style={{color:"#80cbc4", fontSize:"1.4rem"}}>{val["name"]}</p>
 
@@ -28,7 +23,7 @@ class ListCompras extends Component {
                     return (
                       <div key={indx} className="Clist">
                         <li style={{width:"80%", maxWidth:"80%", textAlign:"left", paddingLeft:"8px", fontSize:"1rem"}}>{value.toUpperCase()}</li>
-                        <li style={{width:"20%", maxWidth:"20%"}}> <input type="checkbox" name="compras" value={value}/> </li>
+                        <li style={{width:"20%", maxWidth:"20%"}}> <input onChange={this.props.change} type="checkbox" name="compras" value={value}/> </li>
                       </div>
                     )
                   })}
