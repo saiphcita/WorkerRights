@@ -12,10 +12,20 @@ class ContractG extends Component {
   }
 
   render() {
+
+    var comentario = <div style={{textAlign:"left", marginBottom:"2%"}}>
+                      <h3 style={{marginBottom:"0", color:"#80cbc4"}}>Comentario:</h3>
+                      <p>{localStorage.getItem("comentarioC")}</p>
+                    </div>
+    
+    if(localStorage.getItem("comentarioC") === ""){
+      comentario = <div/>
+    }
+
     return (
       <div className="container">
-        <div style={{height:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center"}}>
-          <div style={{margin:"2.8% 4%"}}>
+        <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center"}}>
+          <div style={{margin:"2.8% 4%", minHeight:"100%"}}>
 
             <Link to="/Graph" className="linkG">Ir a las Gráficas</Link>
 
@@ -32,15 +42,13 @@ class ContractG extends Component {
             </div>
 
             <div style={{textAlign:"left", marginBottom:"2%"}}>
-              <h3 style={{marginBottom:"0", color:"#80cbc4"}}>Comentario:</h3>
-              <p>{localStorage.getItem("comentarioC")}</p>
-            </div>
-
-            <div style={{textAlign:"left", marginBottom:"2%"}}>
               <h3 style={{marginBottom:"0", color:"#80cbc4"}}>Listado:</h3>
               <ListadoX data={listaDeCompras} arrayData={localStorage.getItem("especificacionesC")} />
             </div>
 
+            {comentario}
+
+            <button className="buttonContract" onClick={()=>{ localStorage.setItem("contratoH", false); window.location.reload(); }}>Crear Nuevo Contrato</button>
 
           </div>
         </div>
@@ -123,11 +131,5 @@ class ListadoX extends Component {
     );
   }
 }
-
-
-
-
-
-
 
 export default ContractG;

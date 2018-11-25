@@ -42,3 +42,16 @@
     height: 24px;
     width: 24px;
 }
+
+.name-img{
+    color:#80cbc4;
+    font-size:1.4rem;
+    cursor:pointer;
+    margin: 1.8% 0 0.8% 0;
+}
+.name-img img{
+    margin-right: 4px;
+    width: 28px;
+    height:28px;
+    vertical-align: middle;
+}

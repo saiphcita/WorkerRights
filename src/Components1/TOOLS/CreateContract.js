@@ -64,7 +64,7 @@ class CreateContract extends Component {
 
             <div style={{textAlign:"left", marginBottom:"5%"}}>
               <h4 style={{marginBottom:"0"}}>Nombre del Contrato:</h4>
-              <textarea onChange={this.changeName} value={this.state.nameV} rows="1" placeholder="Nombre." name="nombre" form="usrform"/>
+              <textarea onChange={this.changeName} value={this.state.nameV} rows="1" placeholder="Nombre." name="nombre" form="usrform" style={{width:"40%"}}/>
             </div>
 
             <div style={{textAlign:"left", marginBottom:"5%"}}>
@@ -80,7 +80,7 @@ class CreateContract extends Component {
               <textarea onChange={this.changeComentario} value={this.state.comentarioV} rows="6" placeholder="Escribe tu comentario aquí." name="comentario" form="usrform"/>
             </div>
 
-            <button onClick={this.submitContrato.bind(this)}>TERMINAR</button>
+            <button className="buttonContract" onClick={this.submitContrato.bind(this)}>Crear Contrato</button>
 
           </div>
         </div>
