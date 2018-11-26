@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "../CSS/CreateContract.css";
 import { Link } from 'react-router-dom'
 import ListCompras from "./ListCompras.js";
-import Form from "./TypeForm.js";
 
 var  listaDeCompras = require('../DATA/ComprasJData.json');
 
@@ -82,8 +81,6 @@ class CreateContract extends Component {
             </div>
 
             <button className="buttonContract" onClick={this.submitContrato.bind(this)}>Crear Contrato</button>
-
-            <Form />
 
           </div>
         </div>

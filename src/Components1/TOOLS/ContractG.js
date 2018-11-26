@@ -1,54 +1,62 @@
 import React, { Component } from 'react';
 import "../CSS/ContractG.css";
+import "../CSS/ListCompras.css";
 import { Link } from 'react-router-dom'
 
-var  listaDeCompras = require('../DATA/ComprasJData.json');
+const API = "https://sheets.googleapis.com/v4/spreadsheets/1Kbe7_iroQQRqX5GyW0v0a9fKsV7t5zGzDyijgK6rHew/values:batchGet?ranges=ContractTypeForm&majorDimension=ROWS&key=AIzaSyAl9W1l_Endo-wHPQKtS5p3EP0UA1YXCM0";
 
 class ContractG extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      items:[]
     };
   }
 
+  componentDidMount(){
+    fetch(API).then(response => response.json()).then(data => {
+     let batchRowValues = data.valueRanges[0].values;
+
+     const rows = [];
+     for (let i = 1; i < batchRowValues.length; i++) {
+       let rowObject = {};
+       for (let j = 0; j < batchRowValues[i].length; j++) {
+         rowObject[batchRowValues[0][j]] = batchRowValues[i][j];
+       }
+       rows.push(rowObject);
+     }
+
+       this.setState({ items: rows[rows.length - 1] });
+   });
+
+ }
+
   render() {
-
-    var comentario = <div style={{textAlign:"left", marginBottom:"2%"}}>
-                      <h3 style={{marginBottom:"0", color:"#80cbc4"}}>Comentario:</h3>
-                      <p>{localStorage.getItem("comentarioC")}</p>
-                    </div>
-    
-    if(localStorage.getItem("comentarioC") === ""){
-      comentario = <div/>
-    }
-
     return (
-      <div className="container">
+      <div className="containerG">
         <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center"}}>
           <div style={{margin:"2.8% 4%", minHeight:"100%"}}>
 
-            <Link to="/Graph" className="linkG">Ir a las Gráficas</Link>
+            <Link to="/Graph" className="linkGG">Ir a las Gráficas</Link>
 
             <h1 style={{marginTop:"2%"}}>Contrato: </h1>
 
             <div style={{textAlign:"left", marginBottom:"1%"}}>
-              <h3 style={{marginBottom:"0", color:"#80cbc4"}}>Nombre del Contrato:</h3>
-              <p>{localStorage.getItem("nameC")}</p>
+              <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Nombre del Contrato:</h3>
+              <p>{this.state.items["Nombre del Contrato:"]}</p>
             </div>
 
             <div style={{textAlign:"left", marginBottom:"2%"}}>
-              <h3 style={{marginBottom:"0", color:"#80cbc4"}}>Descripción:</h3>
-              <p>{localStorage.getItem("descripciónC")}</p> 
+              <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Descripción:</h3>
+              <p>{this.state.items["Describe el Contrato:"]}</p> 
             </div>
 
             <div style={{textAlign:"left", marginBottom:"2%"}}>
-              <h3 style={{marginBottom:"0", color:"#80cbc4"}}>Listado:</h3>
-              <ListadoX data={listaDeCompras} arrayData={localStorage.getItem("especificacionesC")} />
-            </div>
+              <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Listado:</h3>
+              <ListadoX data={this.state.items} />
+            </div>  
 
-            {comentario}
-
-            <button className="buttonContract" onClick={()=>{ localStorage.setItem("contratoH", false); window.location.reload(); }}>Crear Nuevo Contrato</button>
+            <button className="buttonContractG" onClick={()=>{ localStorage.setItem("contratoH", false); window.location.reload(); }}>Crear Nuevo Contrato</button>
 
           </div>
         </div>
@@ -61,59 +69,33 @@ class ListadoX extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataJ: this.props.data
     }
   };
 
   render() {
-    var espe = this.props.arrayData.split(',');
-    for(let i = 0; i < espe.length; i++){
-      if(espe[i][0] === " "){
-        espe[i] = espe[i-1] + espe[i]
-        espe[i-1] = espe[i]
-      }
-    }
-    var uniqEspe = [ ...new Set(espe) ]
-
-    var onlyNames = []
-    for(let i = 0; i < this.state.dataJ.length; i++){
-      for(let j = 0; j <uniqEspe.length; j++){
-        if(this.state.dataJ[i].children.includes(uniqEspe[j])){
-          onlyNames.push([this.state.dataJ[i].name, uniqEspe[j]])
-        }
-      }
-    }
-
     var arrayDJToUse = []
-    for(let i=0; i< onlyNames.length; i++){
-      arrayDJToUse.push(onlyNames[i][0])
-    }
-    arrayDJToUse = [ ...new Set(arrayDJToUse) ]
-
-    for(let i=0; i< arrayDJToUse.length; i++){
-      arrayDJToUse[i] = {
-        "name": arrayDJToUse[i],
-        "children": []
-      }
-    }
-    for(let i=0; i< arrayDJToUse.length; i++){
-      for(let j=0; j< onlyNames.length; j++){
-        if(arrayDJToUse[i].name === onlyNames[j][0]){
-          arrayDJToUse[i].children.push(onlyNames[j][1])
+    for(let value in this.props.data){
+      if(value !== "Nombre del Contrato:" && value !== "Describe el Contrato:" && value !== "Submitted At" && value !== "Token"){
+        if(this.props.data[value] !== ""){
+          arrayDJToUse.push({
+            "name": value,
+            "children": this.props.data[value]
+          })
         }
       }
     }
 
-
-
-
+    for(let i=0; i < arrayDJToUse.length; i++){
+      arrayDJToUse[i]["children"] = arrayDJToUse[i]["children"].split(',')
+    }
+    
     return (
       <div className="DivCompras">
         {arrayDJToUse.map((val, ind) =>{
           return(
             <div key={val["name"]}>
 
-              <p style={{color:"#80cbc4", fontSize:"1rem", marginBottom:"0"}}>{val["name"]}</p>
+              <p style={{color:"rgb(239, 219, 73)", fontSize:"1rem", marginBottom:"0"}}>{val["name"]}</p>
               <div style={{border: "1px solid black"}}>
                 {val["children"].map((value, indx) =>{
                   return (

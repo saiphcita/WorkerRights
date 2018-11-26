@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import CreateContract from "./TOOLS/CreateContract.js";
+// import CreateContract from "./TOOLS/CreateContract.js";
 import ContractG from "./TOOLS/ContractG.js";
+import Form from "./TOOLS/TypeForm.js";
+
 
 class FirstInterface extends Component {
   constructor(props) {
@@ -12,12 +14,12 @@ class FirstInterface extends Component {
 
   render() {
 
-    var page = <CreateContract/>
+    var page = <Form/>
 
     if(localStorage.getItem("contratoH") === "true"){
       page = <ContractG/>
     }else{
-      page = <CreateContract/>
+      page = <Form/>
     }
 
     return (

@@ -1,33 +1,29 @@
-.container {
+.containerG {
   width: 100%;
   min-height: 100%;
   margin: 0 auto;
   zoom: 1;
   margin-bottom: 0;
   color: white;
-  background-color: #2F4A6D;
+  background-color: rgb(57, 162, 163);
 }
 
-.linkG{
+.linkGG{
   text-align: left;
   display: block;
-  /* color: white; */
+  color: white;
   font-size: 1.4rem;
 }
 
-textarea{
-  width: 100%;
-}
-
-.buttonContract{
+.buttonContractG{
   cursor: pointer;
   border:0;
   padding: 3%;
   font-size: 1.34rem;
   width: 32%;
-  background-color: rgb(128, 203, 196);
-  color: black;
+  background-color: black;
+  color: white;
 }
-.buttonContract:hover{
+.buttonContractG:hover{
   transform: scale(0.94);
 }

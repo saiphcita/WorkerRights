@@ -3,7 +3,7 @@
     width: 100%;
     height: auto;
     overflow: auto;
-    background-color: #2F4A6D;
+    background-color: inherit;
 }
 .titleList{
     display: table;
