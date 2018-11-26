@@ -13,7 +13,7 @@ class Form extends React.Component {
       typeformEmbed.makeWidget(this.el, "https://oscarorellana1.typeform.com/to/fKu7SZ", {
         hideFooter: true,
         hideHeaders: true,
-        buttonText: false,
+        buttonText: "Take the survey!",
         hideScrollbars: true,
         opacity: 100
       });
