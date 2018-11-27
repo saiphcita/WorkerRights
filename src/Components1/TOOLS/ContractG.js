@@ -40,28 +40,31 @@ class ContractG extends Component {
     return (
       <div className="containerG">
         <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center"}}>
-          <div style={{margin:"0 4% 2% 4%", minHeight:"100%"}}>
+          <div style={{margin:"0 3.2% 2% 3.2%", minHeight:"100%"}}>
+          <Link to="/Graph" className="linkGG">Ir a las Gráficas</Link>
 
-            <Link to="/Graph" className="linkGG">Ir a las Gráficas</Link>
+            <div style={{border:"4px solid black", margin:"2% 0", paddingLeft:"1%"}}>
+              <h1 style={{marginTop:"2%"}}>Anuncio de Contrato Público </h1>
 
-            <h1 style={{marginTop:"2%"}}>Anuncio de Contrato Publico </h1>
+              <div style={{textAlign:"left", marginBottom:"1%"}}>
+                <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Nombre del Contrato:</h3>
+                <p>{this.state.items["Nombre del Contrato:"]}</p>
+              </div>
 
-            <div style={{textAlign:"left", marginBottom:"1%"}}>
-              <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Nombre del Contrato:</h3>
-              <p>{this.state.items["Nombre del Contrato:"]}</p>
-            </div>
+              <div style={{textAlign:"left", marginBottom:"2%"}}>
+                <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Descripción:</h3>
+                <p>{this.state.items["Describe el Contrato:"]}</p> 
+              </div>
 
-            <div style={{textAlign:"left", marginBottom:"2%"}}>
-              <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Descripción:</h3>
-              <p>{this.state.items["Describe el Contrato:"]}</p> 
-            </div>
-
-            <div style={{textAlign:"left", marginBottom:"2%"}}>
-              <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Especificaciones:</h3>
-              <ListadoX data={this.state.items} />
+              <div style={{textAlign:"left", marginBottom:"2%"}}>
+                <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Especificaciones:</h3>
+                <ListadoX data={this.state.items} />
+              </div>
             </div>  
 
             <button className="buttonContractG" onClick={()=>{ localStorage.setItem("contratoH", false); window.location.reload(); }}>Crear Nuevo Contrato</button>
+            <br/>
+            <button className="buttonContractG" onClick={()=>{ window.open('/Contratos', '_self'); }}>Ver contratos</button>
 
           </div>
         </div>
