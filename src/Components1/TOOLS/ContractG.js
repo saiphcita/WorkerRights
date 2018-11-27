@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "../CSS/ContractG.css";
-import "../CSS/ListCompras.css";
 import { Link } from 'react-router-dom'
 
 const API = "https://sheets.googleapis.com/v4/spreadsheets/1Kbe7_iroQQRqX5GyW0v0a9fKsV7t5zGzDyijgK6rHew/values:batchGet?ranges=ContractTypeForm&majorDimension=ROWS&key=AIzaSyAl9W1l_Endo-wHPQKtS5p3EP0UA1YXCM0";
@@ -32,14 +31,20 @@ class ContractG extends Component {
  }
 
   render() {
+
+    window.onbeforeunload = function() {
+      localStorage.removeItem("contratoH");
+      return '';
+    };
+
     return (
       <div className="containerG">
         <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center"}}>
-          <div style={{margin:"2.8% 4%", minHeight:"100%"}}>
+          <div style={{margin:"0 4% 2% 4%", minHeight:"100%"}}>
 
             <Link to="/Graph" className="linkGG">Ir a las Gráficas</Link>
 
-            <h1 style={{marginTop:"2%"}}>Contrato: </h1>
+            <h1 style={{marginTop:"2%"}}>Anuncio de Contrato Publico </h1>
 
             <div style={{textAlign:"left", marginBottom:"1%"}}>
               <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Nombre del Contrato:</h3>
@@ -52,7 +57,7 @@ class ContractG extends Component {
             </div>
 
             <div style={{textAlign:"left", marginBottom:"2%"}}>
-              <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Listado:</h3>
+              <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Especificaciones:</h3>
               <ListadoX data={this.state.items} />
             </div>  
 
@@ -90,17 +95,18 @@ class ListadoX extends Component {
     }
     
     return (
-      <div className="DivCompras">
+      <div className="DivComprasG">
         {arrayDJToUse.map((val, ind) =>{
           return(
             <div key={val["name"]}>
+            
+              <p>{val["name"]}</p>
 
-              <p style={{color:"rgb(239, 219, 73)", fontSize:"1rem", marginBottom:"0"}}>{val["name"]}</p>
-              <div style={{border: "1px solid black"}}>
+              <div>
                 {val["children"].map((value, indx) =>{
                   return (
-                    <div key={indx} className="Clist">
-                      <li style={{width:"100%", maxWidth:"100%", textAlign:"left", paddingLeft:"8px", fontSize:"0.8rem"}}>{value.toUpperCase()}</li>
+                    <div key={indx} className="ClistG">
+                      <li style={{width:"100%", maxWidth:"100%", textAlign:"left", fontSize:"80%"}}>{value.toUpperCase()}</li>
                     </div>
                   )
                 })}
