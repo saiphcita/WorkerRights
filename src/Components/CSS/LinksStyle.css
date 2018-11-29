@@ -10,7 +10,8 @@
 }
 .link1g{
     height: 100%;
-    width: 22%;
+    width: auto;
+    padding: 0 2%;
     align-items: center;
     justify-content: center;
     color: white;
@@ -21,7 +22,8 @@
 }
 .link2g{
     height: 100%;
-    width: 22%;
+    width: auto;
+    padding: 0 2%;
     align-items: center;
     justify-content: center;
     color: white;
