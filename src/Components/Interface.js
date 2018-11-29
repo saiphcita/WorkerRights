@@ -300,23 +300,17 @@ class Interface extends Component {
 };
 
   render() {
-    var button = <div style={{width:"1340px", height:"45px", backgroundColor:"black"}}>
-        <button style={{backgroundColor:"black", width:"420px", height:"100%", color:"white", float:"left", border:"none", padding:"0"}}>Gráfica de Instituciones</button>
-        <button
-        style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
-        onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>
-            Volver
-        </button>
-    </div>
+    var button = <button
+                    style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
+                    onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>
+                        Volver
+                </button>
 
-    var button2 = <div style={{width:"1340px", height:"45px", backgroundColor:"black"}}>
-        <button style={{backgroundColor:"black", width:"420px", height:"100%", color:"white", float:"left", border:"none", padding:"0"}}>Gráfica de Razones de Gastos</button>
-        <button
-        style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
-        onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 1); window.location.reload();}}>
-            Volver
-        </button>
-    </div>
+    var button2 = <button
+                    style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
+                    onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 1); window.location.reload();}}>
+                        Volver
+                </button>
 
     var page = <div>
         <Graph1 programas={programas}/>
@@ -327,8 +321,8 @@ class Interface extends Component {
     if(this.state.statePage === "0" || this.state.statePage === ""){
         page = <div>
             <div className="linkGen" style={{width:"1340px", height:"45px"}}>
-                <Link to="/Contratos" className="link1g">Ver Contratos</Link>
-                <Link to="/" className="link2g">Crear Contrato</Link>
+                <Link to="/Contratos" className="link1g">Ver Anuncios de Contratos</Link>
+                <Link to="/" className="link2g">Crear Nuevo Contrato</Link>
             </div>
             <Graph1 programas={programas}/>
             <Graph3 programas={programas}/>
@@ -337,7 +331,11 @@ class Interface extends Component {
     //PAGINA DE LAS INSTITUCIONES
     else if(this.state.statePage === "1"){
         page = <div>
-            {button}
+            <div className="linkGen" style={{width:"1340px", height:"45px"}}>
+                <Link to="/Contratos" className="link1g">Ver Anuncios de Contratos</Link>
+                <Link to="/" className="link2g">Crear Nuevo Contrato</Link>
+                {button}
+            </div>
             <h1 style={{width:"1340px", margin:"0px", padding:"12px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("jsonData")}</h1>
             <RamoGraph data={jsonSubGraph} miBi={miBi}/>
         </div>
@@ -345,7 +343,11 @@ class Interface extends Component {
     //PAGINA DE LAS RAZONES DE GASTOS
     else if(this.state.statePage === "2"){
         page = <div>
-            {button2}
+            <div className="linkGen" style={{width:"1340px", height:"45px"}}>
+                <Link to="/Contratos" className="link1g">Ver Anuncios de Contratos</Link>
+                <Link to="/" className="link2g">Crear Nuevo Contrato</Link>
+                {button2}
+            </div>
             <h2 style={{width:"1340px", margin:"0", padding:"14px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("subData")}</h2>
             <StatisticsBi jsonData={dataArrayBi} miBi={miBi}/>
             <StatisticsMi jsonData={dataArrayMi} miBi={miBi}/>
