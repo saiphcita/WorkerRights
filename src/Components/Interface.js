@@ -322,7 +322,7 @@ class Interface extends Component {
         page = <div>
             <div className="linkGen" style={{width:"1340px", height:"45px"}}>
                 <Link to="/Contratos" className="link1g">Ver Anuncios de Contratos</Link>
-                <Link to="/" className="link2g">Crear Nuevo Contrato</Link>
+                <Link to="/" className="link2g">Crear Anuncio Contrato</Link>
             </div>
             <Graph1 programas={programas}/>
             <Graph3 programas={programas}/>
@@ -333,7 +333,7 @@ class Interface extends Component {
         page = <div>
             <div className="linkGen" style={{width:"1340px", height:"45px"}}>
                 <Link to="/Contratos" className="link1g">Ver Anuncios de Contratos</Link>
-                <Link to="/" className="link2g">Crear Nuevo Contrato</Link>
+                <Link to="/" className="link2g">Crear Anuncio Contrato</Link>
                 {button}
             </div>
             <h1 style={{width:"1340px", margin:"0px", padding:"12px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("jsonData")}</h1>
@@ -345,7 +345,7 @@ class Interface extends Component {
         page = <div>
             <div className="linkGen" style={{width:"1340px", height:"45px"}}>
                 <Link to="/Contratos" className="link1g">Ver Anuncios de Contratos</Link>
-                <Link to="/" className="link2g">Crear Nuevo Contrato</Link>
+                <Link to="/" className="link2g">Crear Anuncio Contrato</Link>
                 {button2}
             </div>
             <h2 style={{width:"1340px", margin:"0", padding:"14px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("subData")}</h2>
