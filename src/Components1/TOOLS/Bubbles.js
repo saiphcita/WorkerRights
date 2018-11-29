@@ -68,21 +68,21 @@ class Bubbles extends Component {
     })
     .attr("font-family", "sans-serif")
     .attr("font-size", function(d){
-        return d.r/5;
+        return d.r/4.6;
     })
     .attr("fill", "white");
 
-    node.append("text")
-    .attr("dy", "1.3em")
-    .style("text-anchor", "middle")
-    .text(function(d) {
-        return d.data.Count/1000;
-    })
-    .attr("font-family",  "Gill Sans", "Gill Sans MT")
-    .attr("font-size", function(d){
-        return d.r/5;
-    })
-    .attr("fill", "white");
+    // node.append("text")
+    // .attr("dy", "1.3em")
+    // .style("text-anchor", "middle")
+    // .text(function(d) {
+    //     return d.data.Count/1000;
+    // })
+    // .attr("font-family",  "Gill Sans", "Gill Sans MT")
+    // .attr("font-size", function(d){
+    //     return d.r/5;
+    // })
+    // .attr("fill", "white");
 
     d3.select(this.frameElement)
     .style("height", diameter + "px");
