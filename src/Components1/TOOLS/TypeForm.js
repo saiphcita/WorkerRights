@@ -31,7 +31,7 @@ class Form extends React.Component {
               <Link to="/Contratos" className="link2g">Ver Contratos</Link>
             </div>
             <h1 style={{margin:"0", padding:"0", textAlign:"center", color: "#EFDB49", backgroundColor:"#39A2A3"}}>Especificaciones de Nuevo Contrato Público </h1>
-            <div ref={(el) => this.el = el} style={{width: '100%', height: '89.2%'}} />
+            <div ref={(el) => this.el = el} style={{width: '100%', height: '88.2%'}} />
         </div>
     )
   }

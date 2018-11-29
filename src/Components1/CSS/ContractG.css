@@ -38,6 +38,20 @@
   transform: scale(0.94);
 }
 
+.returnB{
+  margin-right: 2%;
+  cursor: pointer;
+  border:0;
+  padding: 1%;
+  font-size: 60%;
+  width: 32%;
+  background-color: white;
+  color: black;
+}
+.returnB:hover{
+  transform: scale(0.94);
+}
+
 /* PARA LA LISTA */
 .DivComprasG {
   margin: 0; 
