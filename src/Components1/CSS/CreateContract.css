@@ -8,22 +8,6 @@
   background-color: #2F4A6D;
 }
 
-.linkG{
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: block;
-  font-size: 175%;
-}
-.link1g{
-  display: inline-block;
-  margin-left: 2%;
-}
-.link2g{
-  float: right;
-  margin-right: 3%;
-}
-
 textarea{
   width: 100%;
 }

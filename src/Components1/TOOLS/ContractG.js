@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "../CSS/ContractG.css";
+import "../CSS/LinksStyle.css";
 import { Link } from 'react-router-dom'
 
 const API = "https://sheets.googleapis.com/v4/spreadsheets/1Kbe7_iroQQRqX5GyW0v0a9fKsV7t5zGzDyijgK6rHew/values:batchGet?ranges=ContractTypeForm&majorDimension=ROWS&key=AIzaSyAl9W1l_Endo-wHPQKtS5p3EP0UA1YXCM0";
@@ -39,9 +40,13 @@ class ContractG extends Component {
 
     return (
       <div className="containerG">
-        <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center"}}>
+        <div className="linkGen">
+          <Link to="/Graph" className="link1g">Ver Compras Públicas</Link>
+          <Link to="/Contratos" className="link2g">Ver Contratos</Link>
+          <Link to="/" className="link2g">Crear Nuevo Contrato</Link>
+        </div>
+        <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center", fontSize:"160%"}}>
           <div style={{margin:"0 3.2% 2% 3.2%", minHeight:"100%"}}>
-          <Link to="/Graph" className="linkGG">Ir a las Gráficas</Link>
 
             <div style={{border:"4px solid black", margin:"2% 0", paddingLeft:"1%"}}>
               <h1 style={{marginTop:"2%"}}>Anuncio de Contrato Público </h1>
@@ -61,11 +66,6 @@ class ContractG extends Component {
                 <ListadoX data={this.state.items} />
               </div>
             </div>  
-
-            <button className="buttonContractG" onClick={()=>{ localStorage.setItem("contratoH", false); window.location.reload(); }}>Crear Nuevo Contrato</button>
-            <br/>
-            <button className="buttonContractG" onClick={()=>{ window.open('/Contratos', '_self'); }}>Ver contratos</button>
-
           </div>
         </div>
       </div>

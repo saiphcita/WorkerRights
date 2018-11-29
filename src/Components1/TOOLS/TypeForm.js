@@ -1,7 +1,7 @@
 import React from 'react';
 import * as typeformEmbed from '@typeform/embed'
 import { Link } from 'react-router-dom'
-import "../CSS/CreateContract.css";
+import "../CSS/LinksStyle.css";
 
 class Form extends React.Component {
   constructor(props) {
@@ -26,8 +26,8 @@ class Form extends React.Component {
   render() {
     return (
         <div style={{width: '100%', height: '100%'}}>
-            <div className="linkG">
-              <Link to="/Graph" className="link1g">Ir a las Gráficas</Link>
+            <div className="linkGen">
+              <Link to="/Graph" className="link1g">Ver Compras Públicas</Link>
               <Link to="/Contratos" className="link2g">Ver Contratos</Link>
             </div>
             <h1 style={{margin:"0", padding:"0", textAlign:"center", color: "#EFDB49", backgroundColor:"#39A2A3"}}>Especificaciones de Nuevo Contrato Público </h1>

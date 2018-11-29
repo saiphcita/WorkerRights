@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './CSS/LinksStyle.css'
+import { Link } from 'react-router-dom';
 
 import Graph1 from "./Tools/Graph1";
 import Graph3 from "./Tools/Graph3";
@@ -324,9 +326,10 @@ class Interface extends Component {
     //PAGINA PRINCIPAL
     if(this.state.statePage === "0" || this.state.statePage === ""){
         page = <div>
-            <h3 style={{width:"1340px", margin:"0", padding:"12px 0", backgroundColor:"black", color:"white", textAlign:"center"}}>
-                Gráfica Principal
-            </h3>
+            <div className="linkGen" style={{width:"1340px", height:"45px"}}>
+                <Link to="/Contratos" className="link1g">Ver Contratos</Link>
+                <Link to="/" className="link2g">Crear Contrato</Link>
+            </div>
             <Graph1 programas={programas}/>
             <Graph3 programas={programas}/>
         </div>

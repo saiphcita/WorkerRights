@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./CSS/ContractG.css";
+import "./CSS/LinksStyle.css";
 import { Link } from 'react-router-dom';
 import Bubbles from './TOOLS/Bubbles.js';
 
@@ -56,9 +57,13 @@ class Contracts extends Component {
 
     return (
       <div className="containerG">
-        <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center"}}>
+        <div className="linkGen">
+            <Link to="/Graph" className="link1g">Ver Compras Públicas</Link>
+            <Link to="/" className="link2g">Crear Contrato</Link>
+        </div>
+        <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center", fontSize:"160%"}}>
           <div style={{margin:"0 3.2% 2% 3.2%", minHeight:"100%"}}>
-            <Link to="/Graph" className="linkGG">Ir a las Gráficas</Link>
+            
             <h1 style={{marginTop:"2%", marginBottom:"0"}}>Anuncios de Contratos Públicos </h1>
 
             {this.state.buuble}
