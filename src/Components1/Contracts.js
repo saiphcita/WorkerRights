@@ -58,8 +58,9 @@ class Contracts extends Component {
     return (
       <div className="containerG">
         <div className="linkGen">
-            <Link to="/Graph" className="link1g">Visualizar Compras Públicas</Link>
-            <Link to="/" className="link2g">Crear Anuncio de Contrato</Link>
+              <Link to="/" className="link1g">Crear Nuevo Anuncio de Contrato</Link>
+              <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
+              <Link to="/Graph" className="link2g">Visualizar Compras Públicas</Link>
         </div>
         <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center", fontSize:"160%"}}>
           <div style={{margin:"0 3.2% 2% 3.2%", minHeight:"100%"}}>

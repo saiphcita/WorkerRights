@@ -301,13 +301,13 @@ class Interface extends Component {
 
   render() {
     var button = <button
-                    style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
+                    style={{width:"225px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
                     onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>
                         Volver
                 </button>
 
     var button2 = <button
-                    style={{width:"325px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
+                    style={{width:"225px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
                     onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 1); window.location.reload();}}>
                         Volver
                 </button>
@@ -321,8 +321,9 @@ class Interface extends Component {
     if(this.state.statePage === "0" || this.state.statePage === ""){
         page = <div>
             <div className="linkGen" style={{width:"1340px", height:"45px"}}>
-                <Link to="/Contratos" className="link1g">Ver Anuncios de Contratos</Link>
-                <Link to="/" className="link2g">Crear Anuncio Contrato</Link>
+              <Link to="/" className="link1g">Crear Nuevo Anuncio de Contrato</Link>
+              <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
+              <Link to="/Graph" className="link2g">Visualizar Compras Públicas</Link>
             </div>
             <Graph1 programas={programas}/>
             <Graph3 programas={programas}/>
@@ -332,8 +333,9 @@ class Interface extends Component {
     else if(this.state.statePage === "1"){
         page = <div>
             <div className="linkGen" style={{width:"1340px", height:"45px"}}>
-                <Link to="/Contratos" className="link1g">Ver Anuncios de Contratos</Link>
-                <Link to="/" className="link2g">Crear Anuncio Contrato</Link>
+                <Link to="/" className="link1g">Crear Nuevo Anuncio de Contrato</Link>
+                <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
+                <Link to="/Graph" onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 0); window.location.reload();}} className="link2g">Visualizar Compras Públicas</Link>
                 {button}
             </div>
             <h1 style={{width:"1340px", margin:"0px", padding:"12px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("jsonData")}</h1>
@@ -344,8 +346,9 @@ class Interface extends Component {
     else if(this.state.statePage === "2"){
         page = <div>
             <div className="linkGen" style={{width:"1340px", height:"45px"}}>
-                <Link to="/Contratos" className="link1g">Ver Anuncios de Contratos</Link>
-                <Link to="/" className="link2g">Crear Anuncio Contrato</Link>
+                <Link to="/" className="link1g">Crear Nuevo Anuncio de Contrato</Link>
+                <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
+                <Link to="/Graph" onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 0); window.location.reload();}} className="link2g">Visualizar Compras Públicas</Link>
                 {button2}
             </div>
             <h2 style={{width:"1340px", margin:"0", padding:"14px 0", textAlign:"center", backgroundColor:"#2F4A6D", color:"white"}}>{localStorage.getItem("subData")}</h2>
