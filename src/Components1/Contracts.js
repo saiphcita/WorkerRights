@@ -59,7 +59,7 @@ class Contracts extends Component {
       <div className="containerG">
         <div className="linkGen">
               <Link to="/" className="link1g">Crear Nuevo Anuncio de Contrato</Link>
-              <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
+              <Link to="/Contratos" onClick={()=>{ window.location.reload();}} className="link2g">Ver Anuncios de Contratos</Link>
               <Link to="/Graph" className="link2g">Visualizar Compras Públicas</Link>
         </div>
         <div style={{ minHeight:"100%", width:"100%", float:"left", backgroundColor:"inherit", textAlign:"center", fontSize:"160%"}}>
@@ -68,8 +68,6 @@ class Contracts extends Component {
             <h1 style={{marginTop:"2%", marginBottom:"0"}}>Anuncios de Contratos Públicos </h1>
 
             {this.state.buuble}
-
-            <button className="buttonContractG" onClick={()=>{ localStorage.setItem("contratoH", false); window.open('/', '_self'); }}>Crear Nuevo Contrato</button>
 
           </div>
         </div>

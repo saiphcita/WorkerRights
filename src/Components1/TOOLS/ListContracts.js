@@ -11,9 +11,6 @@ class ListContracts extends Component {
     render() {
       return (
         <div>
-          <div style={{display:"block", marginTop:"1%", textAlign:"right"}}>
-            <button className="returnB" onClick={this.props.returnF}> VOLVER </button>
-          </div>
           {this.props.data.map((val, ind) => {
               return(
                 <div style={{border:"4px solid black", margin:"1.4% 0", paddingLeft:"1%"}} key={ind}>
@@ -35,9 +32,6 @@ class ListContracts extends Component {
               </div> 
               )
           })}
-          <div style={{display:"block", marginBottom:"1%", textAlign:"right"}}>
-            <button className="returnB" onClick={this.props.returnF}> VOLVER </button>
-          </div>
         </div>
       );
     }
