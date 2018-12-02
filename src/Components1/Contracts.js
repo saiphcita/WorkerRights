@@ -44,7 +44,7 @@ class Contracts extends Component {
         for(let j=0; j < namesRows.length; j++){
           if(rows[i]["Nombre del Contrato:"] === namesRows[j]["Name"]){
             namesRows[j]["hijos"].push(rows[i]);
-            namesRows[j]["Count"] = (namesRows[j]["hijos"].length)*1000
+            namesRows[j]["Count"] = (namesRows[j]["hijos"].length)*1200
           }
         }
       }

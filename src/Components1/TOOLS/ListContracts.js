@@ -11,12 +11,17 @@ class ListContracts extends Component {
     render() {
       return (
         <div>
+          <div style={{width:"100%", height:"8.8%", color:"black", fontSize:"80%", textAlign:"left", marginTop:"1.4%"}}>
+            Número de Contratos: {this.props.data.length}
+          </div>
           {this.props.data.map((val, ind) => {
               return(
                 <div style={{border:"4px solid black", margin:"1.4% 0", paddingLeft:"1%"}} key={ind}>
 
-                <div style={{textAlign:"left", marginBottom:"1%"}}>
-                  <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Nombre del Contrato:</h3>
+                <h2 style={{margin:"0", color:"rgb(239, 219, 73)", textAlign:"right"}}>{ind+1}</h2>
+
+                <div style={{textAlign:"left", marginBottom:"1%", marginTop:"0.2%"}}>
+                  <h3 style={{margin:"0 auto", color:"rgb(239, 219, 73)"}}>Nombre del Contrato:</h3>
                   <p>{val["Nombre del Contrato:"]}</p>
                 </div>
   
