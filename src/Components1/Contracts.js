@@ -31,7 +31,7 @@ class Contracts extends Component {
       //ORDENDANDO LOS DATOS PARA LA GRAFICA
       var namesRows = []
       for(let i=0; i < rows.length; i++){
-        namesRows.push(rows[i]["Nombre del Contrato:"])
+        namesRows.push(rows[i]["TIPO"])
       }
       namesRows = [...new Set(namesRows)]
       for(let i=0; i < namesRows.length; i++){
@@ -42,9 +42,9 @@ class Contracts extends Component {
       }
       for(let i=0; i < rows.length; i++){
         for(let j=0; j < namesRows.length; j++){
-          if(rows[i]["Nombre del Contrato:"] === namesRows[j]["Name"]){
+          if(rows[i]["TIPO"] === namesRows[j]["Name"]){
             namesRows[j]["hijos"].push(rows[i]);
-            namesRows[j]["Count"] = (namesRows[j]["hijos"].length)*1200
+            namesRows[j]["Count"] = (namesRows[j]["hijos"].length)*1000
           }
         }
       }

@@ -11,17 +11,17 @@ class ListContracts extends Component {
     render() {
       return (
         <div>
-          <div style={{width:"100%", height:"8.8%", color:"black", fontSize:"80%", textAlign:"left", marginTop:"1.4%"}}>
+          <div style={{width:"100%", height:"8.8%", color:"white", fontSize:"102%", textAlign:"left", marginTop:"1.4%"}}>
             Número de Contratos: {this.props.data.length}
           </div>
           {this.props.data.map((val, ind) => {
               return(
                 <div style={{border:"4px solid black", margin:"1.4% 0", paddingLeft:"1%"}} key={ind}>
 
-                <h2 style={{margin:"0", color:"rgb(239, 219, 73)", textAlign:"right"}}>{ind+1}</h2>
+                {/* <h3 style={{margin:"1% 1% 0 0", color:"white", textAlign:"right"}}><span style={{border:"2px solid black"}}>{ind+1}</span></h3> */}
 
                 <div style={{textAlign:"left", marginBottom:"1%", marginTop:"0.2%"}}>
-                  <h3 style={{margin:"0 auto", color:"rgb(239, 219, 73)"}}>Nombre del Contrato:</h3>
+                  <h3 style={{marginTop:"1.4%", color:"rgb(239, 219, 73)"}}>Nombre del Contrato {ind+1}:</h3>
                   <p>{val["Nombre del Contrato:"]}</p>
                 </div>
   
@@ -55,7 +55,7 @@ class ListContracts extends Component {
     render() {
       var arrayDJToUse = []
       for(let value in this.props.data){
-        if(value !== "Nombre del Contrato:" && value !== "Describe el Contrato:" && value !== "Submitted At" && value !== "Token"){
+        if(value !== "Nombre del Contrato:" && value !== "Describe el Contrato:" && value !== "Submitted At" && value !== "Token" && value !== "TIPO"){
           if(this.props.data[value] !== ""){
             arrayDJToUse.push({
               "name": value,
