@@ -30,18 +30,25 @@
   transform: scale(0.94);
 }
 
-.returnB{
-  margin-right: 2%;
+.buttonInv{
   cursor: pointer;
-  border:0;
-  padding: 1%;
-  font-size: 60%;
-  width: 32%;
-  background-color: white;
+  border: none;
   color: black;
+  background-color: red;
+  font-size: 100%;
 }
-.returnB:hover{
-  transform: scale(0.94);
+.buttonInv:hover{
+  transform: scale(0.92);
+}
+.buttonInv2{
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: black;
+  font-size: 100%;
+}
+.buttonInv2:hover{
+  transform: scale(0.92);
 }
 
 /* PARA LA LISTA */
