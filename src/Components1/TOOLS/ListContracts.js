@@ -101,8 +101,21 @@ class ListContracts extends Component {
           <div className="divSe" style={{display:"block",textAlign:"left", marginBottom:"1.2%", backgroundColor:"black", width:"38%", padding:"2% 1%", borderRadius:"4px"}}>
             <span style={{marginRight:"4%", color:"white"}}>Marcar como Caso de Corrupción</span>
             <input 
-            onChange={(event) => {var arraySC = this.state.selectedC; arraySC.push(event.target.value); this.setState({selectedC:arraySC}); }} 
-            type="checkbox" name="SelectCase" value={val["Nombre del Contrato:"]}
+            onChange={(event) => {
+              var checkk = document.getElementById("boxS"+ind).checked;
+              var arraySC = this.state.selectedC;
+              if(checkk){
+                arraySC.push(event.target.value);
+                this.setState({selectedC:arraySC}); 
+              }else{
+                var index = arraySC.indexOf(event.target.value);
+                if (index > -1) {
+                  arraySC.splice(index, 1);
+                }
+                this.setState({selectedC:arraySC}); 
+              }
+            }} 
+            type="checkbox" id={"boxS"+ind} name="SelectCase" value={val["Nombre del Contrato:"]}
             />
           </div>
 

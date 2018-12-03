@@ -84,7 +84,7 @@ class ListadoX extends Component {
   render() {
     var arrayDJToUse = []
     for(let value in this.props.data){
-      if(value !== "Nombre del Contrato:" && value !== "Describe el Contrato:" && value !== "Submitted At" && value !== "Token"){
+      if(value !== "Nombre del Contrato:" && value !== "Describe el Contrato:" && value !== "Submitted At" && value !== "Token" && value !== "TIPO" && value !== "COR"){
         if(this.props.data[value] !== ""){
           arrayDJToUse.push({
             "name": value,
