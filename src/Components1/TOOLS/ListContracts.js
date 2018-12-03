@@ -5,11 +5,13 @@ class ListContracts extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        listColor: true
+        listColor: true,
+        selectedC: []
       }
     };
   
     render() {
+
       var listToReturn = this.props.data.map((val, ind) => {
         return(
           <div style={{border:"4px solid black", margin:"1.4% 0", paddingLeft:"1%"}} key={ind}>
@@ -32,12 +34,13 @@ class ListContracts extends Component {
         )
     })
 
-    var buttonInv = <button className="buttonInv" onClick={()=> {this.setState({listColor: !this.state.listColor }) }}>Investigar Corrupción</button>
-
+    var buttonInv = <button className="buttonInv" onClick={()=> {this.setState({listColor: !this.state.listColor }) }}>Investigar Posibles Casos de Corrupción</button>
+    var buttonRep = <div/>
 
     if(this.state.listColor){
 
-      buttonInv = <button className="buttonInv" onClick={()=> {this.setState({listColor: !this.state.listColor }) }}>Investigar Corrupción</button>
+      buttonInv = <button className="buttonInv" onClick={()=> {this.setState({listColor: !this.state.listColor }) }}>Investigar Posibles Casos de Corrupción</button>
+      buttonRep = <div/>
 
       listToReturn = this.props.data.map((val, ind) => {
           return(
@@ -62,7 +65,19 @@ class ListContracts extends Component {
       })
     }else{
 
-      buttonInv = <button className="buttonInv2" onClick={()=> {this.setState({listColor: !this.state.listColor }) }}>Ocultar Posible Corrupción</button>
+      buttonInv = <button className="buttonInv2" onClick={()=> {this.setState({listColor: !this.state.listColor }) }}>Ocultar Posibles Casos de Corrupción</button>
+      buttonRep = <button className="buttonRep" 
+      onClick={()=> {
+        if(this.state.selectedC.length === 0){
+          alert("Debes Seleccionar Posibles Casos de Corrupción")
+        }else{
+          if (window.confirm("Muchas Gracias por Contribuir")) {
+            window.location.reload();
+          }
+        } 
+        }}>
+          Reportar Corrupción
+      </button>
 
       listToReturn = this.props.data.map((val, ind) => {
         if(val["COR"] === "1"){
@@ -78,10 +93,19 @@ class ListContracts extends Component {
             <p style={{textDecorationLine:"underline", textDecorationColor:"red"}}>{val["Describe el Contrato:"]}</p> 
           </div>
 
-          <div style={{textAlign:"left", marginBottom:"2%"}}>
+          <div style={{textAlign:"left", marginBottom:"2.4%"}}>
             <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Especificaciones:</h3>
             <ListadoX data={this.props.data[ind]} stage={false} />
           </div>
+
+          <div className="divSe" style={{display:"block",textAlign:"left", marginBottom:"1.2%", backgroundColor:"black", width:"38%", padding:"2% 1%", borderRadius:"4px"}}>
+            <span style={{marginRight:"4%", color:"white"}}>Marcar como Caso de Corrupción</span>
+            <input 
+            onChange={(event) => {var arraySC = this.state.selectedC; arraySC.push(event.target.value); this.setState({selectedC:arraySC}); }} 
+            type="checkbox" name="SelectCase" value={val["Nombre del Contrato:"]}
+            />
+          </div>
+
         </div>
 
         }else if(val["COR"] === "0"){
@@ -118,6 +142,8 @@ class ListContracts extends Component {
           </div>
 
           {listToReturn}
+
+          {buttonRep}
 
         </div>
       );

@@ -33,7 +33,7 @@ class Form extends React.Component {
               <Link to="/Graph" className="link2g">Visualizar Compras Públicas</Link>
             </div>
             <h1 style={{margin:"0", padding:"0", textAlign:"center", color: "#EFDB49", backgroundColor:"#39A2A3"}}>Especificaciones de Nuevo Contrato Público </h1>
-            <div ref={(el) => this.el = el} style={{width: '100%', height: '85%'}} />
+            <div ref={(el) => this.el = el} style={{width: '100%', height: '80%'}} />
         </div>
     )
   }

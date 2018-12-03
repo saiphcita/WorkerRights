@@ -54,6 +54,19 @@
 .buttonInv2:hover{
   transform: scale(0.92);
 }
+.buttonRep{
+  cursor: pointer;
+  border: none;
+  width: 72%;
+  padding: 1% 0.5%;
+  border-radius: 8px;
+  color: black;
+  background-color: white;
+  font-size: 120%;
+}
+.buttonRep:hover{
+  transform: scale(1.12);
+}
 
 /* PARA LA LISTA */
 .DivComprasG {
@@ -86,4 +99,11 @@
 
 .ClistG li:before{
   content: '✓ ';
+}
+
+.divSe input{
+  vertical-align: middle;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
 }
