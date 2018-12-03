@@ -33,8 +33,10 @@
 .buttonInv{
   cursor: pointer;
   border: none;
+  padding: 1% 0.5%;
+  border-radius: 8px;
   color: black;
-  background-color: red;
+  background-color: #E33535;
   font-size: 100%;
 }
 .buttonInv:hover{
@@ -43,6 +45,8 @@
 .buttonInv2{
   cursor: pointer;
   border: none;
+  padding: 1% 0.5%;
+  border-radius: 8px;
   color: white;
   background-color: black;
   font-size: 100%;

@@ -41,6 +41,7 @@ class ContractG extends Component {
     return (
       <div className="containerG">
         <div className="linkGen">
+          <img src="./image.png" alt="logo" />
           <Link to="/" onClick={()=> {window.location.reload();}} className="link1g">Crear Nuevo Anuncio de Contrato</Link>
           <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
           <Link to="/Graph" className="link2g">Visualizar Compras Públicas</Link>

@@ -301,13 +301,13 @@ class Interface extends Component {
 
   render() {
     var button = <button
-                    style={{width:"225px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
+                    style={{width:"148px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
                     onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 0); localStorage.setItem("jsonData", ""); window.location.reload();}}>
                         Volver
                 </button>
 
     var button2 = <button
-                    style={{width:"225px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
+                    style={{width:"148px", height:"100%", color:"black", backgroundColor:"#80cbc4", float:"right", border:"none", cursor:"pointer", padding:"0"}}
                     onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 1); window.location.reload();}}>
                         Volver
                 </button>
@@ -320,7 +320,8 @@ class Interface extends Component {
     //PAGINA PRINCIPAL
     if(this.state.statePage === "0" || this.state.statePage === ""){
         page = <div>
-            <div className="linkGen" style={{width:"1340px", height:"45px"}}>
+            <div className="linkGen" style={{width:"1340px", height:"78.2px", padding:"2px 0 4px 2px"}}>
+              <img src="./image.png" alt="logo" />
               <Link to="/" className="link1g">Crear Nuevo Anuncio de Contrato</Link>
               <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
               <Link to="/Graph" className="link2g">Visualizar Compras Públicas</Link>
@@ -332,7 +333,8 @@ class Interface extends Component {
     //PAGINA DE LAS INSTITUCIONES
     else if(this.state.statePage === "1"){
         page = <div>
-            <div className="linkGen" style={{width:"1340px", height:"45px"}}>
+            <div className="linkGen" style={{width:"1340px", height:"78.2px", padding:"2px 0 4px 2px"}}>
+                <img src="./image.png" alt="logo" />
                 <Link to="/" className="link1g">Crear Nuevo Anuncio de Contrato</Link>
                 <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
                 <Link to="/Graph" onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 0); window.location.reload();}} className="link2g">Visualizar Compras Públicas</Link>
@@ -345,7 +347,8 @@ class Interface extends Component {
     //PAGINA DE LAS RAZONES DE GASTOS
     else if(this.state.statePage === "2"){
         page = <div>
-            <div className="linkGen" style={{width:"1340px", height:"45px"}}>
+            <div className="linkGen" style={{width:"1340px", height:"78.2px", padding:"2px 0 4px 2px"}}>
+                <img src="./image.png" alt="logo" />
                 <Link to="/" className="link1g">Crear Nuevo Anuncio de Contrato</Link>
                 <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
                 <Link to="/Graph" onClick={()=>{ window.location.href="/#"; localStorage.setItem("statePage", 0); window.location.reload();}} className="link2g">Visualizar Compras Públicas</Link>

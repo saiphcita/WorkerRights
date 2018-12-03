@@ -27,6 +27,7 @@ class Form extends React.Component {
     return (
         <div style={{width: '100%', height: '100%'}}>
             <div className="linkGen">
+              <img src="./image.png" alt="logo" />
               <Link to="" className="link1g">Crear Nuevo Anuncio de Contrato</Link>
               <Link to="/Contratos" className="link2g">Ver Anuncios de Contratos</Link>
               <Link to="/Graph" className="link2g">Visualizar Compras Públicas</Link>

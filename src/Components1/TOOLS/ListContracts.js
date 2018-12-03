@@ -70,12 +70,12 @@ class ListContracts extends Component {
 
           <div style={{textAlign:"left", marginBottom:"1%", marginTop:"0.2%"}}>
             <h3 style={{marginTop:"1.4%", color:"rgb(239, 219, 73)"}}>Nombre del Contrato {ind+1}:</h3>
-            <p style={{color:"red"}}>{val["Nombre del Contrato:"]}</p>
+            <p style={{textDecorationLine:"underline", textDecorationColor:"red"}}>{val["Nombre del Contrato:"]}</p>
           </div>
 
           <div style={{textAlign:"left", marginBottom:"2%"}}>
             <h3 style={{marginBottom:"0", color:"rgb(239, 219, 73)"}}>Descripción:</h3>
-            <p style={{color:"red"}}>{val["Describe el Contrato:"]}</p> 
+            <p style={{textDecorationLine:"underline", textDecorationColor:"red"}}>{val["Describe el Contrato:"]}</p> 
           </div>
 
           <div style={{textAlign:"left", marginBottom:"2%"}}>
@@ -185,7 +185,7 @@ class ListContracts extends Component {
                           {val["children"].map((value, indx) =>{
                             return (
                               <div key={indx} className="ClistG">
-                                <li style={{width:"100%", maxWidth:"100%", textAlign:"left", fontSize:"80%", color:"red"}}>{value.toUpperCase()}</li>
+                                <li style={{width:"100%", maxWidth:"100%", textAlign:"left", fontSize:"80%", textDecorationLine:"underline", textDecorationColor:"red"}}>{value.toUpperCase()}</li>
                               </div>
                             )
                           })}
